@@ -1,25 +1,29 @@
 <?php
 
 
-require_once()
+//require_once()
 
 class ModeleConnexion extends ModeleGenerique {
 	
 	function modele_authentification ($pseudo, $mdp) {
 
-		$req = 'SELECT * FROM p_user WHERE mail_user = ?;';
-		$prepare = self::$connexion->prepare($req);
-		$prepare->execute (array($pseudo));
+		try {
+			$req = 'SELECT * FROM p_user WHERE mail_user = ?;';
+			$prepare = self::$connexion->prepare($req);
+			$prepare->execute (array($pseudo));
 
-		$result = $prepare->fetch();
+			$result = $prepare->fetch();
 
-		if (password_verify($mdp, $result['mdp_user'])) {
-			
-			return $result['id_user'];
+			if (password_verify($mdp, $result['mdp_user'])) {
+				
+				return $result['id_user'];
 
-		} else {
+			} else {
 
-			return NULL;
+				return NULL;
+			}
+		} catch(PDOException $ab) {
+			throw new ModeleConnexionException();
 		}
 	}
 }
