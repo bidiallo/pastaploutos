@@ -21,7 +21,6 @@ $module = isset($_GET['module']) ? $_GET['module'] : "accueil";
 switch ($module) {
 	//case 'accueil':
 	case 'connexion':
-	case 'inscription':
 	/*
 	case 'recettes':
 	case 'compte':
