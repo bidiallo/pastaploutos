@@ -1,8 +1,9 @@
 <?php
 
-require_once('../../include/controleur_generique.php');
-require_once('../../include/module_generique.php');
+require_once('include/controleur_generique.php');
+require_once('include/module_generique.php');
 //require_once('modules/mod_connexion/modele_connexion_exception.php');
+require_once('controleur_connexion.php');
 
 
 class ModConnexion extends ModuleGenerique {

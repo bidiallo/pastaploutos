@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../include/modele_generique.php');
+require_once('include/modele_generique.php');
 
 class ModeleConnexion extends ModeleGenerique {
 	

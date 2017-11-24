@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../include/vue_generique.php');
+require_once('include/vue_generique.php');
 
 class VueConnexion extends VueGenerique {
 
@@ -12,11 +12,8 @@ class VueConnexion extends VueGenerique {
 		?> 
 		<form action = "index.php?module=connexion&action=form_connexion" method="POST">
 
-			<input>
-
 			Pseudo : <input id="pseudo" type="text" name="pseudo"/><br/>
 			<!--Adresse e-mail: <input id="email" type="email" name="email"><br/>-->
-			Identifiant : <input id="identifiant" type="text" name="login"/><br/>
 			Mot de passe : <input id="mdp" type="password" name="motdepasse"/><br/>
 			<input type="submit" value="Connexion"/>
 

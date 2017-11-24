@@ -13,9 +13,7 @@ class VueGenerique{
 
 
 	function tamponVersContenu(){
-		echo "vueGenerique";
 		$this-> contenu = $this -> contenu /*. ob_get_clean()*/;
-
 	}
 
 	function vue_erreur($msgerror){
