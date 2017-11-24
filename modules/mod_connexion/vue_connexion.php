@@ -1,12 +1,14 @@
 <?php
 
+require_once('../../include/vue_generique.php');
+
 class VueConnexion extends VueGenerique {
 
 	function __construct(){
 		parent::__construct();
 	}
 
-	function vue_form_connexion(/*mettre le token en pram*/) {
+	function vue_form_connexion(/*mettre le token en param*/) {
 		?> 
 		<form action = "index.php?module=connexion&action=form_connexion" method="POST">
 
@@ -18,7 +20,7 @@ class VueConnexion extends VueGenerique {
 			Mot de passe : <input id="mdp" type="password" name="motdepasse"/><br/>
 			<input type="submit" value="Connexion"/>
 
-		</form>
+		</form><?php
 	}
 }
 

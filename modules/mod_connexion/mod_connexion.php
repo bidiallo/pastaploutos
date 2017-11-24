@@ -1,7 +1,8 @@
 <?php
 
-require_once('modules/mod_connexion/controleur_connexion.php');
-//require_once('moules/mod_connexion/modele_connexion_exception.php');
+require_once('../../include/controleur_generique.php');
+require_once('../../include/module_generique.php');
+//require_once('modules/mod_connexion/modele_connexion_exception.php');
 
 
 class ModConnexion extends ModuleGenerique {
@@ -20,7 +21,7 @@ class ModConnexion extends ModuleGenerique {
 				break;
 			
 			default:
-				# code...
+				$this->controleur->form_connexion();
 				break;
 		}
 	}
