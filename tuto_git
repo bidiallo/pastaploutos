@@ -1,0 +1,14 @@
+/* Tuto pour ajouter/supprimer des fichiers */
+
+//ajouter
+git add [fichier]
+
+//supprimer
+git rm [fichier]
+
+//créer le commit (-a pour inclure tous les fichiés ajouté/supprimé)
+//modifications visibles avec "git status"
+git commit -a
+
+//push
+git push
