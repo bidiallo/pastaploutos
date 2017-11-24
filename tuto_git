@@ -6,7 +6,7 @@ git add [fichier]
 //supprimer
 git rm [fichier]
 
-//créer le commit (-a pour inclure tous les fichiés ajouté/supprimé)
+//créer le commit (-a pour inclure tous les fichiers ajoutés/supprimés)
 //modifications visibles avec "git status"
 git commit -a
 
