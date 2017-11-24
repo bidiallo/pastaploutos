@@ -1,13 +1,12 @@
 <?php
 
-
-//require_once()
+require_once('../../include/modele_generique.php');
 
 class ModeleConnexion extends ModeleGenerique {
 	
 	function modele_authentification ($pseudo, $mdp) {
 
-		try {
+
 			$req = 'SELECT * FROM p_user WHERE mail_user = ?;';
 			$prepare = self::$connexion->prepare($req);
 			$prepare->execute (array($pseudo));
@@ -22,9 +21,7 @@ class ModeleConnexion extends ModeleGenerique {
 
 				return NULL;
 			}
-		} catch(PDOException $ab) {
-			throw new ModeleConnexionException();
-		}
+		
 	}
 }
 
