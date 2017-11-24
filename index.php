@@ -37,6 +37,6 @@ switch ($module) {
 
 $classe_module->getControleur()->getVue()->tamponVersContenu();
 
-
+require_once("include/template.php");
 
 ?>
