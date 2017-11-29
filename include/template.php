@@ -7,17 +7,16 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Latest compiled and minified CSS -->
-		 <link rel="stylesheet" href="/include/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+		 <link href="/include/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Optional theme -->
-		<link rel="stylesheet" href="/include/bootstrap-3.3.7/dist/css/bootstrap-theme.min.css">
+		<link href="/include/bootstrap-3.3.7/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="/include/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
-
-
-		<title><?php echo $module->getControleur()->getVue->getTitre();?></title>
+		
+		<title>PastaPloutos</title>
 	</head>
+
+	<?php include_once('nav.php');?>
 	<body>
 
 	<?php echo $module->getControleur()->getVue()->getContenu()?>
@@ -48,5 +47,12 @@
 
 		</footer>
 
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    	<!-- Latest compiled and minified JavaScript -->
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="/include/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
 	</body>
 </html>

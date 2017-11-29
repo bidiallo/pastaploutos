@@ -19,25 +19,36 @@ if(!session_start()) {
 $module = isset($_GET['module']) ? $_GET['module'] : "accueil";
 
 switch ($module) {
-	//case 'accueil':
+	
 	case 'connexion':
-	case 'inscription':
-	/*
-	case 'recettes':
-	case 'compte':
-	*/
 
-		include_once ("modules/mod_$module/mod_$module.php");
-		$nom_module = "Mod$module";
+		include_once ("modules/mod_connexion/mod_$module.php");
+		$nom_module = "modConnexion";
 		$classe_module = new $nom_module();
 		break;
 
+
+	case 'inscription':
+
+		include_once ("modules/mod_inscription/mod_$module.php");
+		$nom_module = "ModInscription";
+		$classe_module = new $nom_module();
+		break;
+
+	case 'accueil':
+		/*
+		include_once ("modules/mod_inscription/mod_$module.php");
+		$nom_module = "ModAccueil";
+		$classe_module = new $nom_module();*/
+		break;
+
 	default:
-		$classe_module = new ModuleGenerique();
+		//$classe_module = new ModuleGenerique();
+		header('Location: index.php?module=accueil');
+
+	//$classe_module->getControleur()->getVue()->tamponVersContenu();
 }
 
-$classe_module->getControleur()->getVue()->tamponVersContenu();
-
-//require_once("include/template.php");
+require_once("include/template.php");
 
 ?>
