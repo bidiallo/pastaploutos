@@ -1,3 +1,9 @@
+<?php
+include_once('controleur_generique.php');
+include_once('module_generique.php');
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,44 +13,50 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Latest compiled and minified CSS -->
-		 <link href="/include/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
 		<!-- Optional theme -->
-		<link href="/include/bootstrap-3.3.7/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-		
-		<title>PastaPloutos</title>
+		<!--<title><?php/* echo $classe_module->getControleur()->getVue->getTitre();?*/></title>-->
+		<!--<title>PastaPloutos</title>-->
 	</head>
 
 	<?php include_once('nav.php');?>
 	<body>
 
-	<?php echo $module->getControleur()->getVue()->getContenu()?>
-
+	<?php var_dump($classe_module);
+	 echo $classe_module->getControleur()->getVue()->getContenu()?>
 
 	<!--footer-->
-		<footer>
-			
-			<div class="row">
-			  <div class="col-xs-6 col-sm-4">
-			  	<p> PastaPloutos est un site vouzs permettant de trouver n'importe quel recette à base de pate en passant par la traditionnelle recette des pates à la bolognaise et allant jusqu'à vous présenter les recettes les plus originales du moment.</p>
-			  	
-			  </div>
+		<footer class="footer" style= "margin-left: 15%; margin-top: 45%;">
+			<div class="container">
+				<div class="row">
+				  <div class="col-xs-6 col-sm-4">
+				  	<p class="text-muted"> PastaPloutos est un site vous permettant de trouver n'importe quel recette à base de pate en passant par la traditionnelle recette des pates à la bolognaise et allant jusqu'à vous présenter les recettes les plus originales du moment.</p>
+				  	
+				  </div>
 
-			  <div class="col-xs-6 col-sm-4">Informations pratiques</div>
+				  <div class="col-xs-6 col-sm-4">
+				  		<h5 class="text-muted">
+				  		Informations pratiques
+				  		</h2>
+				  		<p>blablablablablabla</p>
+				  </div>
 
-			  <!-- Optional: clear the XS cols if their content doesn't match in height -->
-			  <div class="clearfix visible-xs-block"></div>
+				  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+				  <div class="clearfix visible-xs-block"></div>
 
-			  <div class="col-xs-6 col-sm-4">
-			  	<ul>
-			  		<li><a href="#">Les origines du site</a></li>
-			  		<li><a href="#">Contact</a></li>
-			  		<li><a href="#">Mentions Légales</a></li>
-			  	</ul>
-			  </div>
+				  <div class="col-xs-6 col-sm-4">
+				  	<ul class="text-muted">
+				  		<li><a href="#">Les origines du site</a></li>
+				  		<li><a href="#">Contact</a></li>
+				  		<li><a href="#">Mentions Légales</a></li>
+				  	</ul>
+				  </div>
+				</div>
 			</div>
-
 		</footer>
 
 
