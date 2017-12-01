@@ -22,7 +22,9 @@ class ControleurConnexion extends ControleurGenerique {
 		$this->vue->vue_confirmation("Vous etes déconnecté !");
 	}
 
-
+	function getModel(){
+		return $this->model;
+	}
 
 
 }
