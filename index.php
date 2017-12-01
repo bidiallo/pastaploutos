@@ -31,14 +31,14 @@ switch ($module) {
 	case 'inscription':
 
 		include_once ("modules/mod_inscription/mod_$module.php");
-		$nom_module = "ModInscription";
+		$nom_module = "modInscription";
 		$classe_module = new $nom_module();
 		break;
 
 	case 'accueil':
 		
 		include_once ("modules/mod_accueil/mod_$module.php");
-		$nom_module = "ModAccueil";
+		$nom_module = "modAccueil";
 		$classe_module = new $nom_module();
 		break;
 
