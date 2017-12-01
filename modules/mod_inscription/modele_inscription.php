@@ -26,6 +26,12 @@ class ModeleInscription extends ModeleGenerique {
 
 
 		$VerifPseudo = $this->VerifPseudo($pseudo);
+		if($VerifEmail)
+			return "Erreur email";
+
+		$VerifEmail = $this->VerifEmail($email);
+		if($VerifPseudo)
+			return "Erreur pseudo";
 
 		$prepare=self::$connexion->prepare($req);
 		$result=$req->execute(array($nom,$prenom,$pseudo,$email, $mdp,$date));
@@ -54,6 +60,6 @@ class ModeleInscription extends ModeleGenerique {
 		}
 		return $existe;
 	}
-
+//verif meme mdp
 }
 
