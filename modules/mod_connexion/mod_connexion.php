@@ -12,13 +12,24 @@ class ModConnexion extends ModuleGenerique {
 
 		$action = isset($_GET['action']) ? $_GET['action'] : "default";
 
+		if(isset($_POST['pseudo'])){
+			$pseudo = $_POST['pseudo'];
+		}
+		if(isset($_POST['motdepasse'])){
+			$mdp = $_POST['motdepasse'];
+		}
+
 		parent::__construct();
 		
 		$this -> controleur = new ControleurConnexion;
 
 		switch ($action) {
 			case 'form_connexion':
-				$this->controleur->form_connexion();
+				$id_session = $this->controleur->get_model()->modele_authentification($pseudo, $mdp);
+				if($id_session != NULL)
+					echo "CONNECTEE MON GAAAAAAA ton id : $id_session\n";
+				else
+					echo "Combinaison incorrecte.\n";
 				break;
 			
 			default:
@@ -26,7 +37,6 @@ class ModConnexion extends ModuleGenerique {
 				break;
 		}
 	}
-
 
 
 }
