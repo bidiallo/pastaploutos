@@ -19,11 +19,24 @@ if(!session_start()) {
 $module = isset($_GET['module']) ? $_GET['module'] : "accueil";
 
 switch ($module) {
+
+	case 'cover':
+		include_once("modules/mod_cover_test/mod_$module.php");
+		$nom_module = "ModCover";
+		$classe_module = new $nom_module();
+		break;
+
+	case 'accueil':
+		
+		include_once ("modules/mod_accueil/mod_$module.php");
+		$nom_module = "ModAccueil";
+		$classe_module = new $nom_module();
+		break;
 	
 	case 'connexion':
 
 		include_once ("modules/mod_connexion/mod_$module.php");
-		$nom_module = "modConnexion";
+		$nom_module = "ModConnexion";
 		$classe_module = new $nom_module();
 		break;
 
@@ -35,16 +48,9 @@ switch ($module) {
 		$classe_module = new $nom_module();
 		break;
 
-	case 'accueil':
-		
-		include_once ("modules/mod_accueil/mod_$module.php");
-		$nom_module = "ModAccueil";
-		$classe_module = new $nom_module();
-		break;
-
 	default:
 		$classe_module = new ModuleGenerique();
-		header('Location: index.php?module=accueil');
+		header('Location: index.php?module=cover');
 
 	$classe_module->getControleur()->getVue()->tamponVersContenu();
 }

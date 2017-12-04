@@ -22,7 +22,7 @@ class VueConnexion extends VueGenerique {
 		</form>
 		-->
 
-		<div class="container">
+		<div class="container" action = "index.php?module=connexion&action=form_connexion" method="POST">
 
 	      <form class="form-signin">
 	        <h2 class="form-signin-heading">Connectez-vous</h2>

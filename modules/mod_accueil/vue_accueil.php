@@ -1,7 +1,9 @@
 <?php
 
+require_once('include/vue_generique.php');
 
-class VueAcceuil extends VueGenerique {
+
+class VueAccueil extends VueGenerique {
 
 	function __construct() {
 		parent:: __construct();
