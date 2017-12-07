@@ -54,6 +54,8 @@ switch ($module) {
 		$classe_module = new $nom_module();
 		break;
 
+	 default:
+
 		$classe_module = new ModuleGenerique();
 		header('Location: index.php?module=cover');
 
