@@ -35,7 +35,7 @@ class VueInscription extends VueGenerique{
 
 		    <div>
 		        <label for="inputEmail" class="sr-only">Adresse mail</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
+        		<input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
 		    </div>
 
 		    <div>
