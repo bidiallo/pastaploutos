@@ -18,24 +18,24 @@ class VueInscription extends VueGenerique{
 
 	         <div>
 		        <label for="inputNom" class="sr-only">Nom</label>
-		        <input type="password" id="inputPassword" class="form-control" placeholder="Nom" required>
+		        <input type="text" id="inputNom" class="form-control" placeholder="Nom" required>
 		    </div>
 
 		    <div>
 		        <label for="inputPrenom" class="sr-only">Prénom</label>
-		        <input type="password" id="inputPassword" class="form-control" placeholder="Prénom" required>
+		        <input type="text" id="inputPrenom" class="form-control" placeholder="Prénom" required>
 		    </div>
 
 	        <div>
 		        <label for="inputPseudo" class="sr-only">Pseudo</label>
-		        <input type="text" id="pseudo" class="form-control" placeholder="Pseudo" required autofocus>
+		        <input type="text" id="inputPseudo" class="form-control" placeholder="Pseudo" required autofocus>
 		    </div>
 
 		   
 
 		    <div>
-		        <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		        <label for="inputEmail" class="sr-only">Adresse mail</label>
+        		<input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
 		    </div>
 
 		    <div>
@@ -48,7 +48,7 @@ class VueInscription extends VueGenerique{
 		        <input type="password" id="inputPassword" class="form-control" placeholder="Confirmation" required>
 		    </div>
 		    
-	        <button class="btn btn-lg btn-primary btn-block" type="submit">Inscription</button>
+	        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
 	      </form>
 
 	    </div> <!-- /container -->
