@@ -1,7 +1,9 @@
 <?php
-require_once('../../include/module_generique.php');
+require_once('./include/module_generique.php');
+require_once('./include/controleur_generique.php');
 
-class ModInscription extends ModuleGenerique{
+
+class ModInscirption extends ModuleGenerique{
 
 	function __construct(){
 		$action = isset($_GET['action']) ? $_GET['action'] : "default";
