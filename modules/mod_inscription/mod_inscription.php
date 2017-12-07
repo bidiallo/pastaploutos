@@ -1,6 +1,7 @@
 <?php
 require_once('./include/module_generique.php');
-class ModuleInscirption extends ModuleGenerique{
+
+class ModInscirption extends ModuleGenerique{
 
 	function __construct(){
 		$action = isset($_GET['action']) ? $_GET['action'] : "default";

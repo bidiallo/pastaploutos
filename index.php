@@ -44,7 +44,7 @@ switch ($module) {
 	case 'inscription':
 
 		include_once ("modules/mod_inscription/mod_$module.php");
-		$nom_module = "modInscription";
+		$nom_module = "ModInscription";
 		$classe_module = new $nom_module();
 		break;
 	case 'accueil':
