@@ -1,6 +1,6 @@
 <?php
 
-require_once('include/vue_generique.php');
+require_once('../../include/vue_generique.php');
 
 class VueInscription extends VueGenerique{
 	 
