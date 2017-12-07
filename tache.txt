@@ -1,0 +1,69 @@
+Avancer du projet :
+06/11/17
+Bineta : diagramme de séquence 
+Camille : début du site, commencer par module connexion
+Création de la BD : Creer la table commenter qui n'a pas fonctionné a cause des attribust clés etrangère blabla à travers le script. Voir avec le prof 
+
+08/11/2017
+bineta : diagramme sequence 
+camille : modification BD + insertion données 
+à faire : modifier le MCD : modifier les noms des tables, ajouter table famille ingrédients(féculent,viande, légumes,fruits,autres)
+*************
+Consigne MCD*
+*************
+hash : cryptage mdp 
+changer params_global, en admin
+voir créer table admin pour 2 interfaces.
+
+user: droit : modifier/supprimer ou lire; il faut supprimer table de droit 
+table commentaire : id_commentaire, commentaire et id_user. peut modifier que si id le même. 
+ 
+recette :  sans gluten
+somme des notes + nombre de notes, puis après faire le calcul d'une moyenne en php.
+si pb note pas bonne admin pourra modifier.
+publier/ou en attente des recettes: bool
+
+ est_compose : créer quantite/poids donc créer une table unité
+
+Créer une base d'ingredients la plus riche possible.
+prévoir la génération d'une recette belle à l'aide d'un plugins PHP (bof) ou en CSS.
+Faire un deuxieme CSS en fonction de l'impression
+https://openweb.eu.org/articles/maitriser_impression_css
+
+
+Regarder pour trouver une BD ingredients
+
+10/11/2017 
+Bineta : compte-rendu + début code page connexion
+Camille : modif MCD : pas 2 interfaces mais un boolean admin
+MCD correcte
+
+15/11/2017
+Bineta : Charte Graphique 
+Camille : Dictionnaire de données
+
+17/11/2017
+Bineta : Avancement du site, Création de la page connexion (debuggage)
+Camille : Modification BDD, MaJ des tables,installation github
+
+22/11/2017
+Camille modification MCD : ajout attribut droit, ajout index.php + controleur_generique.php GITHUB
+Jemery:arrivé dans le groupe, prise de connaissance du projet
+Bineta : Debugg de la page connexion + mis en place template
+
+24/11/2017 : 
+Jerem : insallation gihub + suite du module conexion
+Bineta : installation Bootsrap
+Camille : Module inscription
+
+29/11/2017
+Jerem :: connexion
+Bineta : bootstrap
+Camille : inscription
+
+07/12/2017
+Bineta : Accueil
+Camille : Modif MCD enelver date de naissance
+Faire un pop up quand requetes marche pas
+Finir module gestion user
+

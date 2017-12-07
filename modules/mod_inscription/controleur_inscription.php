@@ -3,7 +3,7 @@
 require_once('modele_inscription.php');
 require_once('vue_inscription.php');
 //require_once('../../include/modele_generique.php');
-require_once('../../include/controleur_generique.php');
+require_once('include/controleur_generique.php');
 
 
 class ControleurInscription extends ControleurGenerique {

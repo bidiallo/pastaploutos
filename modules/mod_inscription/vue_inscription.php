@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../include/vue_generique.php');
+require_once('include/vue_generique.php');
 
 class VueInscription extends VueGenerique{
 	 
@@ -18,12 +18,12 @@ class VueInscription extends VueGenerique{
 
 	         <div>
 		        <label for="inputNom" class="sr-only">Nom</label>
-		        <input type="text" id="inputNom" class="form-control" placeholder="Nom" required>
+		        <input type="text" id="inputNom" class="form-control" placeholder="Nom" required autofocus>
 		    </div>
 
 		    <div>
 		        <label for="inputPrenom" class="sr-only">Prénom</label>
-		        <input type="text" id="inputPrenom" class="form-control" placeholder="Prénom" required>
+		        <input type="text" id="inputPrenom" class="form-control" placeholder="Prénom" required autofocus>
 		    </div>
 
 	        <div>
@@ -40,12 +40,12 @@ class VueInscription extends VueGenerique{
 
 		    <div>
 		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+		        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
 		    </div>
 
 		     <div>
-		        <label for="inputPassword" class="sr-only">Confirmation mot de passe</label>
-		        <input type="password" id="inputPassword" class="form-control" placeholder="Confirmation" required>
+		        <label for="inputPassword" class="sr-only">Mot de passe</label>
+		        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
 		    </div>
 		    
 	        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
