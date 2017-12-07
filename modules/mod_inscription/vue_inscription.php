@@ -1,12 +1,13 @@
 <?php
-//require_once('include/vue_generique');
+
+require_once('include/vue_generique.php');
 
 class VueInscription extends VueGenerique{
 	 
 	function __construct(){
 		parent::__construct();
 	}
-	function vue_form_connexion(/*askip token*/){
+	function vue_form_inscription(/*askip token*/){
 		?> 
 		<form action = "index.php?module=inscription&action=form_inscription" method="POST">
 

@@ -21,7 +21,7 @@ $module = isset($_GET['module']) ? $_GET['module'] : "accueil";
 switch ($module) {
 
 	case 'cover':
-		include_once("modules/mod_cover_test/mod_$module.php");
+		include_once("modules/mod_cover/mod_$module.php");
 		$nom_module = "ModCover";
 		$classe_module = new $nom_module();
 		break;
@@ -44,11 +44,16 @@ switch ($module) {
 	case 'inscription':
 
 		include_once ("modules/mod_inscription/mod_$module.php");
-		$nom_module = "ModInscription";
+		$nom_module = "modInscription";
+		$classe_module = new $nom_module();
+		break;
+	case 'accueil':
+		
+		include_once ("modules/mod_accueil/mod_$module.php");
+		$nom_module = "modAccueil";
 		$classe_module = new $nom_module();
 		break;
 
-	default:
 		$classe_module = new ModuleGenerique();
 		header('Location: index.php?module=cover');
 

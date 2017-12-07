@@ -24,7 +24,7 @@ class VueAccueil extends VueGenerique {
 		    <div class="thumbnail">
 		      <img src="..." alt="..." class="img-thumbnail">
 		      <div class="caption">
-		        <h3>Actu#1</h3>
+		        <h3>Recettes</h3>
 		        <p>Retrouver toutes les recettes déjà disponible...</p>
 		        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
 		      </div>
@@ -46,7 +46,7 @@ class VueAccueil extends VueGenerique {
 		    <div class="thumbnail">
 		      <img src="..." alt="..." class="img-thumbnail">
 		      <div class="caption">
-		        <h3>Actu#3</h3>
+		        <h3>Choisir ingrédients</h3>
 		        <p>Sélectionne les ingrédients que tu possèdes déjà et trouve une recette adapté.</p>
 		        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
 		      </div>
