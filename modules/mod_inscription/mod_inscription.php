@@ -1,5 +1,5 @@
 <?php
-require_once('../../include/module_generique.php');
+require_once('./include/module_generique.php');
 class ModuleInscirption extends ModuleGenerique{
 
 	function __construct(){
