@@ -1,5 +1,7 @@
 <?php
 require_once('./include/module_generique.php');
+require_once('./include/controleur_generique.php');
+
 
 class ModInscirption extends ModuleGenerique{
 
