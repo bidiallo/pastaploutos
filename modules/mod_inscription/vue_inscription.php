@@ -9,20 +9,51 @@ class VueInscription extends VueGenerique{
 	}
 	function vue_form_inscription(/*askip token*/){
 		?> 
-		<form action = "index.php?module=inscription&action=form_inscription" method="POST">
+		
+		<div class="container" action = "index.php?module=inscription&action=form_inscription" method="POST">
 
-			<!-- <input id="" type="" name=""/><br/> -->
-			<input id="nom" type="text" name="nom"/><br/>
-			<input id="prenom" type="text" name="prenom"/><br/>
-			<input id="pseudo" type="text" name="pseudo"/><br/>
-			<input id="email" type="email" name="email"><br/>
-			<input id="mdp" type="password" name="mdp"/><br/>
-			<input id="mdp2" type="password" name="mdp2"/><br/>
-			<input id="age" type="date" name="age"/><br/>
-			
-			<input type="submit" value="Envoyer"/>
+	      <form class="form-signin">
+	        <h2 class="form-signin-heading">Inscription</h2>
 
-		</form><?php
+
+	         <div>
+		        <label for="inputNom" class="sr-only">Nom</label>
+		        <input type="password" id="inputPassword" class="form-control" placeholder="Nom" required>
+		    </div>
+
+		    <div>
+		        <label for="inputPrenom" class="sr-only">Prénom</label>
+		        <input type="password" id="inputPassword" class="form-control" placeholder="Prénom" required>
+		    </div>
+
+	        <div>
+		        <label for="inputPseudo" class="sr-only">Pseudo</label>
+		        <input type="text" id="pseudo" class="form-control" placeholder="Pseudo" required autofocus>
+		    </div>
+
+		   
+
+		    <div>
+		        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		    </div>
+
+		    <div>
+		        <label for="inputPassword" class="sr-only">Mot de passe</label>
+		        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+		    </div>
+
+		     <div>
+		        <label for="inputPassword" class="sr-only">Confirmation mot de passe</label>
+		        <input type="password" id="inputPassword" class="form-control" placeholder="Confirmation" required>
+		    </div>
+		    
+	        <button class="btn btn-lg btn-primary btn-block" type="submit">Inscription</button>
+	      </form>
+
+	    </div> <!-- /container -->
+
+		<?php
 	}
 }
 

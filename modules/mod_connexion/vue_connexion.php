@@ -28,7 +28,7 @@ class VueConnexion extends VueGenerique {
 	        <h2 class="form-signin-heading">Connectez-vous</h2>
 
 	        <div>
-		        <label for="inputEmail" class="sr-only">Pseudo</label>
+		        <label for="inputPseudo" class="sr-only">Pseudo</label>
 		        <input type="text" id="pseudo" class="form-control" placeholder="Pseudo" required autofocus>
 		    </div>
 
