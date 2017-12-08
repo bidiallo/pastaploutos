@@ -3,38 +3,25 @@ require_once ('include/modele_generique.php');
 
 class ModeleInscription extends ModeleGenerique {
 
-	/* public __construct(){
-		parent:: __construct();
-	} */
-
 	function modele_inscription($connexion,$tab){
 		//faire requete
-		$req = 'INSERT INTO p_user (nom,prenom,pseudo,mail,mdp,age) VALUES (?, ?, ?, ?, ?, ?);';
-		/*
-		if(!$prepare->execute(array($tab['nom'],$tab['prenom'], $tab['pseudo'], $tab['mail'], $tab['mdp1'], $tab['mdp2'],$tab['age'])));
-				return false; */
+		$req = "INSERT INTO p_user (nom_user,prenom_user,pseudo_user,mail_user,mdp_user, admin_user) VALUES (?, ?, ?, ?, ?,0)";
+		
+		//$mdp2 = htmlspecialchars($tab['mdp2']);
 
-		$nom = htmlspecialchars($tab['nom']);
-		$prenom = htmlspecialchars($tab['prenom']);
-		$pseudo = htmlspecialchars($tab['pseudo']);
-		$mail = htmlspecialchars($tab['email']);
-		$mdp = htmlspecialchars($tab['mdp1']);
-		$mdp2 = htmlspecialchars($tab['mdp2']);
-		$date = htmlspecialchars($tab['date']);
-		$date = new DateTime($date);
-		$date = $date->format('Y-m-d');
-
-
-		$VerifPseudo = $this->VerifPseudo($pseudo);
-		if($VerifEmail)
-			return "Erreur email";
-
-		$VerifEmail = $this->VerifEmail($email);
+		/*$VerifPseudo = $this->VerifPseudo($pseudo);
 		if($VerifPseudo)
 			return "Erreur pseudo";
-
+		
+		$VerifEmail = $this->VerifEmail($email);
+		if($VerifEmail)
+			return "Erreur email"; */
+		
 		$prepare=self::$connexion->prepare($req);
-		$result=$req->execute(array($nom,$prenom,$pseudo,$email, $mdp,$date));
+	
+		$result=$prepare->execute(array($nom,$prenom,$pseudo,$email, $mdp));
+		
+		
 	}
 
 	public function VerifPseudo($pseudo){

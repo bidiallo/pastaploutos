@@ -18,8 +18,15 @@ class ControleurInscription extends ControleurGenerique {
 	}
 
 
-	function getModel(){
-		return $this->model;
+	function ajout_inscription(){
+		$nom = htmlspecialchars($_POST['nom_user']);
+		$prenom = htmlspecialchars($_POST['prenom_user']);
+		$pseudo = htmlspecialchars($_POST['pseudo_user']);
+		$email = htmlspecialchars($_POST['mail_user']);
+		$mdp = htmlspecialchars($_POST['mdp_user']);
+		//$mdp2 = htmlspecialchars($tab['mdp2']);
+
+		return $this->modele->modele_inscription($nom, $prenom, $pseudo, $email, $mdp);
 	}
 
 
