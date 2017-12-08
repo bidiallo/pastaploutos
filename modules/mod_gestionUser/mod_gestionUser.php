@@ -4,7 +4,7 @@ require_once('modules/mod_gestionUser/controleur_gestionUser.php');
 require_once('modele_gestionUser_exception.php');
 
 
-class ModGestionUser extends VueGenerique {
+class ModGestionUser extends ModuleGenerique {
 
 	function __construct(){
 

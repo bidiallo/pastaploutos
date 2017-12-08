@@ -16,19 +16,29 @@ class VueGenerique{
 		$this-> contenu = $this -> contenu /*. ob_get_clean()*/;
 	}
 
+
 	function vue_erreur($msgerror){
 
-		?><font color = "ff0000"><?php echo $msgerror; ?></font><?php	
+		?> <div class="alert alert-success">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong><?php echo $msgerror; ?></strong>
+			</div>
+		<?php	
 	}
+
 
 	function vue_confirmation($msgconfirm){
 
-		?><font color = "008000"><?php echo $msgconfirm; ?></font><?php
+		?> <div class="alert alert-danger">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong><?php echo $msgconfirm; ?></strong>
+			</div>
+		<?php
 	}
+
 	
 	function getTitre() {
 		return $this->titre;
 	}
+
 
 	function getContenu() {
 		return $this->contenu;

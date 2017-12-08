@@ -32,8 +32,8 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="../navbar/">Default</a></li>-->
-            <li><a href="../navbar-static-top/">Inscription</a></li>
-            <li class="active"><a href="./">Connexion <span class="sr-only">(current)</span></a></li>
+            <li><a href="index.php?module=inscription&action=form_inscription">Inscription</a></li>
+            <li class="active"><a href="index.php?module=connexion&action=form_connexion">Connexion <span class="sr-only">(current)</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
