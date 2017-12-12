@@ -18,29 +18,29 @@ class VueInscription extends VueGenerique{
 
 	         <div>
 		        <label for="inputNom" class="sr-only">Nom</label>
-		        <input type="text" id="inputNom" class="form-control" placeholder="Nom" required autofocus>
+		        <input type="text" name="nom_user" id="inputNom" class="form-control" placeholder="Nom" required autofocus>
 		    </div>
 
 		    <div>
 		        <label for="inputPrenom" class="sr-only">Prénom</label>
-		        <input type="text" id="inputPrenom" class="form-control" placeholder="Prénom" required autofocus>
+		        <input type="text" name="prenom_user" id="inputPrenom" class="form-control" placeholder="Prénom" required autofocus>
 		    </div>
 
 	        <div>
 		        <label for="inputPseudo" class="sr-only">Pseudo</label>
-		        <input type="text" id="inputPseudo" class="form-control" placeholder="Pseudo" required autofocus>
+		        <input type="text" name="pseudo_user" id="inputPseudo" class="form-control" placeholder="Pseudo" required autofocus>
 		    </div>
 
 		   
 
 		    <div>
 		        <label for="inputEmail" class="sr-only">Adresse mail</label>
-        		<input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
+        		<input type="email" name="email_user" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
 		    </div>
 
 		    <div>
 		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
+		        <input type="password" name="mdp_user" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
 		    </div>
 
 		     <div>

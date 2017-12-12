@@ -3,12 +3,10 @@ require_once ('include/modele_generique.php');
 
 class ModeleInscription extends ModeleGenerique {
 
-	function modele_inscription($connexion,$tab){
+	function modele_inscription($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user){
 		//faire requete
-		$req = "INSERT INTO p_user (nom_user,prenom_user,pseudo_user,mail_user,mdp_user, admin_user) VALUES (?, ?, ?, ?, ?,0)";
+		$req = 'INSERT INTO p_user (nom_user,prenom_user,pseudo_user,email_user,mdp_user, admin) VALUES (?, ?, ?, ?, ?,0)';
 		
-		//$mdp2 = htmlspecialchars($tab['mdp2']);
-
 		/*$VerifPseudo = $this->VerifPseudo($pseudo);
 		if($VerifPseudo)
 			return "Erreur pseudo";
@@ -19,11 +17,11 @@ class ModeleInscription extends ModeleGenerique {
 		
 		$prepare=self::$connexion->prepare($req);
 	
-		$result=$prepare->execute(array($nom,$prenom,$pseudo,$email, $mdp));
+		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user, $mdp_user));
 		
 		
 	}
-
+/*
 	public function VerifPseudo($pseudo){
 		$existe = true;
 		$requetePseudo = 'SELECT pseudo_user FROM p_user WHERE pseudo_user=?';
@@ -47,6 +45,7 @@ class ModeleInscription extends ModeleGenerique {
 		}
 		return $existe;
 	}
+	*/
 //verif meme mdp
 }
 

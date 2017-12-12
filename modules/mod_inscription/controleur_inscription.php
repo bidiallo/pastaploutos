@@ -1,4 +1,4 @@
-
+ 
 <?php
 require_once('modele_inscription.php');
 require_once('vue_inscription.php');
@@ -10,7 +10,7 @@ class ControleurInscription extends ControleurGenerique {
 
 	function __construct() {
 		$this->vue=new VueInscription();
-		$this->model=new ModeleInscription();
+		$this->modele=new ModeleInscription();
 	}
 
 	function form_inscription() {
@@ -19,14 +19,14 @@ class ControleurInscription extends ControleurGenerique {
 
 
 	function ajout_inscription(){
-		$nom = htmlspecialchars($_POST['nom_user']);
-		$prenom = htmlspecialchars($_POST['prenom_user']);
-		$pseudo = htmlspecialchars($_POST['pseudo_user']);
-		$email = htmlspecialchars($_POST['mail_user']);
-		$mdp = htmlspecialchars($_POST['mdp_user']);
+		$nom_user = htmlspecialchars($_POST['nom_user']);
+		$prenom_user = htmlspecialchars($_POST['prenom_user']);
+		$pseudo_user = htmlspecialchars($_POST['pseudo_user']);
+		$email_user = htmlspecialchars($_POST['email_user']);
+		$mdp_user = htmlspecialchars($_POST['mdp_user']);
 		//$mdp2 = htmlspecialchars($tab['mdp2']);
 
-		return $this->modele->modele_inscription($nom, $prenom, $pseudo, $email, $mdp);
+		return $this->modele->modele_inscription($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user);
 	}
 
 
