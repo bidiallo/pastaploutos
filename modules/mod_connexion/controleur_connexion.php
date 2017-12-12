@@ -16,6 +16,9 @@ class ControleurConnexion extends ControleurGenerique {
 		$this->vue->vue_form_connexion();
 	}
 
+	function message_connexion_echoue(){
+		$this->vue->vue_erreur("La combinaison Pseudo, Mot de Passe que vous avez saisi est incorrect");
+	}
 
 	function deconnexion() {
 		unset($_SESSION['id_user']);
