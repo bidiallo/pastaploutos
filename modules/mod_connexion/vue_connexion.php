@@ -9,32 +9,20 @@ class VueConnexion extends VueGenerique {
 	}
 
 	function vue_form_connexion(/*mettre le token en param*/) {
-		?> 
-		<!--
-		<form action = "index.php?module=connexion&action=form_connexion" method="POST">
+		?>
+		<div class="container" >
 
-			Pseudo : <input id="pseudo" type="text" name="pseudo"/><br/>
-			Mot de passe : <input id="mdp" type="password" name="motdepasse"/><br/>
-			<input type="submit" value="Connexion"/>
-		
-
-
-		</form>
-		-->
-
-		<div class="container" action = "index.php?module=connexion&action=form_connexion" method="POST">
-
-	      <form class="form-signin">
+	      <form class="form-signin" action = "index.php?module=connexion&action=connexion" method="POST">
 	        <h2 class="form-signin-heading">Connectez-vous</h2>
 
 	        <div>
 		        <label for="inputPseudo" class="sr-only">Pseudo</label>
-		        <input type="text" id="pseudo" class="form-control" placeholder="Pseudo" required autofocus>
+		        <input type="text" id="pseudo" class="form-control" name="pseudo" placeholder="Pseudo" required autofocus>
 		    </div>
 
 		    <div>
 		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+		        <input type="password" id="inputPassword" class="form-control" name="mdp" placeholder="Mot de passe" required>
 		    </div>
 
 		    

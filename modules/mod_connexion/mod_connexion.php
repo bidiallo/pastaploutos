@@ -10,35 +10,40 @@ class ModConnexion extends ModuleGenerique {
 
 	function __construct() {
 
-		$action = isset($_GET['action']) ? $_GET['action'] : "default";
-
-		if(isset($_POST['pseudo'])){
-			$pseudo = $_POST['pseudo'];
-		}
-		if(isset($_POST['motdepasse'])){
-			$mdp = $_POST['motdepasse'];
-		}
+		$action = isset($_GET['action']) ? $_GET['action'] : "default";		
 
 		parent::__construct();
 		
-		$this -> controleur = new ControleurConnexion;
+		$this -> controleur = new ControleurConnexion();
 
 		switch ($action) {
 			case 'form_connexion':
-				$id_session = $this->controleur->get_model()->modele_authentification($pseudo, $mdp);
-				if($id_session != NULL)
-					echo "CONNECTEE MON GAAAAAAA ton id : $id_session\n";
-				else
-					echo "Combinaison incorrecte.\n";
+				$this->controleur->form_connexion();
 				break;
-			
+			case 'connexion':
+				if(isset($_POST['pseudo']) && isset($_POST['mdp'])){
+					$pseudo = $_POST['pseudo'];
+					$mdp = $_POST['mdp'];
+				}
+				else{
+					$pseudo = NULL;
+					$mdp = NULL;
+				}
+
+				$id_session = $this->controleur->getModel()->modele_authentification($pseudo, $mdp);
+				if($id_session != NULL){
+					echo "Connecté !\n";
+				}
+				else{
+					$this->controleur->message_connexion_echoue();
+					$this->controleur->form_connexion();
+				}
+				break;
 			default:
 				$this->controleur->form_connexion();
 				break;
 		}
 	}
-
-
 }
 
 ?>
