@@ -19,16 +19,16 @@ class VueGenerique{
 
 	function vue_erreur($msgerror){
 
-		?> <div class="alert alert-success">
+		?> <div class="alert alert-danger">
 				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong><?php echo $msgerror; ?></strong>
 			</div>
 		<?php	
 	}
 
 
-	function vue_confirmation($msgconfirm){
+	function vue_confirm($msgconfirm){
 
-		?> <div class="alert alert-danger">
+		?> <div class="alert alert-success">
 				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span><strong><?php echo $msgconfirm; ?></strong>
 			</div>
 		<?php

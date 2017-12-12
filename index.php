@@ -47,12 +47,14 @@ switch ($module) {
 		$nom_module = "ModInscription";
 		$classe_module = new $nom_module();
 		break;
-	case 'accueil':
+
+	case 'gestionUser':
 		
-		include_once ("modules/mod_accueil/mod_$module.php");
-		$nom_module = "modAccueil";
+		include_once ("modules/mod_gestionUser/mod_$module.php");
+		$nom_module = "ModGestionUser";
 		$classe_module = new $nom_module();
 		break;
+
 
 	 default:
 
