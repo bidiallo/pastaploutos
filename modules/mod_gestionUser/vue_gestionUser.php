@@ -46,7 +46,7 @@ class VueGestionUser extends VueGenerique {
 
 
 		    <div class="select-style">
-				<label for="combobox">Statut : </label>
+				<label for="combobox">Statut : </label><!--mettre msg d'info pour demander si la modif veut ^etre validé -->
 				<select >
 					<option>Admin</option>
 					<option>User</option>
@@ -69,21 +69,50 @@ class VueGestionUser extends VueGenerique {
 	function vue_liste_user($users) {
 		?>
 
+		<!--faire un foreach qui recupere les données -->
 		<div class="row">
+		<?php 
+		        foreach($users as $user) {?>
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
 		      <img src="..." alt="...">
-		      
+
 		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>...</p>
+		        
+		        	<div class="table table-responsive">
+		        		<table class="table">
+		        			<tbody>
+		        				<tr>Pseudo</tr>
+			        				<?php 
+			        					echo htmlspecialchars($user['pseudo_user']);
+			        				?>
+
+		        				<tr>Nom</tr>
+			        				<?php 
+			        					echo htmlspecialchars($user['pseudo_user']);
+			        				?>
+
+		        				<tr>Prénom</tr>
+		        					<?php 
+		        						echo htmlspecialchars($user['pseudo_user']);
+		        					?>
+		        			</tbody>
+		        			
+		        		</table>
+		        		
+		        	</div>
+
+
 		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 
 		    </div>
 		  </div>
+		  <?php } ?>
 		</div>
 
+
+		<?php
 
 
 	}

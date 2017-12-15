@@ -58,13 +58,17 @@ class ControleurGestionUser extends ControleurGenerique {
 		$this->vue->vue_form_ajout_user();
 
 	}
-/*
+
+	//en train de tester juste pour les users
 	function list_profil() {
 
-		if ($this->modele->) {
-			# code...
-		}
-	}*/
+		//if($this->modele->$_SESSION['id_user']) {}
+			
+			$user = $this->modele->modele_get_liste_user();
+			$this->vue->vue_liste_user($user);
+		//}
+
+	}
 	
 }
 
