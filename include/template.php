@@ -28,7 +28,7 @@ include_once('module_generique.php');
 	<body>
 
 	<?php /*var_dump($classe_module);
-	 echo $classe_module->getControleur()->getVue()->getContenu()*/?>
+	 echo $classe_module->getControleur()->getVue()->getContenu();*/?>
 
 	<!--footer-->
 		<footer class="footer" style= "margin-left: 15%; margin-top: 45%;">

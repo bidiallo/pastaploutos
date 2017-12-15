@@ -14,9 +14,9 @@ class VueAccueil extends VueGenerique {
 	function afficheAccueil() {
 		?>
 		<div class="jumbotron">
-	        <h1>Jumbotron heading</h1>
+	        <h1>Recettes pour les fetes !</h1>
 	        <p class="lead">Il neige. Commencez à préparer les fetes de fin d'année</p>
-	        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+	        <p><a class="btn btn-lg btn-success" href="#" role="button">En savoir plus...</a></p>
       	</div>
 
 		<div class="row">
@@ -26,7 +26,7 @@ class VueAccueil extends VueGenerique {
 		      <div class="caption">
 		        <h3>Recettes</h3>
 		        <p>Retrouver toutes les recettes déjà disponible...</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+		        <p><a href="index.php?module=recettes&action=liste_recette" class="btn btn-primary" role="button">Toutes les recettes</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -35,9 +35,9 @@ class VueAccueil extends VueGenerique {
 		    <div class="thumbnail">
 		      <img src="..." alt="..." class="img-thumbnail">
 		      <div class="caption">
-		        <h3>Actu#2</h3>
+		        <h3>Idées & Astuces</h3>
 		        <p>.Decouvrez nos nouvelles recettes de pates !</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+		        <p><a href="#" class="btn btn-primary" role="button">En savoir plus...</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -47,8 +47,8 @@ class VueAccueil extends VueGenerique {
 		      <img src="..." alt="..." class="img-thumbnail">
 		      <div class="caption">
 		        <h3>Choisir ingrédients</h3>
-		        <p>Sélectionne les ingrédients que tu possèdes déjà et trouve une recette adapté.</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+		        <p>Sélectionne les ingrédients et trouve une recette adapté.</p>
+		        <p><a href="#" class="btn btn-primary" role="button">Go cuisiner ! </a></p>
 		      </div>
 		    </div>
 		  </div>

@@ -69,7 +69,17 @@ class ControleurGestionUser extends ControleurGenerique {
 		//}
 
 	}
+
+	function modif_profil() {
+
+		$this->modele->modele_modif_user($_GET['id_user']);
+		$this->vue->vue_confirm("en cours de modification.");
+	}
 	
+	function supprimer_profil() {
+		$this->modele->modele_suppr_user($_GET['id_user']);
+		$this->vue->vue_confirm("Profil supprimé !");
+	}
 }
 
 
