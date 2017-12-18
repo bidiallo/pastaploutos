@@ -1,6 +1,6 @@
 <?php
-require_once('include/module_generique.php');
-require_once('include/controleur_generique.php');
+//require_once('include/module_generique.php');
+//require_once('include/controleur_generique.php');
 require_once('controleur_inscription.php');
 
 class ModInscription extends ModuleGenerique{
@@ -9,35 +9,35 @@ class ModInscription extends ModuleGenerique{
 		
 		parent:: __construct();
 		$this->controleur = new ControleurInscription();
+		//session_start();
 
 			if(isset($_SESSION['id_user'])){
-				echo "deja la bg";
+				echo "deja inscrit";
 
-			} else if(!isset($_GET['action'])){
-				$action = "form_inscription";
+			} elseif (!isset($_GET['action'])){
+
+				$action = "formulaire";
 			}
-			else 
-			$action = "ajout_inscription";
-			//session_start();
+			else $action=$_GET["action"];
+
+			
 
 		switch($action){
 
-			case 'form_inscription':
-			var_dump($action);
+			case "formulaire":
+				echo "form";
 				$this->controleur->form_inscription();
-				echo 'mehdi';
+				echo 'FORMULAIRE 1';
 				break;
-			case 'ajout_inscription':
-			var_dump($action);
-			echo 'coucou';
+			case "ajout_inscription":
+
 				$this->controleur->ajout_inscription();
-				echo 'mehdo';
+				echo 'AJOUT';
 				break;
 
 			default: 
-				var_dump($action);
-				$this->controleur->form_inscription();
-				echo 'mehdi';
+
+				echo 'FORMULAIRE 2';
 				break;
 
 		}

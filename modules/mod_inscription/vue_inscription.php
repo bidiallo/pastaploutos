@@ -10,7 +10,7 @@ class VueInscription extends VueGenerique{
 	function vue_form_inscription(/*askip token*/){
 		?> 
 		
-		<div class="container" action = "index.php?module=inscription&action=form_inscription" method="POST">
+		<div class="container" action = "index.php?module=inscription&action=ajout_inscription" method="POST">
 
 	      <form class="form-signin">
 	        <h2 class="form-signin-heading">Inscription</h2>
@@ -22,7 +22,7 @@ class VueInscription extends VueGenerique{
 		    </div>
 
 		    <div>
-		        <label for="inputPrenom" class="sr-only">Prénom</label>
+		        <label for="inputPrenom" class="sr-only">Prenom</label>
 		        <input type="text" name="prenom_user" id="inputPrenom" class="form-control" placeholder="Prénom" required autofocus>
 		    </div>
 
@@ -45,7 +45,7 @@ class VueInscription extends VueGenerique{
 
 		     <div>
 		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
+		        <input type="password" name="mdp_user2" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
 		    </div>
 		    
 	        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
