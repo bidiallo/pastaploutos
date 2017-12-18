@@ -77,7 +77,10 @@ class ControleurGestionUser extends ControleurGenerique {
 	}
 	
 	function supprimer_profil() {
-		$this->modele->modele_suppr_user($_GET['id_user']);
+		$id_user = htmlspecialchars($id_user);
+		$this->modele->modele_suppr_user($id_user);
+		session_destroy();
+		header('Location:index.php?module=accueil');
 		$this->vue->vue_confirm("Profil supprimé !");
 	}
 }

@@ -16,7 +16,8 @@ if(!session_start()) {
 }
 
 
-$module = isset($_GET['module']) ? $_GET['module'] : "accueil";
+$module = isset($_GET['module']) ? $_GET['module'] : "cover";
+
 
 switch ($module) {
 
@@ -60,9 +61,8 @@ switch ($module) {
 
 		$classe_module = new ModuleGenerique();
 		header('Location: index.php?module=cover');
-
-	$classe_module->getControleur()->getVue()->tamponVersContenu();
 }
+	$classe_module->getControleur()->getVue()->tamponVersContenu();
 
 require_once("include/template.php");
 

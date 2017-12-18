@@ -118,6 +118,10 @@ class VueGestionUser extends VueGenerique {
 
 	}
 
+	function vue_form_modif() {
+		
+	}
+
 
 }
 
