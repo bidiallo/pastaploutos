@@ -26,9 +26,12 @@ class ModGestionUser extends ModuleGenerique {
 				$this->controleur->list_profil();
 				break;
 
-			case 'supprimer_profil':
+			case 'suppr_profil':
 				$this->controleur->supprimer_profil();
 				break;
+
+			case 'modif_profil':
+				$this->controleur->modif_profil();
 				
 			default:
 				$this->controleur->list_profil();

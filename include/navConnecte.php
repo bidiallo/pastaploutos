@@ -1,7 +1,7 @@
 <?php require_once('modele_generique.php'); ?>
 
 
-	<nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,8 +25,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="../navbar/">Default</a></li>-->
-            <li><a href="index.php?module=inscription&action=form_inscription"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
-            <li class="active"><a href="index.php?module=connexion&action=form_connexion"><span class="glyphicon glyphicon-log-in"></span> Connexion <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="index.php?module=connexion&action=form_connexion"><span class="glyphicon glyphicon-user"></span> Connexion <span class="sr-only">(current)</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

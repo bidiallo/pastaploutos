@@ -46,7 +46,7 @@ class VueGestionUser extends VueGenerique {
 
 
 		    <div class="select-style">
-				<label for="combobox">Statut : </label>
+				<label for="combobox">Statut : </label><!--mettre msg d'info pour demander si la modif veut ^etre validé -->
 				<select >
 					<option>Admin</option>
 					<option>User</option>
@@ -69,21 +69,51 @@ class VueGestionUser extends VueGenerique {
 	function vue_liste_user($users) {
 		?>
 
+		<!--faire un foreach qui recupere les données -->
+		<?php foreach($users as $user) {?>
 		<div class="row">
+	
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      
+		      <img src="images/profil.jpg" alt="photo de profil" width="200" height="184.5">
+
 		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		        
+		        	<div class="table table-responsive">
+		        		<table class="table-vertical">
+		        			<thead>
+		        				<tr>
+		        				<th>Pseudo</th>
+		        				<th>Nom</th>
+		        				<th>Prénom</th>
+		        				</tr>	
+		        			</thead>
+
+		        			<tbody>
+		        				<tr>
+		        					<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
+			        				<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
+			        				<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
+		        				</tr>
+		        			</tbody>
+		        			
+		        		</table>
+		        		
+		        	</div>
+
+
+		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=modif_profil&id=?". class="btn btn-default" role="button"> Modifier </a></p>
+
+		        <p><a id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil" class="btn btn-danger" role="button">Supprimer</a></p>
 		      </div>
 
 		    </div>
 		  </div>
+		  
 		</div>
+		<?php } ?>
 
+		<?php
 
 
 	}
@@ -91,5 +121,23 @@ class VueGestionUser extends VueGenerique {
 
 }
 
+
+/*
+								<th>Pseudo</th>
+			        				<?php 
+			        					echo htmlspecialchars($user['pseudo_user']);
+			        				?>
+
+		        				<th>Nom</th>
+			        				<?php 
+			        					echo htmlspecialchars($user['pseudo_user']);
+			        				?>
+
+		        				<th>Prénom</th>
+		        					<?php 
+		        						echo htmlspecialchars($user['pseudo_user']);
+		        					?>
+
+*/
 
 ?>
