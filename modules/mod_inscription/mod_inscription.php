@@ -16,7 +16,7 @@ class ModInscription extends ModuleGenerique{
 
 			} elseif (!isset($_GET['action'])){
 
-				$action = "formulaire";
+				$action = "form_inscription";
 			}
 			else { 
 				$action=$_GET["action"];
@@ -26,13 +26,13 @@ class ModInscription extends ModuleGenerique{
 
 		switch($action){
 
-			case "formulaire":
+			case "form_inscription":
 				echo "form";
 				$this->controleur->form_inscription();
 				echo 'FORMULAIRE 1';
 				break;
-			case "ajout_inscription":
 
+			case "ajout_inscription":
 				$this->controleur->ajout_inscription();
 				echo 'AJOUT';
 				break;

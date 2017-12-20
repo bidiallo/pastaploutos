@@ -1,11 +1,13 @@
 <?php 
-//require_once ('include/modele_generique.php');
+require_once ('include/modele_generique.php');
 
 class ModeleInscription extends ModeleGenerique {
 
 	function modele_inscription($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user, $mdp_user2){
 		//faire requete
 		$req = 'INSERT INTO p_user (nom_user,prenom_user,pseudo_user,email_user,mdp_user, mdp_user2, admin) VALUES (?, ?, ?, ?, ?, ?, 0)';
+		var_dump($req);
+
 		
 		/*$VerifPseudo = $this->VerifPseudo($pseudo);
 		if($VerifPseudo)
@@ -16,9 +18,10 @@ class ModeleInscription extends ModeleGenerique {
 			return "Erreur email"; */
 		
 		$prepare=self::$connexion->prepare($req);
+
 	
 		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user, $mdp_user, $mdp_user2));
-		
+		var_dump($result);
 		
 	}
 /*
