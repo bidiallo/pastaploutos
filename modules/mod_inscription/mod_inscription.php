@@ -18,7 +18,9 @@ class ModInscription extends ModuleGenerique{
 
 				$action = "formulaire";
 			}
-			else $action=$_GET["action"];
+			else { 
+				$action=$_GET["action"];
+			}
 
 			
 
@@ -36,7 +38,7 @@ class ModInscription extends ModuleGenerique{
 				break;
 
 			default: 
-
+				$this->controleur->form_inscription();
 				echo 'FORMULAIRE 2';
 				break;
 

@@ -19,7 +19,7 @@ class ControleurInscription extends ControleurGenerique {
 
 
 	function ajout_inscription(){
-		var_dump($_POST);
+		//var_dump($_POST);
 		$nom_user = htmlspecialchars($_POST['nom_user']);
 		$prenom_user = htmlspecialchars($_POST['prenom_user']);
 		$pseudo_user = htmlspecialchars($_POST['pseudo_user']);
