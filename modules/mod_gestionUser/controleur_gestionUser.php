@@ -70,12 +70,14 @@ class ControleurGestionUser extends ControleurGenerique {
 
 	}
 
+	
 	function modif_profil() {
 
 		$this->modele->modele_modif_user($_GET['id_user']);
 		$this->vue->vue_confirm("en cours de modification.");
 	}
 	
+
 	function supprimer_profil() {
 		$id_user = htmlspecialchars($id_user);
 		$this->modele->modele_suppr_user($id_user);

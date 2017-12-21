@@ -64,14 +64,22 @@ class VueGestionUser extends VueGenerique {
 	}
 
 
+	function vue_modif_user() {
+	?>
+
+		<form method="POST" action="index.php?module=gestionUser&action=modif_profil">
+			
+			<input type="hidden" name="">Nouveau mail : 
+
+		</form>
+	}
+
 
 	//barre de recherche en ajax pour voir si le user saisie est dans la BD
 	function vue_liste_user($users) {
-		?>
-
-		<!--faire un foreach qui recupere les données -->
-		<?php foreach($users as $user) {?>
-		<div class="row">
+	
+	?>
+		<!--<div class="row">
 	
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
@@ -87,13 +95,19 @@ class VueGestionUser extends VueGenerique {
 		        				<th>Nom</th>
 		        				<th>Prénom</th>
 		        				</tr>	
-		        			</thead>
+		        			</thead>-->
 
-		        			<tbody>
+
+
+							<!--faire un foreach qui recupere les données -->
+							<?php //foreach($users as $user) {
+								//var_dump($users);?>
+		        			
+		        			<!--<tbody>
 		        				<tr>
-		        					<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
-			        				<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
-			        				<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
+		        					<td><?php //echo htmlspecialchars($user['pseudo_user']);?></td>
+			        				<td><?php //echo htmlspecialchars($user['prenom_user']);?></td>
+			        				<td><?php //echo htmlspecialchars($user['nom_user']);?></td>
 		        				</tr>
 		        			</tbody>
 		        			
@@ -102,7 +116,7 @@ class VueGestionUser extends VueGenerique {
 		        	</div>
 
 
-		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=modif_profil&id=?". class="btn btn-default" role="button"> Modifier </a></p>
+		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=modif_profil". class="btn btn-default" role="button"> Modifier </a></p>
 
 		        <p><a id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil" class="btn btn-danger" role="button">Supprimer</a></p>
 		      </div>
@@ -110,8 +124,9 @@ class VueGestionUser extends VueGenerique {
 		    </div>
 		  </div>
 		  
-		</div>
-		<?php } ?>
+		</div>-->
+
+		<?php //} ?>
 
 		<?php
 
@@ -125,23 +140,5 @@ class VueGestionUser extends VueGenerique {
 
 }
 
-
-/*
-								<th>Pseudo</th>
-			        				<?php 
-			        					echo htmlspecialchars($user['pseudo_user']);
-			        				?>
-
-		        				<th>Nom</th>
-			        				<?php 
-			        					echo htmlspecialchars($user['pseudo_user']);
-			        				?>
-
-		        				<th>Prénom</th>
-		        					<?php 
-		        						echo htmlspecialchars($user['pseudo_user']);
-		        					?>
-
-*/
 
 ?>
