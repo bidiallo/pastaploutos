@@ -5,10 +5,9 @@ class ModeleInscription extends ModeleGenerique {
 
 	function modele_inscription($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user, $mdp_user2){
 		//faire requete
-		$req = 'INSERT INTO p_user (nom_user,prenom_user,pseudo_user,email_user,mdp_user, mdp_user2, admin) VALUES (?, ?, ?, ?, ?, ?, 0)';
-		var_dump($req);
+		$req = 'INSERT INTO p_user (nom_user,prenom_user,pseudo_user,mail_user,mdp_user,admin) VALUES (?, ?, ?, ?, ?, 0)';
 
-		
+	//	var_dump($req);
 		/*$VerifPseudo = $this->VerifPseudo($pseudo);
 		if($VerifPseudo)
 			return "Erreur pseudo";
@@ -19,10 +18,9 @@ class ModeleInscription extends ModeleGenerique {
 		
 		$prepare=self::$connexion->prepare($req);
 
-	
-		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user, $mdp_user, $mdp_user2));
-		var_dump($result);
-		
+		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user, $mdp_user));
+
+
 	}
 /*
 	public function VerifPseudo($pseudo){

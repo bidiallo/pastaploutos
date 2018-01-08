@@ -34,7 +34,7 @@ class ModInscription extends ModuleGenerique{
 
 			case "ajout_inscription":
 				$this->controleur->ajout_inscription();
-				echo 'AJOUT';
+				//echo 'AJOUT';
 				break;
 
 			default: 
