@@ -63,7 +63,9 @@ Camille : inscription
 
 07/12/2017
 Bineta : Accueil
-Camille : Modif MCD enelver date de naissance
+Camille : Modif MCD enlever date de naissance
 Faire un pop up quand requetes marche pas
 Finir module gestion user
 
+08/01/2018
+Bineta : Modif module connexion pour accéder au nav
