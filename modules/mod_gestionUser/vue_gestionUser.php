@@ -11,9 +11,9 @@ class VueGestionUser extends VueGenerique {
 	function vue_form_ajout_user() {
 
 		?>
-		<div class="container" action = "index.php?module=gestionUser&action=form_ajout_user" method="POST">
+		<div class="container">
 
-	      <form class="form-signin">
+	      <form class="form-signin"  action = "index.php?module=gestionUser&action=form_ajout_user" method="POST">
 	        <h2 class="form-signin-heading">Ajouter un utilisateur</h2>
 
 
