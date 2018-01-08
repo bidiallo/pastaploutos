@@ -69,3 +69,4 @@ Finir module gestion user
 
 08/01/2018
 Bineta : Modif module connexion pour accéder au nav
+Camille : Securité Inscription : hashage, verif email et pseudo non utilisé
