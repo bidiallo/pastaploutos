@@ -16,7 +16,7 @@ if(!session_start()) {
 }
 
 var_dump($_GET['module']); //affiche pour verifier si le module et l'action existe bien
-var_dump($_GET['action']); // si ils sont a null, redirige vers la cover ---> donc faux! :/
+//var_dump($_GET['action']); // si ils sont a null, redirige vers la cover ---> donc faux! :/
 
 $module = isset($_GET['module']) ? $_GET['module'] : "cover";
 
@@ -29,6 +29,7 @@ switch ($module) {
 		$classe_module = new $nom_module();
 		break;
 
+
 	case 'accueil':
 		
 		include_once ("modules/mod_accueil/mod_$module.php");
@@ -36,11 +37,19 @@ switch ($module) {
 		$classe_module = new $nom_module();
 		break;
 	
+
 	case 'connexion':
 
 		include_once ("modules/mod_connexion/mod_$module.php");
 		$nom_module = "ModConnexion";
 		$classe_module = new $nom_module();
+		break;
+
+
+	case 'deconnexion':
+
+		session_destroy();
+		header('Location:index.php?module=accueil');
 		break;
 
 
@@ -51,6 +60,7 @@ switch ($module) {
 		$classe_module = new $nom_module();				
 
 		break;
+
 
 	case 'gestionUser':
 		

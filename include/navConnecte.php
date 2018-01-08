@@ -24,8 +24,28 @@
             <li><a href="#contact">Choisis tes ingrédients</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!--<li><a href="../navbar/">Default</a></li>-->
-            <li class="active"><a href="index.php?module=connexion&action=form_connexion"><span class="glyphicon glyphicon-user"></span> Connexion <span class="sr-only">(current)</span></a></li>
+            
+          <div id="mySidenav" class="sidenav">
+            
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Paramètres du compte</a>
+            <a href="#">Recette favoris</a>
+            <a href="index.php?module=deconnexion">Deconnexion</a>
+
+          </div>
+          <!--
+          <ul id="menu-accordeon">
+            <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              <ul>
+                  <li></li>
+                
+              </ul>
+              
+            </li>
+          </ul>
+
+
+            <li class="active"><a href="index.php?module=connexion&action=form_connexion"><span class="glyphicon glyphicon-user"></span> Deconnexion <span class="sr-only">(current)</span></a></li>-->
           </ul>
         </div><!--/.nav-collapse -->
       </div>

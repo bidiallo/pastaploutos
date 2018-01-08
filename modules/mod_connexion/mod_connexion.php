@@ -20,10 +20,20 @@ class ModConnexion extends ModuleGenerique {
 			case 'form_connexion':
 				$this->controleur->form_connexion();
 				break;
-			case 'connexion':
+
+			case 'authentification' :
+				$this->controleur->authentification();
+				break;
+
+			case 'deconnexion' :
+				$this->controleur->deconnexion();
+				break;
+
+			/*case 'connexion':
 				if(isset($_POST['pseudo']) && isset($_POST['mdp'])){
 					$pseudo = $_POST['pseudo'];
 					$mdp = $_POST['mdp'];
+					//id_user $_SESSION
 				}
 				else{
 					$pseudo = NULL;
@@ -33,12 +43,13 @@ class ModConnexion extends ModuleGenerique {
 				$id_session = $this->controleur->getModel()->modele_authentification($pseudo, $mdp);
 				if($id_session != NULL){
 					echo "Connecté !\n";
+					
 				}
 				else{
 					$this->controleur->message_connexion_echoue();
 					$this->controleur->form_connexion();
 				}
-				break;
+				break;*/
 			default:
 				$this->controleur->form_connexion();
 				break;

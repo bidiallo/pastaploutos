@@ -2,6 +2,7 @@
 include_once('controleur_generique.php');
 include_once('module_generique.php');
 
+
 ?>
 
 <!DOCTYPE html>
@@ -24,12 +25,23 @@ include_once('module_generique.php');
 		<title>PastaPloutos</title>
 	</head>
 
-	<?php //include_once('nav.php');?>
+	<header>
+		
+		<?php
+			require_once('composants/nav/nav.php');
+			//require_once('composants/connexion/connexion.php');
+			$nav = new Nav();
+		?>
+	</header>
+
+
 	<body>
 
-	<?php /*var_dump($classe_module);
-	 echo $classe_module->getControleur()->getVue()->getContenu();*/?>
+		<?php var_dump($classe_module);
+	 			echo $classe_module->getControleur()->getVue()->getContenu();?>
 
+
+	 </body>
 	<!--footer-->
 		<footer class="footer" style= "margin-left: 15%; margin-top: 45%;">
 			<div class="container">
@@ -67,5 +79,5 @@ include_once('module_generique.php');
     	<!-- Latest compiled and minified JavaScript -->
     	<!-- Include all compiled plugins (below), or include individual files as needed -->
     	<script src="/include/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
-	</body>
+	
 </html>

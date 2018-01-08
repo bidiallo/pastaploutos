@@ -79,7 +79,7 @@ class VueGestionUser extends VueGenerique {
 	function vue_liste_user($users) {
 	
 	?>
-		<!--<div class="row">
+		<div class="row">
 	
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
@@ -100,14 +100,14 @@ class VueGestionUser extends VueGenerique {
 
 
 							<!--faire un foreach qui recupere les données -->
-							<?php //foreach($users as $user) {
-								//var_dump($users);?>
+							<?php foreach($users as $user) {
+								var_dump($users);?>
 		        			
-		        			<!--<tbody>
+		        			<tbody>
 		        				<tr>
-		        					<td><?php //echo htmlspecialchars($user['pseudo_user']);?></td>
-			        				<td><?php //echo htmlspecialchars($user['prenom_user']);?></td>
-			        				<td><?php //echo htmlspecialchars($user['nom_user']);?></td>
+		        					<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
+			        				<td><?php echo htmlspecialchars($user['prenom_user']);?></td>
+			        				<td><?php echo htmlspecialchars($user['nom_user']);?></td>
 		        				</tr>
 		        			</tbody>
 		        			
@@ -126,7 +126,7 @@ class VueGestionUser extends VueGenerique {
 		  
 		</div>-->
 
-		<?php //} ?>
+		<?php } ?>
 
 		<?php
 

@@ -9,11 +9,38 @@ class ControleurConnexion extends ControleurGenerique {
 
 	function __construct() {
 		$this->vue=new VueConnexion();
-		$this->model=new ModeleConnexion();
+		$this->modele=new ModeleConnexion();
 	}
 
 	function form_connexion() {
 		$this->vue->vue_form_connexion();
+	}
+
+	function authentification() {
+
+		if ( !isset($_POST['pseudo']) || $_POST['pseudo'] == "" 
+		|| !isset($_POST['mdp']) || $_POST['mdp'] == "" ) {
+			$this->vue->vue_erreur("Champ(s) invalide(s).");
+			
+		}
+
+		else {
+				//$pseudo = $_POST['pseudo'];
+				//$mdp = $_POST['mdp'];
+			
+			
+			$_SESSION['id_user'] = $this->modele->modele_authentification($_POST['pseudo'], $_POST['mdp']);
+
+			if (!isset($_SESSION['id_user'])) {
+				$this->vue->vue_erreur("Impossible de se connecter. Veuillez réessayer !");
+				$this->vue->vue_form_connexion();
+			}
+			else {
+				$this->vue->vue_confirm("Connecté en tant que " . $_SESSION['id_user']);//mettre en JS pdt 5s l'affichage
+				header('Location: index.php?module=accueil');
+				exit();
+			}
+		}
 	}
 
 	function message_connexion_echoue(){
@@ -22,7 +49,7 @@ class ControleurConnexion extends ControleurGenerique {
 
 	function deconnexion() {
 		unset($_SESSION['id_user']);
-		$this->vue->vue_confirmation("Vous etes déconnecté !");
+		$this->vue->vue_confirm("Vous etes déconnecté !");
 	}
 
 	function getModel(){
