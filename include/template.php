@@ -25,20 +25,18 @@ include_once('module_generique.php');
 		<title>PastaPloutos</title>
 	</head>
 
-<<<<<<< HEAD
+
 	<header>
 		
 		<?php
 			require_once('composants/nav/nav.php');
-			//require_once('composants/connexion/connexion.php');
+			require_once('composants/connexion/connexion.php');
 			$nav = new Nav();
 		?>
 	</header>
 
 
-=======
-	<?php include_once('nav.php');?>
->>>>>>> 8685b573082920eee1514faf6b487f154c7aba96
+
 	<body>
 
 		<?php var_dump($classe_module);
