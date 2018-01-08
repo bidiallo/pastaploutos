@@ -24,7 +24,7 @@ include_once('module_generique.php');
 		<title>PastaPloutos</title>
 	</head>
 
-	<?php// include_once('nav.php');?>
+	<?php include_once('nav.php');?>
 	<body>
 
 	<?php /*var_dump($classe_module);
