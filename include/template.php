@@ -25,6 +25,7 @@ include_once('module_generique.php');
 		<title>PastaPloutos</title>
 	</head>
 
+<<<<<<< HEAD
 	<header>
 		
 		<?php
@@ -35,6 +36,9 @@ include_once('module_generique.php');
 	</header>
 
 
+=======
+	<?php include_once('nav.php');?>
+>>>>>>> 8685b573082920eee1514faf6b487f154c7aba96
 	<body>
 
 		<?php var_dump($classe_module);

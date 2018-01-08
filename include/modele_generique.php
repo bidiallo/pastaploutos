@@ -7,6 +7,7 @@ class ModeleGenerique{
 
 	 static function init(){
 		self::$connexion=new PDO(self::$dns, self::$user, self::$password);
+		
 	}
 
 }
