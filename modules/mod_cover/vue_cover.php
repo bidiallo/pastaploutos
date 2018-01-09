@@ -36,7 +36,7 @@ class VueCover extends VueGenerique {
 	            <h1 class="cover-heading">Bienvenue sur le site PastaPloutos</h1>
 	            <p class="lead">Page où apparaitra une animation de fond </p>
 	            <p class="lead" onclick="redirection()">
-	              <a href="#" class="btn btn-lg btn-default" >Learn more</a>
+	              <a href="#" class="btn btn-lg btn-default" >Venez manger !</a>
 	            </p>
 	          </div>
 

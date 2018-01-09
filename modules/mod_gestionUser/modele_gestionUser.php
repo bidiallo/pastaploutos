@@ -14,10 +14,10 @@ class ModeleGestionUser extends ModeleGenerique {
 
 	}
 
-
+//pour tous les users, admin compris
 	function modele_get_liste_user() {
 
-		$req = 'SELECT * FROM p_user WHERE admin=false';
+		$req = 'SELECT * FROM p_user ';
 
 		$reqPrep = self::$connexion->prepare($req);
 
@@ -28,7 +28,8 @@ class ModeleGestionUser extends ModeleGenerique {
 		return $enregistrement;
 	}
 
-
+//uniquement pour les admin
+/*
 	function modele_get_liste_admin() {
 
 		$req = 'SELECT * FROM p_user WHERE admin=true';
@@ -40,7 +41,7 @@ class ModeleGestionUser extends ModeleGenerique {
 		$enregistrement = $reqPrep->all(PDO::FETCH_ASSOC);
 
 		return $enregistrement;
-	}
+	}*/
 
 
 	function modele_recuperer_info_user($id_user) {

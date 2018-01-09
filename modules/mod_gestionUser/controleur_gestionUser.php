@@ -70,6 +70,11 @@ class ControleurGestionUser extends ControleurGenerique {
 
 	}
 
+	function consulterProfil() {
+		$info = $this->modele->modele_recuperer_info_user($_GET['id_user']);
+		$this->vue->vue_consulter_profil($info);
+	}
+
 	
 	function modif_profil() {
 

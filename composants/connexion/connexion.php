@@ -7,8 +7,10 @@ require_once ('composants/connexion/connexion_vue.php');
 
 class Connexion extends ComposantGenerique {
 
-	$this->controleur = new ConnexionControleur();
-	$this->controleur->affiche();
+	public function __construct() {
+		$this->controleur = new ConnexionControleur();
+		$this->controleur->affiche();
+	}
 }
 
 
