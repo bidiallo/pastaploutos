@@ -3,7 +3,7 @@
 
 class ComposantGenerique {
 
-	protected $contenu;
+	protected $controleur;
 
 	public function __construct() {
 		

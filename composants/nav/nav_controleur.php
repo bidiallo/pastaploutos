@@ -17,7 +17,7 @@ class NavControleur extends ControleurGenerique {
 			"choisiringr" => "Choisir les ingrédients" 
 			);
 
-		if (isset($_SESSION['id_user']) && isset($_SESSION['id_user'] != "")) {
+		if (isset($_SESSION['id_user']) && $_SESSION['id_user'] != "") {
 			//admin et user connecté
 			$nav["paramCompte"] = "Paramètres du compte";
 			
