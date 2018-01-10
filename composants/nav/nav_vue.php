@@ -13,7 +13,7 @@ class NavVue extends ComposantVueGenerique {
 
 				<div class="navbar-header">
 					<a class="navbar-brand" href="index.php?module=accueil">
-					<img src="/images/campao.png" width="130" height="30" style="margin-top: -5px;">
+					<img src="images/campao.png" width="150" height="50" style="margin-top: -5px;">
 					</a>		
 				</div>
 

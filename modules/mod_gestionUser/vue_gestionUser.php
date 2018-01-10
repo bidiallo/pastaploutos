@@ -69,14 +69,11 @@ class VueGestionUser extends VueGenerique {
 
 		<form method="POST" action="index.php?module=gestionUser&action=modif_profil">
 			
-			<input type="hidden" name="">Nouveau mail : 
+			<input type="hidden" name="">Nouveau mail : >
 
-<<<<<<< HEAD
+
 		</form>
 		<?php
-=======
-		</form><?php
->>>>>>> 99c9dab429ccf51174277de56cd927fd7605482f
 	}
 
 	
@@ -85,14 +82,18 @@ class VueGestionUser extends VueGenerique {
 	
 	?>
 		<div class="row">
-	
+			<!--faire un foreach qui recupere les données -->
+				<?php foreach($users as $user) {
+								//var_dump($users);?>
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="images/profil.jpg" alt="photo de profil" width="200" height="184.5">
+		      <img src="images/profil.jpg" alt="photo de profil" width="150" height="135.5">
 
 		      <div class="caption">
 		        
 		        	<div class="table table-responsive">
+
+							
 		        		<table class="table-vertical">
 		        			<thead>
 		        				<tr>
@@ -100,13 +101,10 @@ class VueGestionUser extends VueGenerique {
 		        				<th>Nom</th>
 		        				<th>Prénom</th>
 		        				</tr>	
-		        			</thead>-->
+		        			</thead>
 
 
 
-							<!--faire un foreach qui recupere les données -->
-							<?php foreach($users as $user) {
-								//var_dump($users);?>
 		        			
 		        			<tbody>
 		        				<tr>
@@ -120,7 +118,7 @@ class VueGestionUser extends VueGenerique {
 		        		
 		        	</div>
 
-
+		        	
 		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=profil". class="btn btn-default" role="button"> Voir plus </a></p>
 
 		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=modif_profil". class="btn btn-default" role="button"> Modifier </a></p>
@@ -131,18 +129,14 @@ class VueGestionUser extends VueGenerique {
 		    </div>
 		  </div>
 		  
+		<?php }	?>
 		</div>
-<<<<<<< HEAD
-=======
-
-		<?php } 
->>>>>>> 99c9dab429ccf51174277de56cd927fd7605482f
-
-		<?php } 
 
 
-<<<<<<< HEAD
-=======
+		<?php 
+	} 
+	 
+
 	function vue_consulter_profil($info) {
 		?>
 
@@ -177,23 +171,20 @@ class VueGestionUser extends VueGenerique {
                                     <td><strong>Pseudo</strong></td>
                                     <td><?php echo htmlspecialchars($info['pseudo_user']);?></td>
                                 </tr>
-                    			<!--voir si mettre le mdp ou pas-->
+                    		
                         </tbody>
                 </table>                      
 
               </div>
               <?php	 				
-     				echo "<form class='btnn' action='index.php?module=gestionUser&action=suppr_profil&id=". htmlspecialchars($info[0]['id_user'])."'method='POST'>"  ?>
+     				echo "<form class='btnn' action='index.php?module=gestionUser&action=suppr_profil&id=". htmlspecialchars($info['id_user'])."'method='POST'>"  ?>
       
        <input class="btn btn-danger" type="submit" value="Désactiver"/>
-                      
-          
-
-		<?php
->>>>>>> 99c9dab429ccf51174277de56cd927fd7605482f
+                       
+       <?php
 	}
 
 
 }
 
-?>
+

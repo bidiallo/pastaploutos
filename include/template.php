@@ -39,7 +39,7 @@ include_once('module_generique.php');
 
 	<body>
 
-		<?php var_dump($classe_module);
+		<?php //var_dump($classe_module);
 	 			echo $classe_module->getControleur()->getVue()->getContenu();?>
 
 
