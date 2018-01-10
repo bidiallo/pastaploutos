@@ -72,9 +72,10 @@ class VueGestionUser extends VueGenerique {
 			<input type="hidden" name="">Nouveau mail : 
 
 		</form>
+		<?php
 	}
 
-
+	
 	//barre de recherche en ajax pour voir si le user saisie est dans la BD
 	function vue_liste_user($users) {
 	
@@ -101,7 +102,7 @@ class VueGestionUser extends VueGenerique {
 
 							<!--faire un foreach qui recupere les données -->
 							<?php foreach($users as $user) {
-								var_dump($users);?>
+								//var_dump($users);?>
 		        			
 		        			<tbody>
 		        				<tr>
@@ -124,21 +125,14 @@ class VueGestionUser extends VueGenerique {
 		    </div>
 		  </div>
 		  
-		</div>-->
+		</div>
 
-		<?php } ?>
-
-		<?php
+		<?php } 
 
 
-	}
-
-	function vue_form_modif() {
-		
 	}
 
 
 }
-
 
 ?>

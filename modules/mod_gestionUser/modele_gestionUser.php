@@ -6,7 +6,7 @@ class ModeleGestionUser extends ModeleGenerique {
 
 	function modele_ajout_user($nom, $prenom, $pseudo, $mail, $admin) {
 
-		$req = 'INSERT INTO p_user (nom_user, prenom_user, pseudo_user, mail_user, mdp_user, admin) VALUES (?,?,?,?,?,?)';
+		$req = 'INSERT INTO p_user (nom_user, prenom_user, pseudo_user, mail_user, mdp_user,mdp_user2, admin) VALUES (?,?,?,?,?,?,0)'; 
 
 		$reqPrep = self::$connexion->prepare($req);
 
@@ -17,7 +17,7 @@ class ModeleGestionUser extends ModeleGenerique {
 
 	function modele_get_liste_user() {
 
-		$req = 'SELECT * FROM p_user WHERE admin=false';
+		$req = 'SELECT * FROM p_user ';
 
 		$reqPrep = self::$connexion->prepare($req);
 

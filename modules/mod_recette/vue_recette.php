@@ -1,3 +1,18 @@
+<?php
+require_once('include/vue_generique.php');
+
+class VueRecette extends VueGenerique{
+   
+  function __construct(){
+    parent::__construct();
+  }
+  function vue_form_recette(){
+    ?> 
+    <div class="container" >
+
+        <form class="form-signin" action ="index.php?module=recette&action=liste_recette" method="post">
+
+          <h2 class="form-signin-heading">Inscription</h2>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -13,64 +28,6 @@
         </div>
         <div class="text">
           <p>recette 1</p>
-        </div>
-      </div>
-      <div class="recette n2">
-        <div class="image">
-          <img src="" alt="">
-        </div>
-        <div class="text">
-          <p>recette 2</p>
-        </div>
-      </div>
-      <div class="recette n3">
-        <div class="image">
-          <img src="" alt="">
-        </div>
-        <div class="text">
-          <p>recette 3</p>
-        </div>
-      </div>
-      <div class="recette n4">
-        <div class="image">
-          <img src="" alt="">
-        </div>
-        <div class="text">
-          <p>recette 4</p>
-        </div>
-      </div>
-    </div>
-    <div class="container c2">
-      <div class="recette n5">
-        <div class="image">
-          <img src="" alt="">
-        </div>
-        <div class="text">
-          <p>recette 5</p>
-        </div>
-      </div>
-      <div class="recette n6">
-        <div class="image">
-          <img src="" alt="">
-        </div>
-        <div class="text">
-          <p>recette 6</p>
-        </div>
-      </div>
-      <div class="recette n7">
-        <div class="image">
-          <img src="" alt="">
-        </div>
-        <div class="text">
-          <p>recette 7</p>
-        </div>
-      </div>
-      <div class="recette n8">
-        <div class="image">
-          <img src="" alt="">
-        </div>
-        <div class="text">
-          <p>recette 8</p>
         </div>
       </div>
     </div>
