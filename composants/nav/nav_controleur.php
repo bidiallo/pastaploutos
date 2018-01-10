@@ -20,14 +20,18 @@ class NavControleur extends ControleurGenerique {
 		if (isset($_SESSION['id_user']) && $_SESSION['id_user'] != "") {
 			//admin et user connecté
 			$nav["paramCompte"] = "Paramètres du compte";
-			
+			$nav["deconnexion"] = "Deconnexion";
+
 			if($admin = $this->modele->verifAdmin($_SESSION['id_user'])){
 				//seulement admin
 				$nav["gestionUser"] = "Voir les profils";
 				$nav["offres"] = "Offres recettes";
 			}
-		}
 
+		}
+		else {
+			$nav["connexion"] = "Connexion";
+		}
 		$this->vue->affiche($nav);
 	}
 }
