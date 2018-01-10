@@ -27,11 +27,12 @@ include_once('module_generique.php');
 
 
 	<header>
-		
 		<?php
+						
 			require_once('composants/nav/nav.php');
 			require_once('composants/connexion/connexion.php');
 			$nav = new Nav();
+			
 		?>
 	</header>
 
