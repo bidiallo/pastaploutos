@@ -70,7 +70,7 @@ switch ($module) {
 
 		break;
 
-	case 'recettes':
+	case 'recette':
 
 		include_once ("modules/mod_recette/mod_$module.php");
 		$nom_module = "ModRecette";

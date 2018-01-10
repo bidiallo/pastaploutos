@@ -11,8 +11,8 @@ class NavControleur extends ControleurGenerique {
 
 	public function affiche() {
 		$nav = array(
-			"accueil" => "Accueil",
-			"recettes" => "Recettes",
+			//"accueil" => "Accueil",
+			"recette" => "Recettes",
 			"ideesastuces" => "Idées & Astuces",
 			"choisiringr" => "Choisir les ingrédients" 
 			);
@@ -30,6 +30,7 @@ class NavControleur extends ControleurGenerique {
 
 		}
 		else {
+			$nav["inscription"] = "Inscription";
 			$nav["connexion"] = "Connexion";
 		}
 		$this->vue->affiche($nav);
