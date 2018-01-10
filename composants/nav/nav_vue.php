@@ -25,7 +25,7 @@ class NavVue extends ComposantVueGenerique {
 					switch ($lien) {
 
 
-						case 'recettes':
+						case 'recette':
 						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\"><span class=\"glyphicon glyphicon-plus\"></span>" ." ". $nom . "</a></li>";
 						break;
 
