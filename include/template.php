@@ -37,12 +37,6 @@ include_once('module_generique.php');
 	</header>
 
 
-<<<<<<< HEAD
-=======
-	<?php include_once('nav.php');?>
-=======
->>>>>>> 99c9dab429ccf51174277de56cd927fd7605482f
-
 	<body>
 
 		<?php var_dump($classe_module);
