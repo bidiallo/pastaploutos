@@ -74,3 +74,8 @@ A FAIRE : ajouter mdp 2 dans BD + gestionUser : finir ABSOLUMENT DEMAIN !!!!!!!!
 Proposer pour menu admin: dans Voir les profils : 2 listes, 1 liste de tout les users et 1 liste de tout admins
 POUR LE COVER : https://codepen.io/seriema/pen/JcIpG
 POUR LES IMAGES : https://www.w3schools.com/howto/howto_js_image_grid.asp
+
+10/01/2018:
+A faire pour l'ajout d'ingredients : AJAX: 
+Bineta : nav general + nav utilisateur co et admin 
+Camille : remplissage BD + Modules recettes

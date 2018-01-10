@@ -19,17 +19,15 @@ class ModInscription extends ModuleGenerique{
 			
 		switch($action){
 			case "form_inscription":
-				echo "form";
 				$this->controleur->form_inscription();
-				echo 'FORMULAIRE 1';
+				
 				break;
 			case "ajout_inscription":
 				$this->controleur->ajout_inscription();
-				//echo 'AJOUT';
 				break;
+
 			default: 
 				$this->controleur->form_inscription();
-				echo 'FORMULAIRE 2';
 				break;
 		}
 	}
