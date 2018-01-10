@@ -70,6 +70,14 @@ switch ($module) {
 
 		break;
 
+	case 'recettes':
+
+		include_once ("modules/mod_recette/mod_$module.php");
+		$nom_module = "ModRecette";
+		$classe_module = new $nom_module();
+
+		break;
+
 
 	 default:
 

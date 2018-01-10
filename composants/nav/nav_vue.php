@@ -1,8 +1,8 @@
 <?php
 
+require_once "include/composant_vue_generique.php";
 
-
-class NavVue extends VueGenerique {
+class NavVue extends ComposantVueGenerique {
 
 	function affiche($nav) {
 
