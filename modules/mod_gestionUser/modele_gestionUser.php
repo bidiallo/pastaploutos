@@ -4,13 +4,12 @@
 class ModeleGestionUser extends ModeleGenerique {
 
 
-	function modele_ajout_user($nom, $prenom, $pseudo, $mail, $admin) {
+	function modele_ajout_user($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user, $mdp_user2) {
 
-		$req = 'INSERT INTO p_user (nom_user, prenom_user, pseudo_user, mail_user, mdp_user,mdp_user2, admin) VALUES (?,?,?,?,?,?,0)'; 
+		$req = 'INSERT INTO p_user (nom_user,prenom_user,pseudo_user,mail_user,mdp_user,admin) VALUES (?, ?, ?, ?, ?, 0)';
 
-		$reqPrep = self::$connexion->prepare($req);
-
-		return $reqPrep->execute(array($nom, $prenom, $pseudo, $mail, password_hash("azeerty", PASSWORD_DEFAULT), $admin));
+		$prepare=self::$connexion->prepare($req);
+		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user, $mdp_user));
 
 	}
 
@@ -44,9 +43,10 @@ class ModeleGestionUser extends ModeleGenerique {
 	}*/
 
 
+
 	function modele_recuperer_info_user($id_user) {
 		
-		$req = 'SELECT * FROM p_user WHERE id_user=?';
+		$req = 'SELECT * FROM p_user WHERE id_user=?;';
 
 		$reqPrep = self::$connexion->prepare($req);
 
@@ -56,62 +56,18 @@ class ModeleGestionUser extends ModeleGenerique {
 	}
 
 
-
-
-	//modif des droits si l'user est un admin sinon rien
-	function modele_modif_user($id_user, $pseudo_user, $mail_user, $mdp_user) {
-		$req = 'UPDATE p_user SET nom_user=?, prenom_user=?, pseudo_user=?, mail_user=? WHERE id_user=?';
-
-		$reqPrep = self::$connexion->prepare($req);
-
-		$reqPrep->execute(array());
-
-		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
-	}
-
-
-
-	function modele_modif_nomUser($id, $nom) {
-		$req = 'UPDATE p_user SET nom_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $nom));
-	}
-
-
-	function modele_modif_prenomUser($id, $prenom) {
-		$req = 'UPDATE p_user SET prenom_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $prenom));
-	}
-
-
-	function modele_modif_pseudo($id, $pseudo) {
-		$req = 'UPDATE p_user SET pseudo_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $pseudo));
-	}
-
-
-
-	function modele_modif_mdp($id, $mdp) {
-		
-		$crypt = $this->mdpCrypt($mdp, $_SESSION['pseudo_user']);
-		$req = 'UPDATE p_user SET mdp_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($crypt,$id));
-	}
-
-
-
-	function modele_suppr_user ($id) {
-
-		$req = 'DELETE FROM p_user WHERE id_user=?';
+	function modele_suppr_user($id_user) {
+		var_dump($id_user);
+		$req = 'DELETE FROM p_user WHERE id_user=?;';
 
 		$reqPrep = self::$connexion->prepare($req);
 		$reqPrep->execute(array($id_user));
-		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
+		$enregistrement = $reqPrep->fetchall(PDO::FETCH_ASSOC);
 
 	}
+
+
+	
 }
 
 ?>

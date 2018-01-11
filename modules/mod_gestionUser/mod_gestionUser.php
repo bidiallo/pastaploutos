@@ -22,20 +22,14 @@ class ModGestionUser extends ModuleGenerique {
 				$this->controleur->form_ajout_user();
 				break;
 			
-			case 'list_profil':
+			case 'list_profil'://fait
 				$this->controleur->list_profil();
 				break;
-
-			case 'profil':
-				$this->controleur->consulterProfil();
 
 			case 'suppr_profil':
 				$this->controleur->supprimer_profil();
 				break;
 
-			case 'modif_profil':
-				$this->controleur->modif_profil();
-				
 			default:
 				$this->controleur->list_profil();
 				break;

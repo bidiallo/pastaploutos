@@ -70,6 +70,16 @@ switch ($module) {
 
 		break;
 
+
+	case 'profil':
+
+		include_once ("modules/mod_profil/mod_$module.php");
+		$nom_module = "ModProfil";
+		$classe_module = new $nom_module();
+
+		break;
+
+
 	case 'recette':
 
 		include_once ("modules/mod_recette/mod_$module.php");
