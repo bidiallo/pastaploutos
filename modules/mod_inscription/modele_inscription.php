@@ -1,7 +1,8 @@
 <?php 
 require_once ('include/modele_generique.php');
 class ModeleInscription extends ModeleGenerique {
-	function modele_inscription($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user, $mdp_user2){
+	
+	function modele_inscription($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user){
 
 		$req = 'INSERT INTO p_user (nom_user,prenom_user,pseudo_user,mail_user,mdp_user,admin) VALUES (?, ?, ?, ?, ?, 0)';
 	//	var_dump($req);

@@ -41,11 +41,6 @@ class VueInscription extends VueGenerique{
 		        <input type="password" name="mdp_user" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
 		    </div>
 
-		     <div>
-		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" name="mdp_user2" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
-		    </div>
-		    
 	        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
 	      </form>
 
