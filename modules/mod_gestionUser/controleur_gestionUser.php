@@ -13,6 +13,7 @@ class ControleurGestionUser extends ControleurGenerique {
 	}
 
 
+<<<<<<< HEAD
 
 	function consultProfil() {
 
@@ -21,6 +22,14 @@ class ControleurGestionUser extends ControleurGenerique {
 	}
 
 
+=======
+	function form_ajout_user() {
+		//afficher le formulaire
+		if($this->modele->verifiAdmin($_SESSION['id_user'])) {
+			$this->vue-> vue_form_ajout_user();
+		}
+	}
+>>>>>>> c5bb068928de8b410d524d098b0095a0a5c7a16c
 
 	function ajout_user() {
 
@@ -60,7 +69,7 @@ class ControleurGestionUser extends ControleurGenerique {
 	}
 
 	//en train de tester juste pour les users
-	function list_profil() {
+	function liste_profil() {
 
 		//if($this->modele->$_SESSION['id_user']) {}
 			
@@ -70,9 +79,39 @@ class ControleurGestionUser extends ControleurGenerique {
 
 	}
 
-	function consulterProfil() {
-		$info = $this->modele->modele_recuperer_info_user($_GET['id_user']);
-		$this->vue->vue_consulter_profil($info);
+	function consulter_profil() {
+
+		if(!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
+			$this->vue->vue_erreur("Vous n'etes pas connecté.");
+		}
+		else {
+			try{
+				$element = $this->modele->modele_recuperer_info_user($_GET['id_user']);
+				$this->vue->vue_consulter_profil($element);
+			} catch(Exception $e) {
+				//$this->vue->vue_erreur("Erreur accès BDD");
+			}
+		}
+	}
+
+
+	function form_modif_droit() {
+		//if($this->modele->verifiAdmin($_SESSION['id_user'])) {
+			var_dump($_POST['droit']);
+			$admin = $this->modele->get_admin($_GET['id_user']);
+			$this->vue->vue_form_modif_droit($admin,$_GET['id_user']);
+		//}
+	}
+
+
+	function modif_droit() {
+
+		if (!$this->modele->modele_modif_droit($_POST['admin'], $_GET['id_user'])) {
+			$this->vue->vue_erreur("Modification impossible");
+		}
+		else {
+			$this->vue->vue_confirm('Droit changé');
+		}
 	}
 
 	

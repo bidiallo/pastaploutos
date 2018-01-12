@@ -42,7 +42,7 @@ class ModeleGestionUser extends ModeleGenerique {
 		return $enregistrement;
 	}*/
 
-	function modele_modif_nomUser($id, $nom) {
+	/*function modele_modif_nomUser($id, $nom) {
 		$req = 'UPDATE p_user SET nom_user=? WHERE id_user=?';
 		$reqPrep = self::$connexion->prepare($req);
 		$reqPrep->execute(array($id, $nom));
@@ -70,12 +70,28 @@ class ModeleGestionUser extends ModeleGenerique {
 		$req = 'UPDATE p_user SET mdp_user=? WHERE id_user=?';
 		$reqPrep = self::$connexion->prepare($req);
 		$reqPrep->execute(array($crypt,$id));
+	}*/
+
+	function modele_modif_droit($id_user, $admin) {
+		
+		$req = 'UPDATE p_user SET admin=? WHERE id_user=?';
+		$reqPrep = self::$connexion->prepare($req);
+		return $reqPrep->execute(array($id_user,$admin));
+	}
+
+	function get_admin($id_user) {
+		$req = 'SELECT admin FROM p_user WHERE id_user=?';
+		$reqPrep = self::$connexion->prepare($req);
+		$reqPrep->execute(array($id_user));
+		$enreg = $reqPrep->fetch(PDO::FETCH_ASSOC);
+		return $enreg['admin'];
+
 	}
 
 
 	function modele_recuperer_info_user($id_user) {
 		
-		$req = 'SELECT * FROM p_user WHERE id_user=?;';
+		$req = 'SELECT pseudo_user, nom_user, prenom_user, mail_user, admin FROM p_user WHERE id_user=?;';
 
 		$reqPrep = self::$connexion->prepare($req);
 
