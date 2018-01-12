@@ -13,13 +13,6 @@ class ControleurGestionUser extends ControleurGenerique {
 	}
 
 
-
-	function consultProfil() {
-
-		$profil = $this->modele->modele_recuperer_info_user($_GET['id_user']);
-		$this->vue->vue_profil($profil);
-	}
-
 	function form_ajout_user() {
 		//afficher le formulaire
 		if($this->modele->verifiAdmin($_SESSION['id_user'])) {
@@ -57,7 +50,7 @@ class ControleurGestionUser extends ControleurGenerique {
 
 
 	//en train de tester juste pour les users
-	function list_profil() {
+	function liste_profil() {
 
 		//if($this->modele->$_SESSION['id_user']) {}
 			
@@ -67,10 +60,25 @@ class ControleurGestionUser extends ControleurGenerique {
 
 	}
 
-	function consulterProfil() {
-		$info = $this->modele->modele_recuperer_info_user($_GET['id_user']);
-		$this->vue->vue_consulter_profil($info);
+	function consulter_profil() {
+
+		if(!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
+			$this->vue->vue_erreur("Vous n'etes pas connecté.");
+		}
+		else {
+			try{
+				$profil = $this->modele->modele_recuperer_info_user($_SESSION['id_user']);
+				$this->vue->vue_consulter_profil($profil);
+			} catch(Exception $e) {
+				$this->vue->vue_erreur("Erreur accès BDD");
+			}
+		}
 	}
+
+/*
+	function modif_profil() {
+
+	}*/
 
 
 	

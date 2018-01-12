@@ -42,7 +42,7 @@ class ModeleGestionUser extends ModeleGenerique {
 		return $enregistrement;
 	}*/
 
-	function modele_modif_nomUser($id, $nom) {
+	/*function modele_modif_nomUser($id, $nom) {
 		$req = 'UPDATE p_user SET nom_user=? WHERE id_user=?';
 		$reqPrep = self::$connexion->prepare($req);
 		$reqPrep->execute(array($id, $nom));
@@ -70,6 +70,11 @@ class ModeleGestionUser extends ModeleGenerique {
 		$req = 'UPDATE p_user SET mdp_user=? WHERE id_user=?';
 		$reqPrep = self::$connexion->prepare($req);
 		$reqPrep->execute(array($crypt,$id));
+	}*/
+
+	function modele_modif_droit($id_user, $admin) {
+		
+		
 	}
 
 

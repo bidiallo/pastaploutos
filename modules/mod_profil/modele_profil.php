@@ -1,7 +1,7 @@
 <?php
 
 
-class ModeleGestionUser extends ModeleGenerique {
+class ModeleProfil extends ModeleGenerique {
 
 
 	
@@ -50,7 +50,7 @@ class ModeleGestionUser extends ModeleGenerique {
 	}
 
 
-	function modele_recuperer_info_user($id_user) {
+	function modele_recuperer_info_profil($id_user) {
 		
 		$req = 'SELECT * FROM p_user WHERE id_user=?';
 
@@ -61,7 +61,7 @@ class ModeleGestionUser extends ModeleGenerique {
 		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
 	}
 
-	function modele_suppr_user ($id) {
+	function modele_suppr_profil ($id) {
 
 		$req = 'DELETE FROM p_user WHERE id_user=?';
 
