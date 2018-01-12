@@ -46,7 +46,7 @@ class VueRecette extends VueGenerique {
                 </table>
                 
               </div>
-              <p><a id="btnvoir" href="index.php?module=recette&action=voir_recette". class="btn btn-default" role="button"> Voir plus </a></p>
+              <p><a id="btnvoir" href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>". class="btn btn-default" role="button"> Voir plus </a></p>
 
           </div>
 
@@ -62,46 +62,40 @@ class VueRecette extends VueGenerique {
    
 
   function vue_consulter_recette($info) {
+   // var_dump($info);
     ?>
 
-    
-              <!--<header class="page-header">-->
+          <?php foreach ($info as $element) { ?>
+              
                   <div class="container clr page-header-inner">
                       <h1 class="page-header-title">
-                          <?php echo htmlspecialchars($info['titre_recette']) ?> 
+                          <?php echo htmlspecialchars($element['titre_recette']) ?> 
                       </h1>
 
                   </div>
-              <!--</header>-->
-
               <div class ="page">
+
                 <table class="table table-striped">
                         <thead>
-                                <tr>    
-                                    <td><strong>Titre</strong></td>
-                                    <td><?php echo htmlspecialchars($info['titre_recette']);
-                                    //FINIR ICI?></td>
-                                </tr>
+
                         </thead>
-                        <tbody>                              
+                        <tbody>   
+                                  <img src=<?php echo htmlspecialchars($element['photo_recette']);?> alt="photo recette" width="150" height="135.5">                           
                                 <tr>    
-                                    <td><strong>Nombre de personne</strong></td>
-                                    <td><?php echo htmlspecialchars($info['nbPersonne_recette']);?></td>
+                                    <th><strong>Nombre de personne: </strong> <?php echo htmlspecialchars($element['nbPersonne_recette']);?></th>
+
+                                    <th><strong>Niveau de difficulte: </strong><?php echo htmlspecialchars($element['niv_difficulte_recette']);?></th>
+
+                                    <th><strong>Cout de la recette: </strong><?php echo htmlspecialchars($element['cout_recette']);?></th>
+
+                                    <th><strong>Preparation: </strong><?php echo htmlspecialchars($element['tpsPreparation_recette']);?><strong> min</strong></th>
+                                   
+                                    <th><strong>Cuisson: </strong><?php echo htmlspecialchars($element['tpsCuisson_recette']);?><strong> min</strong></th>
+
                                 </tr>
-                                <tr>    
-                                    <td><strong>Niveau de difficulte</strong></td>
-                                    <td><?php echo htmlspecialchars($info['difficulte_recette']);?></td>
+                                <tr>
+                                  <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']);?></td>
                                 </tr>
-                                <tr>    
-                                    <td><strong>Cout de la recette</strong></td>
-                                    <td><?php echo htmlspecialchars($info['cout_recette']);?></td>
-                                </tr>
-                                <tr>    
-                                    <td><strong>Description</strong></td>
-                                    <td><?php echo htmlspecialchars($info['description_recette']);?></td>
-                                </tr>
-                        
-                        
                         </tbody>
                 </table>                      
 
@@ -110,6 +104,7 @@ class VueRecette extends VueGenerique {
                        
        <?php
   }
+}
 }
 
 ?>

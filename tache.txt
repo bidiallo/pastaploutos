@@ -87,3 +87,4 @@ Camille : Insertion BD
 12/01/2018 : 
 Bineta : Gestion User "voir profil" + module profil
 Camille : module recette + commencer AJAX si possible 
+Ajouter dans le nav un onglet proposer Recette pour un utilisateur connecté

@@ -11,8 +11,8 @@ class ControleurRecette extends ControleurGenerique{
 
 		function consulter_recette() {
 
-		$recette = $this->recette->modele_recuperer_info_recette($_GET['id_recette']);
-		$this->vue->vue_consulter_recette($recette);
+		$element = $this->modele->modele_recuperer_info_recette($_GET['id_recette']);
+		$this->vue->vue_consulter_recette($element);
 	}
 
 		function liste_recette() {
