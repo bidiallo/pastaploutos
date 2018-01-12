@@ -67,18 +67,33 @@ class ControleurGestionUser extends ControleurGenerique {
 		}
 		else {
 			try{
-				$profil = $this->modele->modele_recuperer_info_user($_SESSION['id_user']);
-				$this->vue->vue_consulter_profil($profil);
+				$element = $this->modele->modele_recuperer_info_user($_GET['id_user']);
+				$this->vue->vue_consulter_profil($element);
 			} catch(Exception $e) {
-				$this->vue->vue_erreur("Erreur accès BDD");
+				//$this->vue->vue_erreur("Erreur accès BDD");
 			}
 		}
 	}
 
-/*
-	function modif_profil() {
 
-	}*/
+	function form_modif_droit() {
+		//if($this->modele->verifiAdmin($_SESSION['id_user'])) {
+			var_dump($_POST['droit']);
+			$admin = $this->modele->get_admin($_GET['id_user']);
+			$this->vue->vue_form_modif_droit($admin,$_GET['id_user']);
+		//}
+	}
+
+
+	function modif_droit() {
+
+		if (!$this->modele->modele_modif_droit($_POST['admin'], $_GET['id_user'])) {
+			$this->vue->vue_erreur("Modification impossible");
+		}
+		else {
+			$this->vue->vue_confirm('Droit changé');
+		}
+	}
 
 
 	
