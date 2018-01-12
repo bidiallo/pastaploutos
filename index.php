@@ -15,7 +15,7 @@ if(!session_start()) {
 	echo 'impossible de recuperer la session';
 }
 
-var_dump($_GET['module']); //affiche pour verifier si le module et l'action existe bien
+//var_dump($_GET['module']); //affiche pour verifier si le module et l'action existe bien
 //var_dump($_GET['action']); // si ils sont a null, redirige vers la cover ---> donc faux! :/
 
 $module = isset($_GET['module']) ? $_GET['module'] : "cover";
