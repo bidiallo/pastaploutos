@@ -26,7 +26,7 @@ class VueAccueil extends VueGenerique {
 		      <div class="caption">
 		        <h3>Recettes</h3>
 		        <p>Retrouver toutes les recettes déjà disponible...</p>
-		        <p><a href="index.php?module=recettes&action=liste_recette" class="btn btn-primary" role="button">Toutes les recettes</a></p>
+		        <p><a href="index.php?module=recette" class="btn btn-primary" role="button">Toutes les recettes</a></p>
 		      </div>
 		    </div>
 		  </div>

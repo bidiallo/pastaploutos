@@ -22,12 +22,16 @@ class ModProfil extends ModuleGenerique {
 				$this->controleur->supprimer_profil();
 				break;
 
-			case 'modif_profil':
-				$this->controleur->modif_profil();
+			case 'modif_mail':
+				$this->controleur->modif_mail();
+				break;
+
+			case 'modif_mdp':
+				$this->controleur->modif_mdp();
 				break;
 				
 			default:
-				$this->controleur->list_profil();
+				$this->controleur->consulterProfil();
 				break;
 		}
 	}

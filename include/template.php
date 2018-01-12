@@ -26,7 +26,11 @@ include_once('module_generique.php');
 	</head>
 
 
-	<header>
+	
+
+
+	<body>
+
 		<?php
 						
 			require_once('composants/nav/nav.php');
@@ -34,16 +38,15 @@ include_once('module_generique.php');
 			$nav = new Nav();
 			
 		?>
-	</header>
-
-
-	<body>
-
+		<section>
 		<?php //var_dump($classe_module);
 	 			echo $classe_module->getControleur()->getVue()->getContenu();?>
-
+	 			
+	 			</section>
 
 	 </body>
+
+	 
 	<!--footer-->
 		<footer class="footer" style= "margin-left: 15%; margin-top: 45%;">
 			<div class="container">

@@ -80,15 +80,24 @@ class ControleurGestionUser extends ControleurGenerique {
 		//if($this->modele->verifiAdmin($_SESSION['id_user'])) {
 			var_dump($_POST['droit']);
 			$admin = $this->modele->get_admin($_GET['id_user']);
-			$this->vue->vue_form_modif_droit($_GET['droit'],$_GET['id_user']);
+			$this->vue->vue_form_modif_droit($_GET['id_user'], $admin);
 		//}
 	}
 
 
 	function modif_droit() {
-
-		if (!$this->modele->modele_modif_droit($_POST['admin'], $_GET['id_user'])) {
+		var_dump($_POST['droit']);
+		if($_POST['droit'] == "0") {
+			$droit = 0;
+		}
+		else {
+			$droit = 1;
+		}
+		var_dump($droit);
+		var_dump($_GET['id_user']);
+		if (!$this->modele->modele_modif_droit($_GET['id_user'], $droit)) {
 			$this->vue->vue_erreur("Modification impossible");
+			echo "pass";
 		}
 		else {
 			$this->vue->vue_confirm('Droit changé');

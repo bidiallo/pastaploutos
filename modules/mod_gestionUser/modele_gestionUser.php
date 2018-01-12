@@ -76,7 +76,8 @@ class ModeleGestionUser extends ModeleGenerique {
 		
 		$req = 'UPDATE p_user SET admin=? WHERE id_user=?';
 		$reqPrep = self::$connexion->prepare($req);
-		return $reqPrep->execute(array($id_user,$admin));
+		var_dump($reqPrep->execute(array($admin,$id_user)));
+		return $reqPrep->execute(array($admin,$id_user));
 	}
 
 	function get_admin($id_user) {

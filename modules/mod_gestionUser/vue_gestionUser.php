@@ -195,21 +195,25 @@ class VueGestionUser extends VueGenerique {
 
 
 	function vue_form_modif_droit($id_user, $admin) {
+		echo "id_user";
+		var_dump($id_user);
+		var_dump($admin);
 	?>
 
-		<form method="POST" action="index.php?module=gestionUser&action=form_modif_droit&id_user=<?php $id_user ?>&admin=<?php $_POST['droit']?>">
+		<form method="POST" action="index.php?module=gestionUser&action=modif_droit&id_user=<?php echo $id_user ?>&admin=<?php $_POST['droit']?>">
 			
 			<div class="select-style">
 				<label for="combobox">Statut : </label>
+
 				<select name="droit">
 					<option value="1">Admin</option>
 					<option value="0">User</option>
 				</select>
 				
-				 <button class="btn btn-default type="submit">Valider</button>
+				 
 		    </div>
 
-
+		    <button class="btn btn-default type="submit">Valider</button>
 		</form>
 		<?php
 	}

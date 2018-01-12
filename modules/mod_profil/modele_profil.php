@@ -4,6 +4,16 @@
 class ModeleProfil extends ModeleGenerique {
 
 
+	function modele_recuperer_info_profil($id_user) {
+		
+		$req = 'SELECT * FROM p_user WHERE id_user=?';
+
+		$reqPrep = self::$connexion->prepare($req);
+
+		$reqPrep->execute(array($id_user));
+
+		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
+	}
 	
 
 	//modif des droits si l'user est un admin sinon rien
@@ -17,28 +27,25 @@ class ModeleProfil extends ModeleGenerique {
 		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
 	}*/
 
-
-
-	function modele_modif_nomUser($id, $nom) {
-		$req = 'UPDATE p_user SET nom_user=? WHERE id_user=?';
+	function modele_modif_mail($id_user, $mdp_user, $mail_user) {
+		$req = 'SELECT mdp_user FROM p_user WHERE id_user=?';
 		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $nom));
+
+		if (!reqPrep->execute(array($id_user))) {
+			throw new ModeleProfilException("Erreur requete", 1);
+			
+		}
+		$res = $reqPrep->fetch();
+		
+		if(password_verify($mdp_user, $res['mdp_user'])) {
+			$req = 'UPDATE p_user SET mail_user=? WHERE id_user=?';
+			$reqPrep = self::$connexion->prepare($req);
+
+			if (!reqPrep->execute(array($mail_user, $id_user))) {
+				throw new ModeleProfilException("Erreur requete", 1);
+			}
+		}
 	}
-
-
-	function modele_modif_prenomUser($id, $prenom) {
-		$req = 'UPDATE p_user SET prenom_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $prenom));
-	}
-
-
-	function modele_modif_pseudo($id, $pseudo) {
-		$req = 'UPDATE p_user SET pseudo_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $pseudo));
-	}
-
 
 
 	function modele_modif_mdp($id, $mdp) {
@@ -50,16 +57,6 @@ class ModeleProfil extends ModeleGenerique {
 	}
 
 
-	function modele_recuperer_info_profil($id_user) {
-		
-		$req = 'SELECT * FROM p_user WHERE id_user=?';
-
-		$reqPrep = self::$connexion->prepare($req);
-
-		$reqPrep->execute(array($id_user));
-
-		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
-	}
 
 	function modele_suppr_profil ($id) {
 
