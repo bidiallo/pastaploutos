@@ -7,7 +7,7 @@ class ModeleGestionUser extends ModeleGenerique {
 	
 
 	//modif des droits si l'user est un admin sinon rien
-	function modele_modif_user($id_user, $pseudo_user, $mail_user, $mdp_user) {
+	/*function modele_modif_user($id_user, $pseudo_user, $mail_user, $mdp_user) {
 		$req = 'UPDATE p_user SET nom_user=?, prenom_user=?, pseudo_user=?, mail_user=? WHERE id_user=?';
 
 		$reqPrep = self::$connexion->prepare($req);
@@ -15,7 +15,7 @@ class ModeleGestionUser extends ModeleGenerique {
 		$reqPrep->execute(array());
 
 		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
-	}
+	}*/
 
 
 

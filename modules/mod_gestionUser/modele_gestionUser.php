@@ -42,6 +42,35 @@ class ModeleGestionUser extends ModeleGenerique {
 		return $enregistrement;
 	}*/
 
+	function modele_modif_nomUser($id, $nom) {
+		$req = 'UPDATE p_user SET nom_user=? WHERE id_user=?';
+		$reqPrep = self::$connexion->prepare($req);
+		$reqPrep->execute(array($id, $nom));
+	}
+
+
+	function modele_modif_prenomUser($id, $prenom) {
+		$req = 'UPDATE p_user SET prenom_user=? WHERE id_user=?';
+		$reqPrep = self::$connexion->prepare($req);
+		$reqPrep->execute(array($id, $prenom));
+	}
+
+
+	function modele_modif_pseudo($id, $pseudo) {
+		$req = 'UPDATE p_user SET pseudo_user=? WHERE id_user=?';
+		$reqPrep = self::$connexion->prepare($req);
+		$reqPrep->execute(array($id, $pseudo));
+	}
+
+
+
+	function modele_modif_mdp($id, $mdp) {
+		
+		$crypt = $this->mdpCrypt($mdp, $_SESSION['pseudo_user']);
+		$req = 'UPDATE p_user SET mdp_user=? WHERE id_user=?';
+		$reqPrep = self::$connexion->prepare($req);
+		$reqPrep->execute(array($crypt,$id));
+	}
 
 
 	function modele_recuperer_info_user($id_user) {
