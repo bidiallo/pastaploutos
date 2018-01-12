@@ -88,6 +88,14 @@ switch ($module) {
 
 		break;
 
+	case 'proposer':
+
+		include_once ("modules/mod_proposer/mod_$module.php");
+		$nom_module = "ModProposer";
+		$classe_module = new $nom_module();
+
+		break;
+
 
 	 default:
 
