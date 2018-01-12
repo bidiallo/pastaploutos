@@ -1,6 +1,6 @@
 <?php
 
-require_once('modules/mod_gestionUser/controleur_profil.php');
+require_once('modules/mod_profil/controleur_profil.php');
 require_once('modele_profil_exception.php');
 
 
@@ -10,12 +10,12 @@ class ModProfil extends ModuleGenerique {
 
 		$action = isset($_GET['action']) ? $_GET['action'] : "default";
 
-		$this->controleur = new ControleurGestionUser();
+		$this->controleur = new Controleurprofil();
 
 
 		switch ($action) {
 			case 'profil':
-				$this->controleur->consulterProfil();
+				$this->controleur->consulter_profil();
 				break;
 
 			case 'suppr_profil':
@@ -23,7 +23,7 @@ class ModProfil extends ModuleGenerique {
 				break;
 
 			case 'modif_mail':
-				$this->controleur->modif_mail();
+				$this->controleur->form_modif_mdp();
 				break;
 
 			case 'modif_mdp':
@@ -31,7 +31,7 @@ class ModProfil extends ModuleGenerique {
 				break;
 				
 			default:
-				$this->controleur->consulterProfil();
+				$this->controleur->consulter_profil();
 				break;
 		}
 	}

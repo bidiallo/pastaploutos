@@ -126,19 +126,19 @@ class VueGestionUser extends VueGenerique {
 				  	
 				  </div>
 				</div>--> 
-              <?php	 				
-     				echo "<form class='btnn' action='index.php?module=gestionUser&action=suppr_profil&id=". htmlspecialchars($_GET['id_user'])."'method='POST'>"  ?>
-      
-       <input class="btn btn-danger" type="submit" value="Supprimer"/>
+
+				<!--NE MARCHE PAS QUAND ON EST SUR LE PROFIL D'UN USER-->
+				<!--
+			<p><a id="btnmodif" href="index.php?module=gestionUser&action=form_modif_droit&id_user=<?php //echo $profil['id_user'];?>" class="btn btn-default" role="button"> Modifier </a></p>
+            
+            <p><a id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil&id_user=<?php //echo $profil['id_user'];?>" class="btn btn-danger" role="button">Supprimer</a></p>-->
                      
        <?php
 	}
 
 
 	function vue_form_modif_droit($id_user, $admin) {
-		echo "id_user";
-		var_dump($id_user);
-		var_dump($admin);
+		
 	?>
 
 		<form method="POST" action="index.php?module=gestionUser&action=modif_droit&id_user=<?php echo $id_user ?>&admin=<?php $_POST['droit']?>">
@@ -147,6 +147,7 @@ class VueGestionUser extends VueGenerique {
 				<label for="combobox">Statut : </label>
 
 				<select name="droit">
+					<option>--</option>
 					<option value="1">Admin</option>
 					<option value="0">User</option>
 				</select>
