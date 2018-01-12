@@ -80,7 +80,7 @@ class ControleurGestionUser extends ControleurGenerique {
 		//if($this->modele->verifiAdmin($_SESSION['id_user'])) {
 			var_dump($_POST['droit']);
 			$admin = $this->modele->get_admin($_GET['id_user']);
-			$this->vue->vue_form_modif_droit($admin,$_GET['id_user']);
+			$this->vue->vue_form_modif_droit($_GET['droit'],$_GET['id_user']);
 		//}
 	}
 
