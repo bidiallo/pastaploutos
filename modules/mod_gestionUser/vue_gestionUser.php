@@ -122,7 +122,9 @@ class VueGestionUser extends VueGenerique {
 		        	</div>
 
 		        	
-		        <!--<p><a id="btnmodif" href="index.php?module=gestionUser&action=profil" class="btn btn-default" role="button"> Voir plus </a></p>-->
+		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=profil" class="btn btn-default" role="button"> Voir plus </a></p>
+
+		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=modif_profil" class="btn btn-default" role="button"> Modifier </a></p>
 
 		        <p><a id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil" class="btn btn-danger" role="button">Supprimer</a></p>
 		      </div>
@@ -138,15 +140,15 @@ class VueGestionUser extends VueGenerique {
 	} 
 	 
 
-	//function vue_consulter_profil($info) {
-		//var_dump($info);
+	function vue_consulter_profil($info) {
+		var_dump($info);
 		?>
 
-		<!--
+		
               
                   <div class="container clr page-header-inner">
                       <h1 class="page-header-title">
-                           <?php //echo htmlspecialchars($info[0]['prenom_user']) ?> 
+                           <?php echo htmlspecialchars($info[0]['prenom_user']) ?> 
                       </h1>
 
                   </div>
@@ -156,21 +158,21 @@ class VueGestionUser extends VueGenerique {
                         <thead>
                                 <tr>    
                                     <td><strong>NOM</strong></td>
-                                    <td><?php// echo htmlspecialchars($info[0]['nom_user']);?></td>
+                                    <td><?php echo htmlspecialchars($info[0]['nom_user']);?></td>
                                 </tr>
                         </thead>
                         <tbody>
                                 <tr>    
                                     <td><strong>Prénom</strong></td>
-                                    <td><?php //echo htmlspecialchars($info[0]['prenom_user']);?></td>
+                                    <td><?php echo htmlspecialchars($info[0]['prenom_user']);?></td>
                                 </tr>
                                 <tr>    
                                     <td><strong>E-mail</strong></td>
-                                    <td><?php //echo htmlspecialchars($info[0]['mail_user']);?></td>
+                                    <td><?php echo htmlspecialchars($info[0]['mail_user']);?></td>
                                 </tr>
                                 <tr>    
                                     <td><strong>Pseudo</strong></td>
-                                    <td><?php //echo htmlspecialchars($info[0]['pseudo_user']);?></td>
+                                    <td><?php echo htmlspecialchars($info[0]['pseudo_user']);?></td>
                                 </tr>
                     		
                         </tbody>
@@ -195,7 +197,7 @@ class VueGestionUser extends VueGenerique {
        <input class="btn btn-danger" type="submit" value="Désactiver"/>-->
                        
        <?php
-	//}
+	}
 
 
 }

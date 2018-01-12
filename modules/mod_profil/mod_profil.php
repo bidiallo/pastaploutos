@@ -16,6 +16,7 @@ class ModProfil extends ModuleGenerique {
 		switch ($action) {
 			case 'profil':
 				$this->controleur->consulterProfil();
+				break;
 
 			case 'suppr_profil':
 				$this->controleur->supprimer_profil();
@@ -23,6 +24,7 @@ class ModProfil extends ModuleGenerique {
 
 			case 'modif_profil':
 				$this->controleur->modif_profil();
+				break;
 				
 			default:
 				$this->controleur->list_profil();
