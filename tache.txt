@@ -81,9 +81,9 @@ Bineta : nav general + nav utilisateur co et admin
 Camille : remplissage BD + Modules recettes
 
 11/01/2018:
-Bineta : modules Gestion User debug
+Bineta : modules Gestion User debug + mod Profil
 Camille : Insertion BD 
 
 12/01/2018 : 
-Bineta : Gestion User "voir profil"
+Bineta : Gestion User "voir profil" + module profil
 Camille : module recette + commencer AJAX si possible 

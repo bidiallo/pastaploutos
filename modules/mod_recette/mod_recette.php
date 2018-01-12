@@ -10,12 +10,16 @@ class ModRecette extends ModuleGenerique{
 		$this->controleur = new ControleurRecette();
 
 		switch ($action) {
-			case '':
-				# code...
+			case 'consulter_recette':
+				$this->controleur->consulter_recette();
 				break;
-			
+				
+			case 'liste_recette':
+				$this->controleur->liste_recette();
+				break;
+
 			default:
-				# code...
+				$this->controleur->liste_recette();
 				break;
 		}
 
