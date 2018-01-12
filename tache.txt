@@ -80,6 +80,10 @@ A faire pour l'ajout d'ingredients : AJAX:
 Bineta : nav general + nav utilisateur co et admin 
 Camille : remplissage BD + Modules recettes
 
-11/11/2018:
+11/01/2018:
 Bineta : modules Gestion User debug
 Camille : Insertion BD 
+
+12/01/2018 : 
+Bineta : Gestion User "voir profil"
+Camille : module recette + commencer AJAX si possible 
