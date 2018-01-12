@@ -8,65 +8,6 @@ class VueGestionUser extends VueGenerique {
 	}
 
 
-	function vue_form_ajout_user() {
-
-		?>
-		<div class="container">
-
-	      <form class="form-signin"  action = "index.php?module=gestionUser&action=ajout_user" method="POST">
-	        <h2 class="form-signin-heading">Ajouter un utilisateur</h2>
-
-
-	         <div>
-		        <label for="inputNom" class="sr-only">Nom</label>
-		        <input type="text" name="nom_user" id="inputNom" class="form-control" placeholder="Nom" required autofocus>
-		    </div>
-
-		    <div>
-		        <label for="inputPrenom" class="sr-only">Prenom</label>
-		        <input type="text" name="prenom_user" id="inputPrenom" class="form-control" placeholder="Prénom" required autofocus>
-		    </div>
-
-	        <div>
-		        <label for="inputPseudo" class="sr-only">Pseudo</label>
-		        <input type="text" name="pseudo_user" id="inputPseudo" class="form-control" placeholder="Pseudo" required autofocus>
-		    </div>
-
-		    <div>
-		        <label for="inputEmail" class="sr-only">Adresse mail</label>
-        		<input type="email" name="email_user" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
-		    </div>
-
-		    <div>
-		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" name="mdp_user" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
-		    </div>
-
-		     <div>
-		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" name="mdp_user2" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
-		    </div>
-
-
-		    <div class="select-style">
-				<label for="combobox">Statut : </label><!--mettre msg d'info pour demander si la modif veut ^etre validé -->
-				<select >
-					<option>Admin</option>
-					<option>User</option>
-				</select>
-				<input type="submit" name="admin" value="1"/>		    	
-		    </div>
-		    
-		    <input type="hidden" name="admin">
-	        <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
-	      </form>
-
-	    </div> <!-- /container -->
-
-	    <?php
-	}
-
-
 	
 	//barre de recherche en ajax pour voir si le user saisie est dans la BD
 	function vue_liste_user($users) {

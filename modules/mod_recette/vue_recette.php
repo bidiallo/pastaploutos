@@ -6,16 +6,19 @@ class VueRecette extends VueGenerique {
   function __construct(){
     parent::__construct();
   }
+
+
   function vue_liste_recette($recettes) {
-  
+ // var_dump($recettes);
   ?>
     <div class="row">
       <!--faire un foreach qui recupere les données -->
-        <?php foreach($recettes as $recette) {
-                ?>
+        <?php  foreach($recettes as $recette) {
+         // var_dump($recette['photo_recette']);
+         ?>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="images/patesBolo.jpg" alt="photo de recette" width="150" height="135.5">
+          <img src=<?php echo htmlspecialchars($recette['photo_recette']);?> alt="photo de recette" width="150" height="135.5">
 
           <div class="caption">
             
@@ -25,84 +28,85 @@ class VueRecette extends VueGenerique {
                 <table class="table-vertical">
                   <thead>
                     <tr>
-                    <th>Recette</th>
+                    <td><strong><?php echo htmlspecialchars($recette['titre_recette']);?></strong></td>
                     </tr> 
                   </thead>
 
 
 
-                  
-                  <tbody>
+                 <tbody>
                     <tr>
-                      <td><?php echo htmlspecialchars($recette['nom_recette']);?></td>
+                      
+                      <td>Nombre de Personnes :<?php echo htmlspecialchars($recette['nbPersonne_recette']);?></td>
+                      <td>Temps de préparation :<?php echo htmlspecialchars($recette['tpsPreparation_recette']);?></td>
+                      <td>Temps de cuisson :<?php echo htmlspecialchars($recette['tpsCuisson_recette']);?></td>
                     </tr>
                   </tbody>
                   
                 </table>
                 
               </div>
-              <p><a id="btnmodif" href="index.php?module=recette&action=recette". class="btn btn-default" role="button"> Voir plus </a></p>
+              <p><a id="btnvoir" href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>". class="btn btn-default" role="button"> Voir plus </a></p>
 
           </div>
 
         </div>
       </div>
-      
-    <?php } ?>
+       
+  <?php } ?> 
     </div>
 
 
-    <?php 
-  } 
+ <?php  }
+  
    
 
   function vue_consulter_recette($info) {
+   // var_dump($info);
     ?>
 
-    
-              <!--<header class="page-header">-->
+          <?php foreach ($info as $element) { ?>
+              
                   <div class="container clr page-header-inner">
                       <h1 class="page-header-title">
-                          <?php echo htmlspecialchars($info['nom_recette']) ?> 
+                          <?php echo htmlspecialchars($element['titre_recette']) ?> 
                       </h1>
 
                   </div>
-              <!--</header>-->
-
               <div class ="page">
+
                 <table class="table table-striped">
                         <thead>
-                                <tr>    
-                                    <td><strong>NOM</strong></td>
-                                    <td><?php echo htmlspecialchars($info['nom_recette']);
-                                    //FINIR ICI?></td>
-                                </tr>
+
                         </thead>
-                        <tbody>
+                        <tbody>   
+                                  <img src=<?php echo htmlspecialchars($element['photo_recette']);?> alt="photo recette" width="150" height="135.5">                           
                                 <tr>    
-                                    <td><strong>Prénom</strong></td>
-                                    <td><?php echo htmlspecialchars($info['prenom_user']);?></td>
+                                    <th><strong>Nombre de personne: </strong> <?php echo htmlspecialchars($element['nbPersonne_recette']);?></th>
+
+                                    <th><strong>Niveau de difficulte: </strong><?php echo htmlspecialchars($element['niv_difficulte_recette']);?></th>
+
+                                    <th><strong>Cout de la recette: </strong><?php echo htmlspecialchars($element['cout_recette']);?></th>
+
+                                    <th><strong>Preparation: </strong><?php echo htmlspecialchars($element['tpsPreparation_recette']);?><strong> min</strong></th>
+                                   
+                                    <th><strong>Cuisson: </strong><?php echo htmlspecialchars($element['tpsCuisson_recette']);?><strong> min</strong></th>
+
                                 </tr>
-                                <tr>    
-                                    <td><strong>E-mail</strong></td>
-                                    <td><?php echo htmlspecialchars($info['mail_user']);?></td>
+                                <tr>
+                                  <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']);?></td>
                                 </tr>
-                                <tr>    
-                                    <td><strong>Pseudo</strong></td>
-                                    <td><?php echo htmlspecialchars($info['pseudo_user']);?></td>
-                                </tr>
-                        
                         </tbody>
                 </table>                      
 
               </div>
-              <?php         
-            echo "<form class='btnn' action='index.php?module=gestionUser&action=suppr_profil&id=". htmlspecialchars($info['id_user'])."'method='POST'>"  ?>
-      
-       <input class="btn btn-danger" type="submit" value="Désactiver"/>
+              
                        
        <?php
   }
-
-
 }
+}
+
+?>
+
+

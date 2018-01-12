@@ -4,14 +4,6 @@
 class ModeleGestionUser extends ModeleGenerique {
 
 
-	function modele_ajout_user($nom_user, $prenom_user, $pseudo_user, $email_user, $mdp_user, $mdp_user2) {
-
-		$req = 'INSERT INTO p_user (nom_user,prenom_user,pseudo_user,mail_user,mdp_user,admin) VALUES (?, ?, ?, ?, ?, 0)';
-
-		$prepare=self::$connexion->prepare($req);
-		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user, $mdp_user));
-
-	}
 
 //pour tous les users, admin compris
 	function modele_get_liste_user() {
@@ -42,35 +34,6 @@ class ModeleGestionUser extends ModeleGenerique {
 		return $enregistrement;
 	}*/
 
-	/*function modele_modif_nomUser($id, $nom) {
-		$req = 'UPDATE p_user SET nom_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $nom));
-	}
-
-
-	function modele_modif_prenomUser($id, $prenom) {
-		$req = 'UPDATE p_user SET prenom_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $prenom));
-	}
-
-
-	function modele_modif_pseudo($id, $pseudo) {
-		$req = 'UPDATE p_user SET pseudo_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id, $pseudo));
-	}
-
-
-
-	function modele_modif_mdp($id, $mdp) {
-		
-		$crypt = $this->mdpCrypt($mdp, $_SESSION['pseudo_user']);
-		$req = 'UPDATE p_user SET mdp_user=? WHERE id_user=?';
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($crypt,$id));
-	}*/
 
 	function modele_modif_droit($id_user, $admin) {
 		
