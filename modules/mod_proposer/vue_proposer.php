@@ -78,7 +78,7 @@ class VueProposer extends VueGenerique{
 
 		    <div class="select-style">
 				<label for="combobox">Type de plat: </label>
-				<select name="idcat">
+				<select name="id_cat">
 					<option value="3">Apéritif</option>
 					<option value="1">Entrée</option>
 					<option value="2">Plat</option>

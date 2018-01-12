@@ -1,6 +1,6 @@
 <?php
-require_once('modele_inscription.php');
-require_once('vue_inscription.php');
+require_once('modele_proposer.php');
+require_once('vue_proposer.php');
 require_once('include/controleur_generique.php');
 
 class ControleurProposer extends ControleurGenerique {
@@ -22,14 +22,14 @@ class ControleurProposer extends ControleurGenerique {
 		$nbPersonne_recette = htmlspecialchars($_POST["nbPersonne_recette"]);
 		$tpsPreparation_recette = htmlspecialchars($_POST["tpsPreparation_recette"]);
 		$tpsCuisson_recette = htmlspecialchars($_POST["tpsCuisson_recette"]);
-		$idcat = htmlspecialchars($_POST["idcat"]);
+		$id_cat = htmlspecialchars($_POST["id_cat"]);
 
-		if(empty($titre_recette) || empty($description_recette) || empty($niv_difficulte_recette) || empty($cout_recette) || empty($is_vegetarien) || empty($nbPersonne_recette)|| empty($tpsPreparation_recette)|| empty($tpsCuisson_recette)|| empty($idcat)){
+		if(empty($titre_recette) || empty($description_recette) || empty($niv_difficulte_recette) || empty($cout_recette) || empty($is_vegetarien) || empty($nbPersonne_recette)|| empty($tpsPreparation_recette)|| empty($tpsCuisson_recette)|| empty($id_cat)){
 			$this->form_proposer();
 					
 		} else {
 			
-		return $this->modele->modele_proposer($titre_recette, $description_recette, $niv_difficulte_recette, $cout_recette, $is_vegetarien, $nbPersonne_recette, $tpsPreparation_recette, $tpsCuisson_recette, $idcat);
+		return $this->modele->modele_proposer($titre_recette, $description_recette, $niv_difficulte_recette, $cout_recette, $is_vegetarien, $nbPersonne_recette, $tpsPreparation_recette, $tpsCuisson_recette, $id_cat);
 		}
 	}
 }

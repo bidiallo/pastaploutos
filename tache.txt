@@ -90,3 +90,9 @@ Camille : module recette + commencer AJAX si possible
 Ajouter dans le nav un onglet proposer Recette pour un utilisateur connecté
 mod_proposer : formulaire pour proposer une recette
 mod_offre: pr Admin, voir les offres de recette
+Bineta à faire :
+Module idees et astuces : requete Select * from p_recette where id_cat=5 si noel, id_cat=6 si halloween etcs...
+
+Si tu dois inserer dans la BD, prends des photos sur Google de taille 400px par 320px
+
+Camille: Ajouter dans la liste des choix de proposer, les autres val de categories

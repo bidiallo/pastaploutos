@@ -1,5 +1,5 @@
 <?php
-require_once('controleur_inscription.php');
+require_once('controleur_proposer.php');
 
 class ModProposer extends ModuleGenerique{
 
@@ -7,7 +7,7 @@ class ModProposer extends ModuleGenerique{
 
 		parent:: __construct();
 		$action = isset($_GET['action']) ? $_GET['action'] : "default";
-		
+
 		$this->controleur = new ControleurProposer();
 
 			
