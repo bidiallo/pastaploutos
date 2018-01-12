@@ -7,84 +7,92 @@ class VueProfil extends VueGenerique {
 		parent::__construct();
 	}
 
-
-
-
-	function vue_modif_user() {
-	?>
-
-		<form method="POST" action="index.php?module=gestionUser&action=modif_profil">
-			
-			<input type="hidden" name="">Nouveau mail : >
-
-
-		</form>
-		<?php
-	}
-
-	
 	 
 
-	function vue_consulter_profil($info) {
-		var_dump($info);
-		?>
+	function vue_consulter_profil_user($profil) {
+    //var_dump($profil);
+    ?>
 
-		
-              <!--<header class="page-header">-->
-                  <div class="container clr page-header-inner">
-                      <h1 class="page-header-title">
-                           <?php echo htmlspecialchars($info[0]['prenom_user']) ?> 
-                      </h1>
+      <?php foreach ($profil as $element) { ?>
+              
+              <div class="container clr page-header-inner">
+                    <h1 class="page-header-title"> Bonjour
+                        <?php echo htmlspecialchars($element['prenom_user']) ?> 
+                        :)
+                    </h1>
 
-                  </div>
-              <!--</header>-->
+              </div>
 
               <div class ="page">
+            
+                
+              
                 <table class="table table-striped">
                         <thead>
                                 <tr>    
                                     <td><strong>NOM</strong></td>
-                                    <td><?php echo htmlspecialchars($info[0]['nom_user']);?></td>
+                                    <td><?php echo htmlspecialchars($element['prenom_user']);?></td>
                                 </tr>
                         </thead>
                         <tbody>
                                 <tr>    
                                     <td><strong>Prénom</strong></td>
-                                    <td><?php echo htmlspecialchars($info[0]['prenom_user']);?></td>
+                                    <td><?php echo htmlspecialchars($element['nom_user']);
+                                    //var_dump($profil['prenom_user']);
+                                    ?></td>
                                 </tr>
                                 <tr>    
                                     <td><strong>E-mail</strong></td>
-                                    <td><?php echo htmlspecialchars($info[0]['mail_user']);?></td>
+                                    <td><?php echo htmlspecialchars($element['mail_user']);?></td>
                                 </tr>
                                 <tr>    
                                     <td><strong>Pseudo</strong></td>
-                                    <td><?php echo htmlspecialchars($info[0]['pseudo_user']);?></td>
+                                    <td><?php echo htmlspecialchars($element['pseudo_user']);?></td>
                                 </tr>
-                    		
+                        
                         </tbody>
                 </table>                      
-
+        
               </div>
+              
+              <?php }?> 
+      <!--
+                <div class="row">
+          <div class="col-sm-4">
 
+          </div>
 
+          <div class="col-sm-8">
+            
+          </div>
+        </div>--> 
 
-               	<div class="row">
-				  <div class="col-sm-4">
-
-				  </div>
-
-				  <div class="col-sm-8">
-				  	
-				  </div>
-				</div> 
-              <?php	 				
-     				echo "<form class='btnn' action='index.php?module=gestionUser&action=suppr_profil&id=". htmlspecialchars($info[0]['id_user'])."'method='POST'>"  ?>
-      
-       <input class="btn btn-danger" type="submit" value="Désactiver"/>
-                       
+        
+       <p><a id="btnmodif" href="index.php?module=profil&action=form_modif_mdp&id_user=<?php //echo $profil['id_user'];?>" class="btn btn-default" role="button"> Modifier </a></p>
+                     
        <?php
-	}
+  }
 
+
+    function vue_modif_mdp() {
+    ?>
+
+      <form method="POST" action="index.php?module=gestionUser&action=modif_profil">
+        
+        <label for="pwd">Ancien mot de passe :</label>
+        <input type="password" name="password_old"><br/>
+
+        <label for="pwd">Nouveau mot de passe :</label>
+        <input type="password" name="password_new"><br/>
+
+        <label for="pwd">Vérification : </label>
+        <input type="password" name="password_new_verif"><br/>
+
+        <button type="submit" class="btn btn-default">Valider</button>
+      </form>
+
+      <?php
+    }
 
 }
 
