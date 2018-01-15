@@ -40,9 +40,6 @@ class NavVue extends ComposantVueGenerique {
 						case 'deconnexion':
 						echo "\t\t\t<li><a href=\"index.php?module=connexion&action=deconnexion\"><span class=\"glyphicon glyphicon-log-out\"></span>" ." ".$nom . "</a></li>";
 						break;
-
-						case 'profil':
-						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a>"; //<span class=\"caret\"></span> (avant </a>)
 						
 						default:
 						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";

@@ -34,10 +34,13 @@ include_once('module_generique.php');
 		<?php
 						
 			require_once('composants/nav/nav.php');
-			require_once('composants/connexion/connexion.php');
-			$nav = new Nav();
 			
-		?>
+				//require_once('composants/side_nav/side_nav.php');
+				require_once('composants/connexion/connexion.php');
+				$sidenav = new Nav();
+				
+			?>
+
 		<section>
 		<?php //var_dump($classe_module);
 	 			echo $classe_module->getControleur()->getVue()->getContenu();?>
@@ -84,5 +87,19 @@ include_once('module_generique.php');
     	<!-- Latest compiled and minified JavaScript -->
     	<!-- Include all compiled plugins (below), or include individual files as needed -->
     	<script src="/include/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+
+    	<script type="text/javascript">
+    		
+    		function openNav() {
+    			document.getElementById("mySidenav").style.width = "250px";
+    			document.getElementById("main").style.marginLeft = "250px";
+    		}
+
+
+    		function closeNav() {
+    			document.getElementById("mySidenav").style.width = "0";
+    			document.getElementById("main").style.marginLeft = "0";
+    		}
+    	</script>
 	
 </html>

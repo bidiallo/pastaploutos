@@ -97,6 +97,15 @@ switch ($module) {
 		break;
 
 
+	case 'choisir':
+
+		include_once ("modules/mod_choisir/mod_$module.php");
+		$nom_module = "ModChoisir";
+		$classe_module = new $nom_module();
+
+		break;
+
+
 	 default:
 
 		$classe_module = new ModuleGenerique();

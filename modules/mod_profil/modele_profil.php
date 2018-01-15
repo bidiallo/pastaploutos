@@ -22,6 +22,7 @@ class ModeleProfil extends ModeleGenerique {
 		$req = 'SELECT mdp_user FROM p_user WHERE id_user= ?';
 		$reqPrep = self::$connexion->prepare($req);
 
+		var_dump($reqPrep);
 		if (!$reqPrep->execute(array($id_user))) {
 			throw new ModeleProfilException("Erreur requete", 1);
 		}
