@@ -96,3 +96,8 @@ Module idees et astuces : requete Select * from p_recette where id_cat=5 si noel
 Si tu dois inserer dans la BD, prends des photos sur Google de taille 400px par 320px
 
 Camille: Ajouter dans la liste des choix de proposer, les autres val de categories
+
+15/01/2018 : 
+Camille : ajouter les ingrédients dans la recette -> DONC MODIF  BD
+https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/file
+https://openclassrooms.com/courses/upload-de-fichiers-par-formulaire

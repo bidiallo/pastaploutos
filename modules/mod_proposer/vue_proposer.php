@@ -66,6 +66,11 @@ class VueProposer extends VueGenerique{
 		   </div>
 		   <!-- NOTETOTALRECETTE-->
 		   <!-- RECETTE PUBLIE-->
+		   <div>
+		   <label for="photo_recette">Sélectionner des images à uploader (PNG, JPG) :</label>
+		   	<input type="file" name="photo_recette" accept=".jpg, .jpeg, .png" id="photo_recette" />
+
+		   </div>
 	        <div>
 		        <label for="inputTpsPreparation" class="sr-only">Temps de préparation</label>
 		        <input type="text" name="tpsPreparation_recette" id="inputTpsPreparation" class="form-control" placeholder="Temps de préparation" required autofocus>

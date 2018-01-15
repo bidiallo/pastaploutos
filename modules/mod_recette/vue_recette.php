@@ -18,7 +18,7 @@ class VueRecette extends VueGenerique {
          ?>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src=<?php echo htmlspecialchars($recette['photo_recette']);?> alt="photo de recette" width="150" height="135.5">
+          <img src=<?php echo htmlspecialchars($recette['photo_recette']);?> alt="photo de recette" width="400" height="525">
 
           <div class="caption">
             
