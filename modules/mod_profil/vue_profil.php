@@ -13,7 +13,8 @@ class VueProfil extends VueGenerique {
     //var_dump($profil);
     ?>
 
-      <?php foreach ($profil as $element) { ?>
+      <div class="row">
+          <?php foreach ($profil as $element) { ?>
               
               <div class="container clr page-header-inner">
                     <h1 class="page-header-title"> Bonjour
@@ -54,30 +55,21 @@ class VueProfil extends VueGenerique {
                 </table>                      
         
               </div>
-              
-              <?php }?> 
-      <!--
-                <div class="row">
-          <div class="col-sm-4">
-
-          </div>
-
-          <div class="col-sm-8">
-            
-          </div>
-        </div>--> 
-
         
-       <p><a id="btnmodif" href="index.php?module=profil&action=form_modif_mdp&id_user=<?php //echo $profil['id_user'];?>" class="btn btn-default" role="button"> Modifier </a></p>
-                     
+       <p><a id="btnmodif" href="index.php?module=profil&action=form_modif_mdp&id_user=<?php echo $element['id_user'];?>" class="btn btn-default" role="button"> Modifier </a></p>
+
+       <?php }?>  
+
+      </div> 
+
        <?php
   }
 
 
-    function vue_modif_mdp() {
+    function vue_form_modif_mdp() {
     ?>
 
-      <form method="POST" action="index.php?module=gestionUser&action=modif_profil">
+      <form method="POST" action="index.php?module=profil&action=modif_profil">
         
         <label for="pwd">Ancien mot de passe :</label>
         <input type="password" name="password_old"><br/>

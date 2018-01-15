@@ -22,7 +22,7 @@ class ModProfil extends ModuleGenerique {
 				$this->controleur->supprimer_profil();
 				break;
 
-			case 'modif_mail':
+			case 'form_modif_mdp':
 				$this->controleur->form_modif_mdp();
 				break;
 
