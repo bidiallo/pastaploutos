@@ -33,11 +33,36 @@ include_once('module_generique.php');
 
 		<?php
 						
-			require_once('composants/nav/nav.php');
-			
-				//require_once('composants/side_nav/side_nav.php');
-				require_once('composants/connexion/connexion.php');
-				$sidenav = new Nav();
+			//require_once('composants/nav/nav.php');
+			require_once('nav.php');
+			//require_once('composants/connexion/connexion.php');
+			//$sidenav = new Nav();
+
+			//verifier la session isset si user est connecté
+			if(isset($_SESSION['id_user'])) {
+				?>
+
+				<div class="sidenav" id="mySidenav">
+					<!--<ul class="nav navbar-nav navbar-left">-->
+					<!--mettre des logos pour chacune des pages-->
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					
+					<?php
+						require_once('composants/nav/nav.php');
+						require_once('composants/connexion/connexion.php');
+						$sidenav = new Nav();
+					?>
+				</div>
+
+
+				<div id="main">
+					<h2>Sidenav example</h2>
+					<p>Open the side navigation</p>
+					<span style="font-size: 30px;cursor: pointer;" onclick="openNav()">&#9776; open</span>
+				</div>
+
+				<?php
+			}
 				
 			?>
 
@@ -87,6 +112,7 @@ include_once('module_generique.php');
     	<!-- Latest compiled and minified JavaScript -->
     	<!-- Include all compiled plugins (below), or include individual files as needed -->
     	<script src="/include/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+
 
     	<script type="text/javascript">
     		

@@ -55,7 +55,7 @@ class ModeleGestionUser extends ModeleGenerique {
 
 	function modele_recuperer_info_user($id_user) {
 		
-		$req = 'SELECT pseudo_user, nom_user, prenom_user, mail_user, admin FROM p_user WHERE id_user=?;';
+		$req = 'SELECT id_user, pseudo_user, nom_user, prenom_user, mail_user, admin FROM p_user WHERE id_user=?;';
 
 		$reqPrep = self::$connexion->prepare($req);
 
