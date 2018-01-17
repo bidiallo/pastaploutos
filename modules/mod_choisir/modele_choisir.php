@@ -14,5 +14,10 @@ http://www.tomshardware.fr/forum/id-1346383/formulaire-recherche-php.html
 		$req = 'SELECT titre_recette, '
 	}
 	
+
+
+	function modele_recuperer_info_recette($idrecette) {
+		$req = 'SELECT'
+	}
 }
 ?>

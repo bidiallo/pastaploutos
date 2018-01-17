@@ -14,15 +14,8 @@ class ModGestionUser extends ModuleGenerique {
 
 
 		switch ($action) {
-			case 'ajout_user':
-				$this->controleur->ajout_user();
-				break;
-
-			case 'form_ajout_user':
-				$this->controleur->form_ajout_user();
-				break;
 			
-			case 'liste_profil'://fait
+			case 'liste_profil':
 				$this->controleur->liste_profil();
 				break;
 
