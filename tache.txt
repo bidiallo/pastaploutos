@@ -101,3 +101,8 @@ Camille: Ajouter dans la liste des choix de proposer, les autres val de categori
 Camille : ajouter les ingrédients dans la recette -> DONC MODIF  BD
 https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/file
 https://openclassrooms.com/courses/upload-de-fichiers-par-formulaire
+
+17/01/2018 : 
+Créer une liste d'ingreidnet dans la bd, et ajouter l'id de chaque ingreidnets de dedans 
+Camille : Créer msg d'erreur pour proposer + Mettre AJAX pour recherche des ingredinets + categorie du plat + Faire module Idée et Astuces
+Bine : Nav bar sur le c^oté + faire design + faire Securite + module choisis tes Ingredients (juste le debut)
