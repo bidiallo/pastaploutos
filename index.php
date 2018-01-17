@@ -96,6 +96,14 @@ switch ($module) {
 
 		break;
 
+	case 'ideesetastuces':
+
+		include_once ("modules/mod_ideesetastuces/mod_$module.php");
+		$nom_module = "ModIdeesetastuces";
+		$classe_module = new $nom_module();
+
+		break;
+
 
 	case 'choisir':
 
