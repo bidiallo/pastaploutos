@@ -13,5 +13,19 @@ class ControleurChoisir extends ControleurGenerique {
 
 	//form pour sélectionner les ingrédients qu'on veut
 //
+
+	function form_choisir() {
+
+			$ingr = $this->modele->modele_recuperer_info_recette($_GET['id_ingredient'], $_GET['id_ingredient'], $_GET['id_ingredient']);
+			$this->vue->vue_form_choisir($_GET['id_ingredient'], $_GET['id_ingredient'], $_GET['id_ingredient']);
+		
+	}
+
+
+	function choisir() {
+		
+		
+	}
+
 }
 ?>

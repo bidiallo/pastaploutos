@@ -26,51 +26,23 @@ include_once('module_generique.php');
 	</head>
 
 
+		<?php
+
+			require_once('composants/nav/nav.php');
+			require_once('composants/connexion/connexion.php');
+			$nav = new Nav();
+		
+		?>
 	
 
 
 	<body>
 
-		<?php
-						
-			//require_once('composants/nav/nav.php');
-			require_once('nav.php');
-			//require_once('composants/connexion/connexion.php');
-			//$sidenav = new Nav();
-
-			//verifier la session isset si user est connecté
-			if(isset($_SESSION['id_user'])) {
-				?>
-
-				<div class="sidenav" id="mySidenav">
-					<!--<ul class="nav navbar-nav navbar-left">-->
-					<!--mettre des logos pour chacune des pages-->
-					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					
-					<?php
-						require_once('composants/nav/nav.php');
-						require_once('composants/connexion/connexion.php');
-						$sidenav = new Nav();
-					?>
-				</div>
-
-
-				<div id="main">
-					<h2>Sidenav example</h2>
-					<p>Open the side navigation</p>
-					<span style="font-size: 30px;cursor: pointer;" onclick="openNav()">&#9776; open</span>
-				</div>
-
-				<?php
-			}
-				
-			?>
-
 		<section>
 		<?php //var_dump($classe_module);
 	 			echo $classe_module->getControleur()->getVue()->getContenu();?>
 	 			
-	 			</section>
+	 	</section>
 
 	 </body>
 
@@ -107,54 +79,7 @@ include_once('module_generique.php');
 
 
 
-		<style>
-			
-			.sidenav {
-				height: 100%;
-				width: 0;
-				position: fixed;
-				z-index: 1;
-				top: 0;
-				left: 0;
-				background: #111;
-				overflow-x: hidden;
-				transition: 0.5s;
-				padding-top: 60px;
-			}
-
-
-
-			.sidenav a {
-			    padding: 8px 8px 8px 32px;
-			    text-decoration: none;
-			    font-size: 25px;
-			    color: #818181;
-			    display: block;
-			    transition: 0.3s;
-			}
-
-			.sidenav a:hover {
-			    color: #f1f1f1;
-			}
-
-			.sidenav .closebtn {
-			    position: absolute;
-			    top: 0;
-			    right: 25px;
-			    font-size: 36px;
-			    margin-left: 50px;
-			}
-
-			#main {
-			    transition: margin-left .5s;
-			    padding: 16px;
-			}
-
-			@media screen and (max-height: 450px) {
-			  .sidenav {padding-top: 15px;}
-			  .sidenav a {font-size: 18px;}
-			}
-		</style>
+		
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -164,18 +89,5 @@ include_once('module_generique.php');
     	<script src="/include/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
 
 
-    	<script type="text/javascript">
-    		
-    		function openNav() {
-    			document.getElementById("mySidenav").style.width = "250px";
-    			document.getElementById("main").style.marginLeft = "250px";
-    		}
-
-
-    		function closeNav() {
-    			document.getElementById("mySidenav").style.width = "0";
-    			document.getElementById("main").style.marginLeft = "0";
-    		}
-    	</script>
 	
 </html>

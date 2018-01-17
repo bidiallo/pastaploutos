@@ -11,10 +11,10 @@ class NavControleur extends ControleurGenerique {
 
 	public function affiche() {
 		$nav = array(
-			//"accueil" => "Accueil",
-			//"recette" => "Recettes",
-			//"ideesastuces" => "Idées & Astuces",
-			//"choisiringr" => "Choisir les ingrédients" 
+			"accueil" => "Accueil",
+			"recette" => "Recettes",
+			"ideesetastuces" => "Idées & Astuces",
+			"choisir" => "Choisir un ingrédient" 
 			);
 
 		if (isset($_SESSION['id_user']) && $_SESSION['id_user'] != "") {
@@ -25,7 +25,7 @@ class NavControleur extends ControleurGenerique {
 			if($admin = $this->modele->verifAdmin($_SESSION['id_user'])){
 				//seulement admin
 				$nav["gestionUser"] = "Voir les profils";
-				$nav["offres"] = "Offres recettes";
+				$nav["offre"] = "Offres recettes";
 			}
 			$nav["deconnexion"] = "Deconnexion";
 

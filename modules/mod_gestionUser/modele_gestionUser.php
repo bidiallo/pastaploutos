@@ -39,7 +39,6 @@ class ModeleGestionUser extends ModeleGenerique {
 		
 		$req = 'UPDATE p_user SET admin=? WHERE id_user=?';
 		$reqPrep = self::$connexion->prepare($req);
-		var_dump($reqPrep->execute(array($admin,$id_user)));
 		return $reqPrep->execute(array($admin,$id_user));
 	}
 
@@ -66,7 +65,7 @@ class ModeleGestionUser extends ModeleGenerique {
 
 
 	function modele_suppr_user($id_user) {
-		var_dump($id_user);
+		
 		$req = 'DELETE FROM p_user WHERE id_user=?;';
 
 		$reqPrep = self::$connexion->prepare($req);
