@@ -64,11 +64,35 @@ class VueProposer extends VueGenerique{
 					<option value="8">8 et +</option>
 				</select>
 		   </div>
-		   <!-- ID INGREDIENT AJAAAAAAAX-->
-		   <div class="select-style">
-		   	<label for="id_ingredient">Ingrédient principal : </label>
-		   	<input type="text" name="id_ingredient" id="id_ingredient" class="form-control" placeholder="Nom de l'Ingrédient" required autofocus>
-		   </div>
+		   <!-- ID INGREDIENT AJAAAAAAAX--><?php
+		   echo "
+
+		<div class='input-group' id='pagerecherche'>
+		 
+		  <input type='text' class='form-control' id='search' placeholder='Choisissez le nom de l'ingrédient principale' aria-describedby='basic-addon1'>
+		  <p id='r'></p>
+		</div>
+
+		<button type='submit'>Rechercher</button>
+
+		<script src='jquery-3.1.1.min.js'></script>
+		<script>
+			$('#search').on('input', function() {
+				var recherche=$('#search').val();
+				$.ajax({
+					url : 'rechercheIngredient.php',
+					data : 'mot='+recherche,
+					type : 'POST',
+					dataType : 'html',
+					success : function (code_html) {
+						console.log(code_html);
+						$('#r').html(code_html);
+					}
+				});
+			});
+		</script>
+
+		";?>
 		   <!-- RECETTE PUBLIE-->
 		   <div class="select-style">
 		   <label for="photo_recette">Sélectionner des images à uploader (PNG, JPG) :</label>

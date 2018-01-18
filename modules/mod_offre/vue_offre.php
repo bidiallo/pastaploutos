@@ -43,7 +43,6 @@ class VueOffre extends VueGenerique {
                 
               </div>
               <p><a id="btnvoir" href="index.php?module=offre&action=consulter_offre&id_recette=<?php echo $offre['id_recette'];?>". class="btn btn-default" role="button"> Voir plus </a></p>
-
           </div>
 
         </div>
@@ -92,6 +91,12 @@ class VueOffre extends VueGenerique {
                                 <tr>
                                   <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']);?></td>
                                 </tr>
+                                </div>
+                                    <p><a id="btnvoir" href="index.php?module=offre&action=ajouter_offre&id_recette=<?php echo $element['id_recette'];?>". class="btn btn-default" role="button"> Valider </a></p>
+                                </div>
+                                </div>
+                                    <p><a id="btnvoir" href="index.php?module=offre&action=consulter_offre&id_recette=<?php echo $element['id_recette'];?>". class="btn btn-default" role="button"> Effacer </a></p>
+                                </div>
                         </tbody>
                 </table>                      
 
@@ -101,6 +106,7 @@ class VueOffre extends VueGenerique {
        <?php
   }
 }
+
 }
 
 ?>

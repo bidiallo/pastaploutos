@@ -30,7 +30,8 @@ class ControleurProposer extends ControleurGenerique {
 
 		if(empty($titre_recette) || empty($description_recette) || empty($niv_difficulte_recette) || empty($cout_recette) || empty($is_vegetarien) || empty($nbPersonne_recette)|| empty($id_ingredient)|| empty($tpsPreparation_recette)|| empty($tpsCuisson_recette)|| empty($id_cat) || empty($photo_recette)){
 			$this->form_proposer();
-					
+			
+
 		} else {
 			
 		return $this->modele->modele_proposer($titre_recette, $description_recette, $niv_difficulte_recette, $cout_recette, $is_vegetarien, $nbPersonne_recette,$id_ingredient, $tpsPreparation_recette, $tpsCuisson_recette, $id_cat, $photo_recette);

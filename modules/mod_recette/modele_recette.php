@@ -4,7 +4,7 @@ require_once('include/modele_generique.php');
 class ModeleRecette extends ModeleGenerique{
 
 	function modele_recette(){
-		$req = 'SELECT * FROM p_recette ;';
+		$req = 'SELECT * FROM p_recette where recette_publie=1;';
 
 		$reqPrep = self::$connexion->prepare($req);
 		
