@@ -19,7 +19,7 @@ class NavVue extends ComposantVueGenerique {
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 				<ul class="nav navbar-nav navbar-left">
-				<!--mettre des logos pour chacune des pages-->
+				
 				<?php
 				foreach ($nav as $lien => $nom) {
 					switch ($lien) {

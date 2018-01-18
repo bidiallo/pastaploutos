@@ -13,80 +13,34 @@ class VueGestionUser extends VueGenerique {
 	//barre de recherche en ajax pour voir si le user saisie est dans la BD
 	function vue_liste_user($users) {
 	
-		?>
-<!--
-		<form method="POST">
-			<h1 class'page-header-title'> Rechercher les utilisateurs</h1>
+		echo "
 
-				<div id="recherche">
-					<div id="labelinput">
-						<input type="text" id="search" placeholder="Saisir le nom de l'utilisateur">
-						<p id="r"></p>
-						<input type="submit" name="submit" value="Rechercher">
-					</div>
+		<div class='input-group' id='pagerecherche'>
+		 
+		  <input type='text' class='form-control' id='search' placeholder='Saisir un utilisateur' aria-describedby='basic-addon1'>
+		  <p id='r'></p>
+		</div>
 
-					<script src='jquery-3.1.1.min.js'></script>
-					<script>
-							$('#search').('input', function()) {
-								var recherche=$('#search').val();
-								$.ajax({
-									url:'recherche.php',
-									data: 'mot='+recherche,
-									type: 'POST',
-									dataType: 'html',
-									success : function(code_html) {
-										console.log(code_html);
-										$('#r').html(code_html);
-									}
-								});
-							});
-					</script>
+		<button type='submit'>Rechercher </button>
 
-				</div>
-			</form>-->
-			<?php	
-				$output ='';
-				
-				if (isset($_POST['search'])) {
-					
-					$searchq = $_POST['search'];
-
-					$search = preg_replace("#[^0-9a-z]#i", "", $searchq);
-
-					$query = mysql_query("SELECT * FROM p_user WHERE nom_user LIKE '%$searchq%' OR prenom_user LIKE '%$searchq%'") or die("recherche impossible"); 
-
-					$count = mysql_num_rows($query);
-
-					if ($count == 0) {
-						$output = 'Pas de résultats !';
+		<script src='jquery-3.1.1.min.js'></script>
+		<script>
+			$('#search').on('input', function() {
+				var recherche=$('#search').val();
+				$.ajax({
+					url : 'rechercheuser.php',
+					data : 'mot='+recherche,
+					type : 'POST',
+					dataType : 'html',
+					success : function (code_html) {
+						console.log(code_html);
+						$('#r').html(code_html);
 					}
-					else {
-						while ($row = mysql_fetch_array($query)) {
-							$nuser = $row['nom_user'];
-							$puser = $row['prenom_user'];
-							$id = $row['id_user'];
+				});
+			});
+		</script>
 
-							$output.='<div>'.$nuser.''.$puser.'</div>';
-						}
-					}
-				}
-
-
-			?>
-
-			<form method="POST">
-				<h1 class'page-header-title'> Rechercher les utilisateurs</h1>
-
-				<input type="text" name="search" placeholder="Saisir le nom de l'utilisateur ...">
-				<input type="submit" name="submit" value="Rechercher">
-					
-			</form>
-
-			
-			<?php	
-
-			print("$output");
-
+		";
 			?>
 		<div class="row">
 			<!--faire un foreach qui recupere les données -->

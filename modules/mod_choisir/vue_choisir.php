@@ -7,15 +7,39 @@ class VueChoisir extends VueGenerique {
 	}
 
 
-	function vue_form_choisir($idingredient1, $idingredient2, $idingredient3) {
+	function vue_form_choisir($idingredient) {
 
-		?>
+		echo "
 
-		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">@</span>
-		  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+		<div class='input-group' id='pagerecherche'>
+		 
+		  <input type='text' class='form-control' id='search' placeholder='Choisissez un ingrédient' aria-describedby='basic-addon1'>
+		  <p id='r'></p>
 		</div>
+
+		<button type='submit'>Rechercher</button>
+
+		<script src='jquery-3.1.1.min.js'></script>
+		<script>
+			$('#search').on('input', function() {
+				var recherche=$('#search').val();
+				$.ajax({
+					url : 'recherche.php',
+					data : 'mot='+recherche,
+					type : 'POST',
+					dataType : 'html',
+					success : function (code_html) {
+						console.log(code_html);
+						$('#r').html(code_html);
+					}
+				});
+			});
+		</script>
+
+		";
 	}
 
+
+	
 }
 ?>

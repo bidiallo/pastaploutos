@@ -26,6 +26,10 @@ http://www.tomshardware.fr/forum/id-1346383/formulaire-recherche-php.html
 
 		return $reqPrep->fetchall(PDO::FETCH_ASSOC);
 	}
+
+
+
+	//liste des recettes en fonction de l'ingrédient saisis
 }
 
 ?>
