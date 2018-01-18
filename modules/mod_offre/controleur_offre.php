@@ -9,17 +9,25 @@ class ControleurOffre extends ControleurGenerique{
 		$this->modele=new ModeleOffre();
 	}
 
-		function consulter_offre() {
-
-		$element = $this->modele->modele_recuperer_info_offre($_GET['id_offre']);
-		$this->vue->vue_consulter_offre($element);
-	}
-
 		function liste_offre() {
 			
 		$offre = $this->modele->modele_offre();
 		$this->vue->vue_liste_offre($offre);
 	}
 
+
+		function consulter_offre() {
+
+		$element = $this->modele->modele_recuperer_info_offre($_GET['id_recette']);
+		$this->vue->vue_consulter_offre($element);
+	}
+
+
+		function ajouter_offre(){
+			$element= $this->modele->modele_valider_offre($_GET['id_recette']);
+			$this->vue->vue_liste_offre($element);
+			$this->vue->vue_confirm("Recette bien ajoutée !");
+		}
+//erreur mauvaise fonction utiliser pour redirige vers la liste 
 }
 ?>
