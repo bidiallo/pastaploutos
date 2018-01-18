@@ -16,12 +16,12 @@ class VueProposer extends VueGenerique{
 
 	        <h2 class="form-signin-heading">Proposer une recette!</h2>
 
-	         <div>
+	         <div class="select-style">
 		        <label for="inputTitre" class="sr-only">Titre</label>
 		        <input type="text" name="titre_recette" id="inputNom" class="form-control" placeholder="Titre" required autofocus>
 		    </div>
 
-		    <div>
+		    <div class="select-style">
 		        <label for="inputDescription" class="sr-only">Description</label>
 		        <input type="text" name="description_recette" id="inputDescription" class="form-control" placeholder="Description" required autofocus>
 		    </div>
@@ -64,19 +64,23 @@ class VueProposer extends VueGenerique{
 					<option value="8">8 et +</option>
 				</select>
 		   </div>
-		   <!-- NOTETOTALRECETTE-->
+		   <!-- ID INGREDIENT AJAAAAAAAX-->
+		   <div class="select-style">
+		   	<label for="id_ingredient">Ingrédient principal : </label>
+		   	<input type="text" name="id_ingredient" id="id_ingredient" class="form-control" placeholder="Nom de l'Ingrédient" required autofocus>
+		   </div>
 		   <!-- RECETTE PUBLIE-->
-		   <div>
+		   <div class="select-style">
 		   <label for="photo_recette">Sélectionner des images à uploader (PNG, JPG) :</label>
 		   	<input type="file" name="photo_recette" accept=".jpg, .jpeg, .png" id="photo_recette" />
 
 		   </div>
-	        <div>
+	        <div class="select-style">
 		        <label for="inputTpsPreparation" class="sr-only">Temps de préparation</label>
 		        <input type="text" name="tpsPreparation_recette" id="inputTpsPreparation" class="form-control" placeholder="Temps de préparation" required autofocus>
 		    </div>
 
-	        <div>
+	        <div class="select-style">
 		        <label for="inputTpsCuisson" class="sr-only">Temps de cuisson</label>
 		        <input type="text" name="tpsCuisson_recette" id="inputTpsCuisson" class="form-control" placeholder="Temps de cuisson" required autofocus>
 		    </div>
