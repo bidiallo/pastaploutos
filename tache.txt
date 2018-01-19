@@ -115,4 +115,4 @@ Design : Cover/Proposer/Offre/Connexion/Incription/idee/
 
 Bineta : Debug pour Connexion : methode de hashage ne marchait pas à cause d'une taille trop petite pour le mdp + pas bonne méthode, donc reprend pour connexion + Debug sur  profil en ajax 
 A FAIRE : Sécurité du site !!!!!!!!!!!!!!!!!!!!!!!!!!! + Enlever commentaire
-Design : Accueil/Choisir/Favoris/Recette/Profil/
+Design : Accueil/Choisir/Favoris/Recette/Profil/NAV/Template

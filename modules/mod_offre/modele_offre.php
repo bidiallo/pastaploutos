@@ -42,6 +42,18 @@ class ModeleOffre extends ModeleGenerique{
 
 
 	}
+	function modele_supprimer_offre($idOffre){
+
+		$req = 'DELETE  FROM p_recette WHERE id_recette=?;';
+
+		$reqPrep = self::$connexion->prepare($req);
+
+		$reqPrep->execute(array($idOffre));
+
+		$enregistrement = $reqPrep->fetchall(PDO::FETCH_ASSOC);
+
+		return $enregistrement;
+	}
 
 }
 ?>

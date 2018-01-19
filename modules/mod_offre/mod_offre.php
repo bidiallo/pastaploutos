@@ -22,6 +22,11 @@ class ModOffre extends ModuleGenerique{
 				$this->controleur->ajouter_offre();
 				break;
 
+			case 'supprimer_offre':
+				$this->controleur->supprimer_offre();
+				break;
+
+
 			default:
 				$this->controleur->liste_offre();
 				break;

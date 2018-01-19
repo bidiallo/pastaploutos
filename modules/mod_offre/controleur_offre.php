@@ -28,6 +28,5 @@ class ControleurOffre extends ControleurGenerique{
 			$this->vue->vue_liste_offre($element);
 			$this->vue->vue_confirm("Recette bien ajoutée !");
 		}
-//erreur mauvaise fonction utiliser pour redirige vers la liste 
 }
 ?>
