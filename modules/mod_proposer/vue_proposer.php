@@ -64,12 +64,17 @@ class VueProposer extends VueGenerique{
 					<option value="8">8 et +</option>
 				</select>
 		   </div>
-		   <!-- ID INGREDIENT AJAAAAAAAX--><?php
-		   echo "
+		
+		   <!-- ID INGREDIENT AJAAAAAAAX-->
+		    <div class="select-style">
+		        <label for="inputTitre" class="sr-only">Ingredient</label>
+		        <input type="text" name="id_ingredient" id="id_ingredient" class="form-control" placeholder="Ingredient" required autofocus>
+		    </div>
+		   <?php /*echo "
 
 		<div class='input-group' id='pagerecherche'>
 		 
-		  <input type='text' class='form-control' id='search' placeholder='Choisissez le nom de l'ingrédient principale' aria-describedby='basic-addon1'>
+		  <input type='text' class='form-control' id='id_ingredient' placeholder='Choisissez le nom de l'ingrédient principale' aria-describedby='basic-addon1'>
 		  <p id='r'></p>
 		</div>
 
@@ -92,7 +97,7 @@ class VueProposer extends VueGenerique{
 			});
 		</script>
 
-		";?>
+		";*/?>
 		   <!-- RECETTE PUBLIE-->
 		   <div class="select-style">
 		   <label for="photo_recette">Sélectionner des images à uploader (PNG, JPG) :</label>

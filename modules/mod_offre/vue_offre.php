@@ -89,7 +89,7 @@ class VueOffre extends VueGenerique {
 
                                 </tr>
                                 <tr>
-                                  <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']);?></td>
+                                  <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']); ?></td>
                                 </tr>
                                 </div>
                                     <p><a id="btnvoir" href="index.php?module=offre&action=ajouter_offre&id_recette=<?php echo $element['id_recette'];?>". class="btn btn-default" role="button"> Valider </a></p>
