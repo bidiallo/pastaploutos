@@ -106,10 +106,10 @@ switch ($module) {
 		break;
 
 
-	case 'ideesetastuces':
+	case 'idees':
 
-		include_once ("modules/mod_ideesetastuces/mod_$module.php");
-		$nom_module = "ModIdeesetastuces";
+		include_once ("modules/mod_idees/mod_$module.php");
+		$nom_module = "ModIdees";
 		$classe_module = new $nom_module();
 
 		break;

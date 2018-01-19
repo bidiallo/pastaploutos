@@ -12,7 +12,7 @@ class NavControleur extends ControleurGenerique {
 	public function affiche() {
 		$nav = array(
 			"recette" => "Recettes",
-			"ideesetastuces" => "Idées & Astuces",
+			"idees" => "Idées & Astuces",
 			"choisir" => "Choisir un ingrédient"
 			);
 
