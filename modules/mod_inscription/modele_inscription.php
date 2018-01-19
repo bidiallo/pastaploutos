@@ -15,7 +15,7 @@ class ModeleInscription extends ModeleGenerique {
 			return "Erreur email"; */
 		
 		$prepare=self::$connexion->prepare($req);
-		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user, $mdp_user));
+		$result=$prepare->execute(array($nom_user,$prenom_user,$pseudo_user,$email_user,password_hash($mdp_user,PASSWORD_DEFAULT)));
 	}
 /*
 	public function VerifPseudo($pseudo){

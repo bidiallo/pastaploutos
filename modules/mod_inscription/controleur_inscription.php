@@ -17,7 +17,7 @@ class ControleurInscription extends ControleurGenerique {
 		$prenom_user = htmlspecialchars($_POST["prenom_user"]);
 		$pseudo_user = htmlspecialchars($_POST["pseudo_user"]);
 		$email_user = htmlspecialchars($_POST["email_user"]);
-		$mdp_user = hash('sha256',htmlspecialchars($_POST["mdp_user"]));
+		$mdp_user = $_POST['mdp_user'];
 		
 		if(empty($nom_user) || empty($prenom_user) || empty($pseudo_user) || empty($email_user) || empty($mdp_user)){
 			$this->form_inscription();

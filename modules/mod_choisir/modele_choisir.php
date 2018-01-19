@@ -15,7 +15,7 @@ http://www.tomshardware.fr/forum/id-1346383/formulaire-recherche-php.html
 	function modele_recuperer_info_recette($idingredient) {
 
 
-		$req = 'SELECT titre_recette, nom_ingredient FROM p_recette 
+		$req = 'SELECT  titre_recette, nom_ingredient FROM p_recette 
 				INNER JOIN p_ingredient USING (id_ingredient) 
 				WHERE id_ingredient=? LIKE '%".$id_ingredient."%' ORDER BY titre_recette';
 
