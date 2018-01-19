@@ -16,18 +16,22 @@ class ControleurChoisir extends ControleurGenerique {
 
 	function form_choisir() {
 		
-			$this->vue->vue_form_choisir($_GET['id_ingredient']);
-		
+		//if (isset($_GET['id_ingredient'])) {
+			//$this->vue->vue_form_choisir($_GET['id_ingredient']);
+		//}
+		$this->vue->vue_form_choisir();
+
 			
 	}
 
 
 
-
-	function choisir() {
+/*
+	function choisir_ingr() {
 		
+
 		$ingr = $this->modele->modele_recuperer_info_recette($_GET['id_ingredient']);	
 	}
-
+*/
 }
 ?>

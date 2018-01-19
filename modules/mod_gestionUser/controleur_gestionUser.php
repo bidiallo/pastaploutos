@@ -22,6 +22,7 @@ class ControleurGestionUser extends ControleurGenerique {
 		//if($this->modele->$_SESSION['id_user']) {}
 			
 			$user = $this->modele->modele_get_liste_user();
+			$this->vue->vue_recherche_user();
 			$this->vue->vue_liste_user($user);
 		//}
 
@@ -35,7 +36,6 @@ class ControleurGestionUser extends ControleurGenerique {
 		else {
 			try{
 				$element = $this->modele->modele_recuperer_info_user($_GET['id_user']);
-				//var_dump($_POST['id_user']);
 				$this->vue->vue_consulter_profil($element);
 			} catch(Exception $e) {
 				//$this->vue->vue_erreur("Erreur accès BDD");
@@ -88,6 +88,7 @@ class ControleurGestionUser extends ControleurGenerique {
 		$this->modele->modele_suppr_user( htmlspecialchars($_GET['id_user']));
 		$this->vue->vue_confirm("Profil supprimé !");
 		session_destroy();
+		
 		//header('Location:index.php?module=gestionUser&action=liste_profil');	
 	}
 

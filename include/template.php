@@ -12,6 +12,7 @@ include_once('module_generique.php');
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" type="text/css" href="template.css">
     	<link href="modules/mod_<?php echo "$module"?>/<?php echo "$module"?>.css" rel="stylesheet" type="text/css">
 
 		<!-- Latest compiled and minified CSS -->
@@ -23,9 +24,12 @@ include_once('module_generique.php');
 
 		<!--<title><?php /*echo $classe_module->getControleur()->getVue->getTitre();*/?></title>-->
 		<title>PastaPloutos</title>
+
+
 	</head>
 
-
+	<header>
+		
 		<?php
 
 			require_once('composants/nav/nav.php');
@@ -33,6 +37,9 @@ include_once('module_generique.php');
 			$nav = new Nav();
 		
 		?>
+	</header>
+
+		
 	
 
 
@@ -48,7 +55,7 @@ include_once('module_generique.php');
 
 	 
 	<!--footer-->
-		<footer class="footer" style= "margin-left: 15%; margin-top: 45%;">
+		<footer class="footer">
 			<div class="container">
 				<div class="row">
 				  <div class="col-xs-6 col-sm-4">

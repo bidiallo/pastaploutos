@@ -13,8 +13,14 @@
 
 	$a = $t->fetchall(PDO::FETCH_ASSOC);
 
-	foreach ($a as $r) {
-		echo "<a href=index.php?module=recette&action=consulter_recette&id=$r[id_ingredient]>$r[nom_ingredient]<a/><br>";
+
+	if (isset($_POST['mot'])) {
+		
+		foreach ($a as $r) {
+			//var_dump($a);
+			echo "<a href=index.php?module=recette&action=consulter_recette&id=$r[id_ingredient]&id_recette=$r[id_recette]>$r[nom_ingredient]<a/><br>";
+		}
 	}
+	
 
 	?>

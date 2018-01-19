@@ -46,7 +46,7 @@ class ModeleGenerique{
 	}
 
 	function efface_token($token) {
-		$requete = "DELETE FROM p_token WHERE id_oken = ?";
+		$requete = "DELETE FROM p_token WHERE id_token = ?";
    		$reqPrep = self::$connexion->prepare($requete);
    		$this->effaceTokenNonValides();
    		return $reqPrep->execute(array($token));

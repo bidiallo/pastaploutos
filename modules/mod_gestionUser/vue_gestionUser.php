@@ -8,18 +8,16 @@ class VueGestionUser extends VueGenerique {
 		parent::__construct();
 	}
 
+	function vue_recherche_user() {
 
-	
-	//barre de recherche en ajax pour voir si le user saisie est dans la BD
-	function vue_liste_user($users) {
-		var_dump($users);
-		
+
 		echo "
 
 		<div class='input-group' id='pagerecherche'>
-		 
-		  <input type='text' class='form-control' id='search' placeholder='Saisir un utilisateur' aria-describedby='basic-addon1'>
-		  <p id='r'></p>
+			 <form method='POST'>
+			  <input type='text' class='form-control' id='search' placeholder='Saisir un utilisateur' aria-describedby='basic-addon1'>
+			  <p id='r'></p>
+			</form>
 		</div>
 
 		<button type='submit'>Rechercher </button>
@@ -42,6 +40,13 @@ class VueGestionUser extends VueGenerique {
 		</script>
 
 		";
+
+	}
+	
+	//barre de recherche en ajax pour voir si le user saisie est dans la BD
+	function vue_liste_user($users) {
+		//var_dump($users);
+		
 			?>
 		<div class="row">
 			<!--faire un foreach qui recupere les données -->
@@ -100,7 +105,7 @@ class VueGestionUser extends VueGenerique {
 	 
 
 	function vue_consulter_profil($profil) {
-		var_dump($profil);
+		
 		?>
 
 			<?php foreach ($profil as $element) { ?>

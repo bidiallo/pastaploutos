@@ -1,5 +1,124 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
+/*
+https://codepen.io/aalokindreams/pen/GZPoEX
+https://codepen.io/T00dles/pen/qmdOOQ
+https://codepen.io/tmrDevelops/pen/WrEgJB
+https://codepen.io/vineethtr/pen/EajNxE
+
+https://mdbootstrap.com/css/colors/
+https://www.flaticon.com/free-icon/
+*/
+
+
 body {
-  /*padding-top: 50px;
-  padding-bottom: 20px;*/
+
+  font-weight: 300;
+  background-color: #EEEEEE;
 }
+
+nav {
+	/*position: static;*/
+	/*z-index: 1030;*/
+	overflow: visible;
+	background: #0D5D66;
+}
+/*
+.navbar-inner {
+	background-color: #0D5D66;
+	background-repeat: repeat-x;
+}*/
+
+
+.left-side {
+	float: left;
+	padding: 20px;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.right-side {
+	float: right;
+	padding-right: 10px;
+}
+
+.right-side li {
+	display: inline-block;
+	padding: 20px;
+	color: #FFFFFF;
+	margin-top: -26px;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.right-side li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+.jumbotron {
+	display: flex;
+	align-items:center;
+	background-image: url('images/pates.jpg'); 
+	background-size: cover;
+	color: #FFFFFF;
+	height: 500px;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+
+.jumbotron h1 {
+	font-size: 60px;
+	font-weight: 700;
+	margin: 0;
+	color: #FFFFFF;
+}
+
+.button {
+	width: 200px;
+	border-radius: 8px;
+	height: 50px;
+	position: absolute;
+	padding: 0px;
+	z-index: 99;
+	background-color: #FFCA28;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 150;
+	color: #FFFFFF; 
+	/*margin-top: 50px;*/
+}
+
+.button:hover {
+	background-color:  #FFD54F;
+	color: white;s
+}
+
+.img-thumbnail {
+	cursor: pointer;
+	transition: 0.3s;
+
+	/*animation*/
+	-webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.img-thumbnail:hover {
+	opacity: 0.7;
+}
+
+
+footer {
+	display:flex;
+	align-items:center;
+	background: #0D5D66;
+	color: #FFFFFF;
+	padding: 20px 0;
+	margin-top: 105px;
+}
+
+
+
+

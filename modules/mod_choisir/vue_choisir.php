@@ -7,14 +7,16 @@ class VueChoisir extends VueGenerique {
 	}
 
 
-	function vue_form_choisir($idingredient) {
+	function vue_form_choisir() {
 
 		echo "
 
 		<div class='input-group' id='pagerecherche'>
-		 
-		  <input type='text' class='form-control' id='search' placeholder='Choisissez un ingrédient' aria-describedby='basic-addon1'>
-		  <p id='r'></p>
+		 	<form method='POST'>
+		  		<input type='text' class='form-control' id='search' placeholder='Choisissez un ingrédient' aria-describedby='basic-addon1'>
+		  		<p id='r'></p>
+		  		<p id_recette='r'></p>
+		  	</form>
 		</div>
 
 		<button type='submit'>Rechercher</button>

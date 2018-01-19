@@ -13,8 +13,13 @@
 
 	$a = $t->fetchall(PDO::FETCH_ASSOC);
 
-	foreach ($a as $r) {
-		echo "<a href=index.php?module=gestionUser&action=consulter_profil&id=$r[id_user]>$r[prenom_user] $r[nom_user]<a/><br>";
+	if (isset($_POST['mot'])) {
+		
+		
+		foreach ($a as $r) {
+			var_dump($r['id_user']);
+			echo "<a href=index.php?module=gestionUser&action=consulter_profil&id_user=$r[id_user]>$r[prenom_user] $r[nom_user]<a/><br>";
+		}
 	}
 
 	?>

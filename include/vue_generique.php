@@ -13,7 +13,7 @@ class VueGenerique{
 
 
 	function tamponVersContenu(){
-		$this-> contenu = $this -> contenu /*. ob_get_clean()*/;
+		$this-> contenu = $this -> contenu.ob_get_clean();
 	}
 
 

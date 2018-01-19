@@ -1,3 +1,9 @@
+body {
+
+  font-weight: 300;
+  background-color: #EEEEEE;
+}
+
 nav {
 	/*position: static;*/
 	/*z-index: 1030;*/
