@@ -21,5 +21,27 @@ class ControleurRecette extends ControleurGenerique{
 		$this->vue->vue_liste_recette($recette);
 	}
 
+		function favoris_recette(){
+
+			if(!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
+			$this->vue->vue_erreur(" Impossible d'ajouter aux favoris. Vous n'etes pas connecté.");
+
+		}elseif ($_GET['is_favoris']==1) {
+
+			$this->vue->vue_erreur(" Recette déjà ajoutée aux favoris !!");
+		}
+
+		else {
+			try{
+			$element = $this->modele->modele_ajouter_favoris($_GET['id_recette']);
+			$this->vue->vue_consulter_recette($element);
+			} catch(Exception $e) {
+				//$this->vue->vue_erreur("Erreur accès BDD");
+			}
+		}
+
+
+		}
+
 }
 ?>

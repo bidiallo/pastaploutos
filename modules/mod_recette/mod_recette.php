@@ -18,6 +18,10 @@ class ModRecette extends ModuleGenerique{
 				$this->controleur->liste_recette();
 				break;
 
+			case 'favoris_recette':
+				$this->controleur->favoris_recette();
+				break;
+
 			default:
 				$this->controleur->liste_recette();
 				break;

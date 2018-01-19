@@ -47,8 +47,7 @@ class VueRecette extends VueGenerique {
                 
               </div>
               <p><a id="btnvoir" href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>". class="btn btn-default" role="button"> Voir plus </a></p>
-
-          </div>
+              </div>
 
         </div>
       </div>
@@ -94,8 +93,12 @@ class VueRecette extends VueGenerique {
 
                                 </tr>
                                 <tr>
-                                  <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']);?></td>
+                                  <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']); ?></td>
                                 </tr>
+                                </div>
+                                <p><a id="btnvoir" href="index.php?module=recette&action=favoris_recette&id_recette=<?php echo $element['id_recette'];?>&is_favoris=<?php echo $element['is_favoris'];?>". class="btn btn-default" role="button"> Ajouter aux favoris </a></p>
+                                </div>
+
                         </tbody>
                 </table>                      
 
