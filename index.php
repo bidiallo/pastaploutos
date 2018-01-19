@@ -125,7 +125,7 @@ switch ($module) {
 
 	case 'favoris':
 
-		include_once("module/mod_favoris/mod_$module.php");
+		include_once("modules/mod_favoris/mod_$module.php");
 		$nom_module = "ModFavoris";
 		$classe_module = new $nom_module();
 		break;

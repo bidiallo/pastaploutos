@@ -15,13 +15,9 @@ class ControleurChoisir extends ControleurGenerique {
 //
 
 	function form_choisir() {
-		if (isset($_GET['id_ingredient'])) {
+		
 			$this->vue->vue_form_choisir($_GET['id_ingredient']);
-		}
-		else {
-			echo "prb";
-		}
-
+		
 			
 	}
 
