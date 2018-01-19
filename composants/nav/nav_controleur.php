@@ -13,13 +13,15 @@ class NavControleur extends ControleurGenerique {
 		$nav = array(
 			"recette" => "Recettes",
 			"ideesetastuces" => "Idées & Astuces",
-			"choisir" => "Choisir un ingrédient" 
+			"choisir" => "Choisir un ingrédient",
+			"recherche" => "Recherche" 
 			);
 
 		if (isset($_SESSION['id_user']) && $_SESSION['id_user'] != "") {
 			//admin et user connecté
 			$nav["profil"] = "Profil";
 			$nav["proposer"] = "Proposer une recette";
+			$nav["favoris"] = "Favoris";
 
 			if($admin = $this->modele->verifAdmin($_SESSION['id_user'])){
 				//seulement admin

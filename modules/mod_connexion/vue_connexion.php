@@ -8,7 +8,7 @@ class VueConnexion extends VueGenerique {
 		parent::__construct();
 	}
 
-	function vue_form_connexion(/*mettre le token en param*/) {
+	function vue_form_connexion() {
 		?>
 		<div class="container" >
 

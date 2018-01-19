@@ -77,9 +77,6 @@ class VueProfil extends VueGenerique {
         <label for="pwd">Nouveau mot de passe :</label>
         <input type="password" name="password_new"><br/>
 
-        <label for="pwd">Vérification : </label>
-        <input type="password" name="password_new_verif"><br/>
-
         <button type="submit" class="btn btn-default">Valider</button>
       </form>
 

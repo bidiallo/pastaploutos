@@ -43,15 +43,13 @@ class ControleurProfil extends ControleurGenerique {
 		}
 	}
 
-
+/*
 	function modif_mdp() {
 		
 		if (!isset($_POST['password_old']) || $_POST['password_old'] == "" || !isset($_POST['password_new']) || $_POST['password_new'] == "" ) {
 			$this->vue->vue_erreur("Champ(s) invalide(s)");
 		}
-		elseif ($_POST['password_new'] != $_POST['password_new_verif']) {
-			$this->vue->vue_erreur("Attention ! Mots de passe différent.");
-		}
+		
 		else {
 			try {
 				$this->modele->modele_modif_mdp($_SEESION['id_user'], $_POST['password_old'], $_POST['password_new']);
@@ -62,7 +60,25 @@ class ControleurProfil extends ControleurGenerique {
 		}
 
 	}
+*/
 
+	function modif_mdp() {
+
+		if (!isset($_POST['password_old']) || $_POST['password_old'] == "" || !isset($_POST['password_new']) || $_POST['password_new'] == "" ) {
+			$this->vue->vue_erreur("Champ(s) invalide(s)");
+		}
+		else {
+			$mdp_old = $this->modele->modele_recupere_ancien($_POST['mdp_user']);
+
+			try {
+				$this->modele->modele_modif_mdp($_SESSION['id_user'], $_POST['password_old'], $_POST['password_new']);
+				$this->vue->vue_confirm("Mot de passe modifié");
+			} catch( Exception $e) {
+				$this->vue->vue_erreur("Erreur");
+			}
+
+		}
+	}
 
 	
 
