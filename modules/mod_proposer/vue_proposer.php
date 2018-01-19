@@ -79,9 +79,11 @@ class VueProposer extends VueGenerique{
 									<option value="1">Entrée</option>
 									<option value="2">Plat</option>
 									<option value="4">Dessert</option>
-					</select>
-			        </div>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">Envoyer</button>
+						</select>
+					</div>
+					<div>
+						<button class="button" type="submit">Envoyer</button>
+					</div>			     			
 				</form>
 			</div> 
 
