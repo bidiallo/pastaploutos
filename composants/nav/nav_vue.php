@@ -24,15 +24,14 @@ class NavVue extends ComposantVueGenerique {
 				foreach ($nav as $lien => $nom) {
 					switch ($lien) {
 
-
 						case 'recette':
-						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						echo "\t\t\t<li><a class='dropdown-toggle' data-toggle='dropdown' role='button' href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
 						break;
-
+						
 						case 'ideesetastuces':
 						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
 						break;
-
+									
 						case 'offre':
 						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
 						break;
