@@ -18,7 +18,7 @@ class VueRecette extends VueGenerique {
          ?>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src=<?php echo htmlspecialchars($recette['photo_recette']);?> alt="photo de recette" width="400" height="525">
+          <img class="img-thumbnail" src=<?php echo htmlspecialchars($recette['photo_recette']);?> alt="photo de recette" width="400" height="525">
 
           <div class="caption">
             
@@ -28,7 +28,7 @@ class VueRecette extends VueGenerique {
                 <table class="table-vertical">
                   <thead>
                     <tr>
-                    <td><strong><?php echo htmlspecialchars($recette['titre_recette']);?></strong></td>
+                    <td><h3><?php echo htmlspecialchars($recette['titre_recette']);?></h3></td>
                     </tr> 
                   </thead>
 
@@ -46,7 +46,7 @@ class VueRecette extends VueGenerique {
                 </table>
                 
               </div>
-              <p><a id="btnvoir" href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>". class="btn btn-default" role="button"> Voir plus </a></p>
+              <p><a id="btnvoir" href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>". class="button" role="button"> Voir plus </a></p>
               </div>
 
         </div>

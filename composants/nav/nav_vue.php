@@ -9,11 +9,11 @@ class NavVue extends ComposantVueGenerique {
 		?>
 
 		<nav class="navbar-default">
-			<div class="container-fluid">
+			<div class="container-fluid" style="flex-grow: 2px">
 
 				<div class="navbar-header">
 					<a class="navbar-brand" href="index.php?module=accueil">
-					<img src="images/campao.png" width="150" height="50" style="margin-top: -5px;">
+					<img src="images/campao.png" width="150" height="100" style="margin-top: -5px;">
 					</a>		
 				</div>
 

@@ -42,7 +42,7 @@ class VueAccueil extends VueGenerique {
 			      <div class="caption">
 			        <h3>Idées & Astuces</h3>
 			        <p>.Decouvrez nos nouvelles recettes de pates !</p>
-			        <p><a href="#" class="index.php?module=ideesetastuces&action=liste_ideesetastuces" role="button">En savoir plus...</a></p>
+			        <p><a href="index.php?module=ideesetastuces&action=liste_ideesetastuces" class="button" role="button">En savoir plus...</a></p>
 			      </div>
 			    </div>
 			  </div>
