@@ -31,7 +31,7 @@ class VueAccueil extends VueGenerique {
 			      <div class="caption">
 			        <h3>Recettes</h3>
 			        <p>Retrouver toutes les recettes déjà disponibles...</p>
-			        <p><a class="button" href="liste_recette.html" role="button">Recettes</a></p>
+			        <p><a class="button" href="index.php?module=recette&action=liste_recette" role="button">Recettes</a></p>
 			      </div>
 			    </div>
 			  </div>
@@ -42,7 +42,7 @@ class VueAccueil extends VueGenerique {
 			      <div class="caption">
 			        <h3>Idées & Astuces</h3>
 			        <p>.Decouvrez nos nouvelles recettes de pates !</p>
-			        <p><a href="#" class="button" role="button">En savoir plus...</a></p>
+			        <p><a href="#" class="index.php?module=ideesetastuces&action=liste_ideesetastuces" role="button">En savoir plus...</a></p>
 			      </div>
 			    </div>
 			  </div>
@@ -54,7 +54,7 @@ class VueAccueil extends VueGenerique {
 			      <div class="caption">
 			        <h3>Choisir ingrédients</h3>
 			        <p>Sélectionne les ingrédients et trouve une recette adapté.</p>
-			        <p><a href="choisir" class="button" role="button">Go cuisiner ! </a></p>
+			        <p><a href="index.php?module=choisir&action=form_choisir" class="button" role="button">Go cuisiner ! </a></p>
 			      </div>
 			    </div>
 			  </div>

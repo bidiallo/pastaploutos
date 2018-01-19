@@ -13,8 +13,7 @@ class NavControleur extends ControleurGenerique {
 		$nav = array(
 			"recette" => "Recettes",
 			"ideesetastuces" => "Idées & Astuces",
-			"choisir" => "Choisir un ingrédient",
-			"recherche" => "Recherche" 
+			"choisir" => "Choisir un ingrédient"
 			);
 
 		if (isset($_SESSION['id_user']) && $_SESSION['id_user'] != "") {

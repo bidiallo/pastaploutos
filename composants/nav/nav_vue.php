@@ -28,17 +28,6 @@ class NavVue extends ComposantVueGenerique {
 						echo "\t\t\t<li><a class='dropdown-toggle' data-toggle='dropdown' role='button' href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
 						break;
 						
-						case 'ideesetastuces':
-						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
-						break;
-									
-						case 'offre':
-						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
-						break;
-
-						case 'choisir':
-						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
-						break;
 
 						case 'connexion':
 						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\"><span class=\"glyphicon glyphicon-log-in\"></span>" ." ". $nom . "</a></li>";

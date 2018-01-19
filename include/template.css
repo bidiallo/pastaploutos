@@ -10,3 +10,13 @@ nav {
 	overflow: visible;
 	background: #0D5D66;
 }
+
+
+footer {
+	display:flex;
+	align-items:center;
+	background: #0D5D66;
+	color: #FFFFFF;
+	padding: 20px 0;
+	margin-top: 105px;
+}

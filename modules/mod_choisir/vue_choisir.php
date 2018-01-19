@@ -11,32 +11,39 @@ class VueChoisir extends VueGenerique {
 
 		echo "
 
-		<div class='input-group' id='pagerecherche'>
-		 	<form method='POST'>
-		  		<input type='text' class='form-control' id='search' placeholder='Choisissez un ingrédient' aria-describedby='basic-addon1'>
-		  		<p id='r'></p>
-		  		<p id_recette='r'></p>
-		  	</form>
-		</div>
+		<section class='header'>
+			<center><h1>Choisir Ingrédient</h1></center>
+			<div class='input-group' id='pagerecherche'>
+			 	<form method='POST' class='cont'>
+			  		<input type='text' class='srchFld' id='search' ng-model='search' placeholder='Choisissez un ingrédient' aria-describedby='basic-addon1'>
+			  		<p id='r'></p>
+			  		<p id_recette='r'></p>
 
-		<button type='submit'>Rechercher</button>
+			  		<div class='entypo-search ico'></div>
+			  	</form>
+			</div>
 
-		<script src='jquery-3.1.1.min.js'></script>
-		<script>
-			$('#search').on('input', function() {
-				var recherche=$('#search').val();
-				$.ajax({
-					url : 'recherche.php',
-					data : 'mot='+recherche,
-					type : 'POST',
-					dataType : 'html',
-					success : function (code_html) {
-						console.log(code_html);
-						$('#r').html(code_html);
-					}
+
+		</section>
+
+		<div>
+			<script src='jquery-3.1.1.min.js'></script>
+			<script>
+				$('#search').on('input', function() {
+					var recherche=$('#search').val();
+					$.ajax({
+						url : 'recherche.php',
+						data : 'mot='+recherche,
+						type : 'POST',
+						dataType : 'html',
+						success : function (code_html) {
+							console.log(code_html);
+							$('#r').html(code_html);
+						}
+					});
 				});
-			});
-		</script>
+			</script>
+		</div>
 
 		";
 	}
