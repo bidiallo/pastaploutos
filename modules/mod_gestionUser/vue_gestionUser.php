@@ -12,7 +12,8 @@ class VueGestionUser extends VueGenerique {
 	
 	//barre de recherche en ajax pour voir si le user saisie est dans la BD
 	function vue_liste_user($users) {
-	
+		var_dump($users);
+		
 		echo "
 
 		<div class='input-group' id='pagerecherche'>

@@ -14,7 +14,7 @@
 	$a = $t->fetchall(PDO::FETCH_ASSOC);
 
 	foreach ($a as $r) {
-		echo "<a href=index.php?module=gestionUser&action=consulter_profil&id=$r[id_user]>$r[prenom_user]<a/><br>";
+		echo "<a href=index.php?module=gestionUser&action=consulter_profil&id=$r[id_user]>$r[prenom_user] $r[nom_user]<a/><br>";
 	}
 
 	?>

@@ -34,7 +34,7 @@ class ControleurGestionUser extends ControleurGenerique {
 		}
 		else {
 			try{
-				$element = $this->modele->modele_recuperer_info_user($_POST['id_user']);
+				$element = $this->modele->modele_recuperer_info_user($_GET['id_user']);
 				//var_dump($_POST['id_user']);
 				$this->vue->vue_consulter_profil($element);
 			} catch(Exception $e) {
