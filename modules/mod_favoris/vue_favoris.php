@@ -11,7 +11,7 @@ class VueFavoris extends VueGenerique {
   function vue_liste_favoris($favoris) { ?>
     <div class="row">
       <!--faire un foreach qui recupere les données -->
-        <?php  foreach($fav as $favoris) { ?>
+        <?php  foreach($favoris as $fav) { ?>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <img src=<?php echo htmlspecialchars($fav['photo_recette']);?> alt="photo de recette" width="400" height="525">
@@ -42,8 +42,11 @@ class VueFavoris extends VueGenerique {
                 </table>
                 
               </div>
-              <p><a id="btnvoir" href="index.php?module=offre&action=consulter_offre&id_recette=<?php echo $offre['id_recette'];?>". class="btn btn-default" role="button"> Voir plus </a></p>
-          </div>
+	              <p><a id="btnvoir" href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $fav['id_recette'];?>". class="btn btn-default" role="button"> Voir plus 
+	              </a></p>
+	              <a id="btnsuppr" href="index.php?module=favoris&action=supprimer_offre&id_recette=<?php echo $fav['id_recette'];?>". class="btn btn-default" role="button"> Supprimer 
+	              </a>
+         	 </div>
 
         </div>
       </div>
@@ -53,6 +56,7 @@ class VueFavoris extends VueGenerique {
 
 
  <?php  }
+
 }
   
  

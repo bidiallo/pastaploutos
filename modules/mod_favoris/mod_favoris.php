@@ -1,5 +1,5 @@
 <?php
-require_once('controleur_offre.php');
+require_once('controleur_favoris.php');
 
 class ModFavoris extends ModuleGenerique{
 	function __construct(){
@@ -7,7 +7,7 @@ class ModFavoris extends ModuleGenerique{
 
 		$action = isset($_GET['action']) ? $_GET['action'] : "default";
 
-		$this->controleur = new ControleurOffre();
+		$this->controleur = new ControleurFavoris();
 
 		switch ($action) {
 				
@@ -15,8 +15,8 @@ class ModFavoris extends ModuleGenerique{
 				$this->controleur->liste_favoris();
 				break;
 
-			case 'ajouter_offre':
-				$this->controleur->ajouter_offre();
+			case 'supprimer_offre':
+				$this->controleur->supprimer_offre();
 				break;
 
 			default:

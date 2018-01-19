@@ -16,10 +16,12 @@ class ControleurFavoris extends ControleurGenerique{
 	}
 
 
-		function ajouter_offre(){
-			$element= $this->modele->modele_valider_offre($_GET['id_recette']);
-			$this->vue->vue_liste_offre($element);
-			$this->vue->vue_confirm("Recette bien ajoutée !");
+		function supprimer_offre(){
+			$element= $this->modele-> modele_supprimer_favoris($_GET['id_recette']);
+			$this->vue->vue_confirm(" supprimé !");
+			$this->vue->vue_liste_favoris($element);
+			//session_destroy();
+		//header('Location:index.php?module=favoris&action=liste_favoris');	
 		}
 //erreur mauvaise fonction utiliser pour redirige vers la liste 
 }

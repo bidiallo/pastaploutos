@@ -18,13 +18,13 @@ class ModeleFavoris extends ModeleGenerique{
 	//OKAI
 
 
-	function modele_valider_offre($idOffre){
+	function modele_supprimer_favoris($idFavoris){
 		
-		$req = 'UPDATE p_recette SET recette_publie = 1 WHERE id_recette=?;';
+		$req = 'UPDATE p_recette SET is_favoris = 0 WHERE id_recette=?;';
 
 		$reqPrep = self::$connexion->prepare($req);
 
-		$reqPrep->execute(array($idOffre));
+		$reqPrep->execute(array($idFavoris));
 
 		$enregistrement = $reqPrep->fetchall(PDO::FETCH_ASSOC);
 
