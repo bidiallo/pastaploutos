@@ -1,0 +1,5 @@
+SELECT id_recette from p_favoris where id_user=15; 
+
+SELECT  * FROM p_favoris 
+				INNER JOIN p_recette USING (id_recette) 
+				WHERE id_recette=?

@@ -109,8 +109,9 @@ Bine : Nav bar sur le c^oté + faire design + faire Securite + module choisis te
 
 19/01/2018
 Camille : Debug de offre et proposer, finis SAUF lien photo qui ne marche pas, plus ajax pour le nom de l'ingredient 
-Essayé de faire pour recette en favoris : FAIT : ajouter une recette en favoris + verif reste module favoris à faire 
+Essayé de faire pour recette en favoris :PAS POSSIBLE
 A FAIRE : Verif inscription
+Design : Cover/Profil/Proposer/Accueil/Puis voir inscription/Connexion
 
 Bineta : Debug pour Connexion : methode de hashage ne marchait pas à cause d'une taille trop petite pour le mdp + pas bonne méthode, donc reprend pour connexion + Debug sur  profil en ajax 
 A FAIRE : Sécurité du site !!!!!!!!!!!!!!!!!!!!!!!!!!! + Enlever commentaire
