@@ -16,7 +16,7 @@ class VueChoisir extends VueGenerique {
 			<div class='input-group' id='pagerecherche'>
 			 	<form method='POST' class='cont'>
 			  		<input type='text' class='srchFld' id='search' ng-model='search' placeholder='Choisissez un ingrédient' aria-describedby='basic-addon1'>
-			  		<p id='r'></p>
+			  		<p class='input-choisir' id='r'></p>
 			  		<p id_recette='r'></p>
 
 			  		<div class='entypo-search ico'></div>

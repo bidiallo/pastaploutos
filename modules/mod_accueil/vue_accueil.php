@@ -18,7 +18,7 @@ class VueAccueil extends VueGenerique {
 					<div class="row text-center">
 				        <h1>Recettes pour les fetes !</h1>
 				        <p class="lead">Il neige. Commencez à préparer les fetes de fin d'année</p>
-				        <p><a  class="button" href="ideesastuces" role="button">En savoir plus...</a></p>
+				        <p><a  class="button-jumb" href="ideesastuces" role="button">En savoir plus...</a></p>
       		</div>
       	</section>
 
@@ -41,7 +41,7 @@ class VueAccueil extends VueGenerique {
 			      <img src="images/2018.jpg" alt="..." class="img-thumbnail">
 			      <div class="caption">
 			        <h3>Idées & Astuces</h3>
-			        <p>.Decouvrez nos nouvelles recettes de pates !</p>
+			        <p>Decouvrez nos nouvelles recettes de pates !</p>
 			        <p><a href="index.php?module=ideesetastuces&action=liste_ideesetastuces" class="button" role="button">En savoir plus...</a></p>
 			      </div>
 			    </div>
@@ -53,7 +53,7 @@ class VueAccueil extends VueGenerique {
 			      <img src="images/ingredients2.jpg" alt="..." class="img-thumbnail">
 			      <div class="caption">
 			        <h3>Choisir ingrédients</h3>
-			        <p>Sélectionne les ingrédients et trouve une recette adapté.</p>
+			        <p>Trouve une recette en sélectionnant un ingrédient.</p>
 			        <p><a href="index.php?module=choisir&action=form_choisir" class="button" role="button">Go cuisiner ! </a></p>
 			      </div>
 			    </div>

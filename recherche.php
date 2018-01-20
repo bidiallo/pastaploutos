@@ -1,8 +1,8 @@
 <?php
 
-	$dns = "mysql:host=database-etudiants.iut.univ-paris8.fr;dbname=dutinfopw201618; charset=utf8";
-	$user= "dutinfopw201618";
-	$password= "hytytesa";
+	$dns = "mysql:host=localhost;dbname=test; charset=utf8";
+	$user= "pma";
+	$password= "montreuil";
 
 	$connexion = new PDO ($dns, $user, $password);
 

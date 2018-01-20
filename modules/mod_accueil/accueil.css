@@ -1,33 +1,59 @@
-/*
-https://codepen.io/aalokindreams/pen/GZPoEX
-https://codepen.io/T00dles/pen/qmdOOQ
-https://codepen.io/tmrDevelops/pen/WrEgJB
-https://codepen.io/vineethtr/pen/EajNxE
-
-https://mdbootstrap.com/css/colors/
-https://www.flaticon.com/free-icon/
-*/
-
 
 body {
-
-  font-weight: 300;
-  background-color: #EEEEEE;
+	font-family: century gothic, sans-serif;
+  	width: 100%;
+  	font-weight: 300;
+  	background-color: #EEEEEE;
 }
 
 nav {
-	/*position: static;*/
-	/*z-index: 1030;*/
-	overflow: visible;
-	background: #0D5D66;
-}
-/*
-.navbar-inner {
+	width: 100%;
 	background-color: #0D5D66;
-	background-repeat: repeat-x;
-}*/
+	margin-bottom: 70px;
+
+}
 
 
+.copyright{
+    background-color:#f0f0f0;
+}
+
+.copyright p{
+   margin:15px 0px;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	background-color:#00404C;
+	margin-top: 100px;
+	padding: 60px 0px;
+}
+
+footer .menu li a{
+	color:#FFFFFF;
+	padding:10px;
+	text-decoration:none;
+}
+
+footer .menu li a:hover{
+	color:#FFD54F;
+}
+
+.icon-facebook, .icon-twitter , .icon-instagram {
+	color:#FFFFFF;
+	font-size:20px;
+	padding:10px;
+}
+
+
+.icon-facebook:hover , .icon-twitter:hover  , .icon-instagram:hover  {
+	color:#FFCA28;
+}
+
+
+
+ /*		ACCUEIL		*/
 .left-side {
 	float: left;
 	padding: 20px;
@@ -62,7 +88,7 @@ nav {
 	background-image: url('images/pates.jpg'); 
 	background-size: cover;
 	color: #FFFFFF;
-	height: 500px;
+	height: 300px;
 	text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
@@ -72,6 +98,28 @@ nav {
 	font-weight: 700;
 	margin: 0;
 	color: #FFFFFF;
+}
+
+.button-jumb {
+
+	width: 200px;
+	border-radius: 8px;
+	height: 50px;
+	position: absolute;
+	padding: 0px;
+	z-index: 99;
+	background-color: #FFCA28;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 150;
+	color: #FFFFFF; 
+	
+	/*margin-top: 50px;*/
+}
+
+.button-jumb:hover {
+	background-color:  #FFD54F;
+	color: white;
 }
 
 .button {
@@ -86,14 +134,14 @@ nav {
 	font-size: 25px;
 	font-weight: 150;
 	color: #FFFFFF; 
+	margin-left: 60px;
 	/*margin-top: 50px;*/
 }
 
 .button:hover {
 	background-color:  #FFD54F;
-	color: white;s
+	color: white;
 }
-
 .img-thumbnail {
 	cursor: pointer;
 	transition: 0.3s;
@@ -110,15 +158,6 @@ nav {
 }
 
 
-/*À ENLEVER*/
-footer {
-	display:flex;
-	align-items:center;
-	background: #0D5D66;
-	color: #FFFFFF;
-	padding: 20px 0;
-	margin-top: 105px;
-}
 
 
 

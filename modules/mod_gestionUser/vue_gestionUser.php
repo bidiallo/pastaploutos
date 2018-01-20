@@ -86,11 +86,11 @@ class VueGestionUser extends VueGenerique {
 		        	</div>
 
 		        	
-		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=consulter_profil&id_user=<?php echo $user['id_user'];?>" class="btn btn-default" role="button"> Voir plus </a></p>
+		        <p><a class="btn btn-default" role="button" id="btnmodif" href="index.php?module=gestionUser&action=consulter_profil&id_user=<?php echo $user['id_user'];?>">Voir plus</a></p>
 
-		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=form_modif_droit&id_user=<?php echo $user['id_user'];?>" class="btn btn-default" role="button"> Modifier </a></p>
+		        <p><a class="btn btn-default" role="button" id="btnmodif" href="index.php?module=gestionUser&action=form_modif_droit&id_user=<?php echo $user['id_user'];?>">Modifier</a></p>
 
-		        <p><a id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil&id_user=<?php echo $user['id_user'];?>" class="btn btn-danger" role="button">Supprimer</a></p>
+		        <p><a class="btn btn-default" role="button" id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil&id_user=<?php echo $user['id_user'];?>">Supprimer</a></p>
 		      </div>
 
 		    </div>
