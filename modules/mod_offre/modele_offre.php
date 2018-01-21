@@ -28,7 +28,7 @@ class ModeleOffre extends ModeleGenerique{
 		return $enregistrement;
 	}
 
-	function modele_valider_offre($idOffre){
+	function modele_valider_offre(){
 		
 		$req = 'UPDATE p_recette SET recette_publie = 1 WHERE id_recette=?;';
 
