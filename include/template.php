@@ -112,7 +112,7 @@ include_once('module_generique.php');
      <div class="container">
        
          <div class="row text-center">
-         	<p>Copyright © 2017 All rights reserved</p>
+         	<p>Copyright © PastaPloutos 2017 - All rights reserved</p>
          </div>
          
  	   </div>

@@ -9,11 +9,11 @@ class NavVue extends ComposantVueGenerique {
 		?>
 
 		<nav class="navbar-default">
-			<div class="container-fluid" style="flex-grow: 2px">
+			<div class="container-fluid">
 
 				<div class="navbar-header">
 					<a class="navbar-brand" href="index.php?module=accueil">
-					<img src="images/finalelogo.png" width="150" height="100" style="margin-top: -5px;">
+					<img src="images/finalelogo.png" width="100" height="50" style="margin-top: -5px;">
 					</a>		
 				</div>
 
@@ -25,8 +25,17 @@ class NavVue extends ComposantVueGenerique {
 					switch ($lien) {
 
 						case 'recette':
-						echo "\t\t\t<li><a class='dropdown-toggle' data-toggle='dropdown' role='button' href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
 						break;
+
+						case 'idees':
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						break;
+
+						case 'choisir':
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						break;
+
 						
 
 						case 'connexion':

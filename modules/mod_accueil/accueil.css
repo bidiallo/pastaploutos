@@ -7,9 +7,13 @@ body {
 }
 
 nav {
-	width: 100%;
-	background-color: #0D5D66;
-	margin-bottom: 70px;
+  width: 100%;
+  /*height: 50px;*/
+  
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #0D5D66;
+  margin-bottom: 70px;
 
 }
 
@@ -89,7 +93,7 @@ footer .menu li a:hover{
 	background-size: cover;
 	color: #FFFFFF;
 	height: 300px;
-	text-shadow: 0.25px 0.25px 0.25px #000000;
+	text-shadow: 0.25px 0.25px 0.25px #FFFFFF;
 }
 
 
@@ -113,14 +117,14 @@ footer .menu li a:hover{
 	font-size: 25px;
 	font-weight: 150;
 	color: #FFFFFF; 
-	
-	/*margin-top: 50px;*/
 }
+
 
 .button-jumb:hover {
 	background-color:  #FFD54F;
 	color: white;
 }
+
 
 .button {
 	width: 200px;
@@ -138,10 +142,17 @@ footer .menu li a:hover{
 	/*margin-top: 50px;*/
 }
 
+
 .button:hover {
 	background-color:  #FFD54F;
 	color: white;
 }
+
+.caption {
+	margin-bottom: 50px;
+}
+
+
 .img-thumbnail {
 	cursor: pointer;
 	transition: 0.3s;

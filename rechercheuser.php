@@ -1,8 +1,10 @@
 <?php
 
+	
 	$dns = "mysql:host=localhost;dbname=test; charset=utf8";
 	$user= "pma";
 	$password= "montreuil";
+
 
 	$connexion = new PDO ($dns, $user, $password);
 
@@ -17,7 +19,7 @@
 		
 		
 		foreach ($a as $r) {
-			var_dump($r['id_user']);
+			
 			echo "<a href=index.php?module=gestionUser&action=consulter_profil&id_user=$r[id_user]>$r[prenom_user] $r[nom_user]<a/><br>";
 		}
 	}

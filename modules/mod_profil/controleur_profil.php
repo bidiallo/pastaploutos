@@ -31,7 +31,7 @@ class ControleurProfil extends ControleurGenerique {
 		}
 	}
 
-	//voir à la fin si modif nom, prenom
+	
 
 
 	function form_modif_mdp() {

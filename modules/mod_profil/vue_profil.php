@@ -9,59 +9,58 @@ class VueProfil extends VueGenerique {
 
 	 
 
-	function vue_consulter_profil_user($profil) {
-    //var_dump($profil);
+	
+
+
+    function vue_consulter_profil_user($profil) {
+    
     ?>
 
-      <div class="row">
-          <?php foreach ($profil as $element) { ?>
+      <?php foreach ($profil as $element) { ?>
               
-              <div class="container clr page-header-inner">
-                    <h1 class="page-header-title"> Bonjour
-                        <?php echo htmlspecialchars($element['prenom_user']) ?> 
-                        :)
-                    </h1>
-
-              </div>
-
               <div class ="page">
-            
+
+                <div>
+                    <div class="bandeau_perso">
+                      <div class="bienvenue">
+                        <div class="trait" style="border-color: #FFCA28"></div>
+                          <strong>Bienvenue <?php echo htmlspecialchars($element['prenom_user'])?></strong>
+                        <div class="trait" style="border-color: #FFCA28"></div>
+                      </div>
+                    </div>
+
+
+                  <div class="contenu">
+                    <ul class="params-list">
+                      <li class="params-list-title">Mes infos personnelles</li>
+
+                      <li class="params-list-pseudo">
+                        <div class="params-title">Pseudo</div>
+                        <div class="params"><?php echo htmlspecialchars($element['pseudo_user']);?></div>
+
+                      </li>
+                      <li class="params-list-mail">
+                        <div class="params-title">E-mail</div>
+                        <div class="params"><?php echo htmlspecialchars($element['mail_user']);?></div>
+                      </li>
+
+
+                      <li class="params-list-name">
+                        <div class="params-title">Nom</div>
+                        <div class="params"><?php echo htmlspecialchars($element['prenom_user']);?><?php echo htmlspecialchars($element['nom_user']);?></div>
+                      </li>
+                    </ul>
+                  </div>     
+          
+                </div>
                 
+               
+                  
+        <a id="btnmodif" href="index.php?module=profil&action=form_modif_mdp&id_user=<?php echo $element['id_user'];?>" role="button"><img src="images/edit.png"> Modifier </a>
               
-                <table class="table table-striped">
-                        <thead>
-                                <tr>    
-                                    <td><strong>NOM</strong></td>
-                                    <td><?php echo htmlspecialchars($element['prenom_user']);?></td>
-                                </tr>
-                        </thead>
-                        <tbody>
-                                <tr>    
-                                    <td><strong>Prénom</strong></td>
-                                    <td><?php echo htmlspecialchars($element['nom_user']);
-                                    //var_dump($profil['prenom_user']);
-                                    ?></td>
-                                </tr>
-                                <tr>    
-                                    <td><strong>E-mail</strong></td>
-                                    <td><?php echo htmlspecialchars($element['mail_user']);?></td>
-                                </tr>
-                                <tr>    
-                                    <td><strong>Pseudo</strong></td>
-                                    <td><?php echo htmlspecialchars($element['pseudo_user']);?></td>
-                                </tr>
-                        
-                        </tbody>
-                </table>                      
-        
-              </div>
-        
-       <p><a id="btnmodif" href="index.php?module=profil&action=form_modif_mdp&id_user=<?php echo $element['id_user'];?>" class="btn btn-default" role="button"> Modifier </a></p>
+            </div>
 
-       <?php }?>  
-
-      </div> 
-
+            <?php }?>        
        <?php
   }
 

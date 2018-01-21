@@ -57,7 +57,7 @@ class VueOffre extends VueGenerique {
    
 
   function vue_consulter_offre($info) {
-   // var_dump($info);
+   
     ?>
 
           <?php foreach ($info as $element) { ?>
@@ -92,7 +92,7 @@ class VueOffre extends VueGenerique {
                                   <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']); ?></td>
                                 </tr>
                                 </div>
-                                    <p><a id="btnvoir" href="index.php?module=offre&action=ajouter_offre&id_recette=<?php echo $element['id_recette'];?>". class="btn btn-default" role="button"> Valider </a></p>
+                                    <p><a id="btnvoir" href="index.php?module=offre&action=valider_offre&id_recette=<?php echo $element['id_recette'];?>". class="btn btn-default" role="button"> Valider </a></p>
                                 </div>
                                 </div>
                                     <p><a id="btnvoir" href="index.php?module=offre&action=consulter_offre&id_recette=<?php echo $element['id_recette'];?>". class="btn btn-default" role="button"> Effacer </a></p>
@@ -110,5 +110,4 @@ class VueOffre extends VueGenerique {
 }
 
 ?>
-
 

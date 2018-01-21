@@ -9,16 +9,6 @@ class ModeleGenerique{
 		self::$connexion=new PDO(self::$dns, self::$user, self::$password);
 		
 	}
-/*
-	function verifiAdmin($id_user) {
-
-		$req = "SELECT admin FROM p_user WHERE id_user = 1";
-
-		$reqPrep = self::$connexion->prepare($req);
-		$reqPrep->execute(array($id_user));
-		$enreg = $reqPrep->fetch();
-		return $enreg[0];
-	}*/
 
 
 	function creer_token($validite = "300") {

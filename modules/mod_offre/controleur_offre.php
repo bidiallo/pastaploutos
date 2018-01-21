@@ -1,47 +1,28 @@
 <?php
-require_once('modele_recette.php');
-require_once('vue_recette.php');
+require_once('modele_offre.php');
+require_once('vue_offre.php');
 require_once('include/controleur_generique.php');
-
-class ControleurRecette extends ControleurGenerique{
-	function __construct(){
-		$this->vue=new VueRecette();
-		$this->modele=new ModeleRecette();
-	}
-
-		function consulter_recette() {
-
-		$element = $this->modele->modele_recuperer_info_recette($_GET['id_recette']);
-		$this->vue->vue_consulter_recette($element);
-	}
-
-		function liste_recette() {
-			
-		$recette = $this->modele->modele_recette();
-		$this->vue->vue_liste_recette($recette);
-	}
-
-		function favoris_recette(){
-
-			if(!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
-			$this->vue->vue_erreur(" Impossible d'ajouter aux favoris. Vous n'etes pas connecté.");
-
-		}elseif ($_GET['is_favoris']==1) {
-
-			$this->vue->vue_erreur(" Recette déjà ajoutée aux favoris !!");
+class ControleurOffre extends ControleurGenerique{
+		function __construct(){
+			$this->vue=new VueOffre();
+			$this->modele=new ModeleOffre();
 		}
-
-		else {
-			try{
-			$element = $this->modele->modele_ajouter_favoris($_GET['id_recette']);
-			$this->vue->vue_consulter_recette($element);
-			} catch(Exception $e) {
-				//$this->vue->vue_erreur("Erreur accès BDD");
-			}
+			function consulter_offre() {
+			$element = $this->modele->modele_recuperer_info_offre($_GET['id_recette']);
+			$this->vue->vue_consulter_offre($element);
 		}
-
-
+			function liste_offre() {
+				
+			$recette = $this->modele->modele_offre();
+			$this->vue->vue_liste_offre($recette);
 		}
-
-}
+		function supprimer_offre(){
+			$element=$this->modele->modele_supprimer_offre();
+			$this->vue->vue_liste_offre($element);
+		}
+		function valider_offre(){
+			$element=$this->modele->modele_valider_offre();
+			$this->vue->vue_liste_offre($element);
+		}
+	}
 ?>

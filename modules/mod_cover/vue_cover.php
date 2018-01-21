@@ -13,7 +13,10 @@ class VueCover extends VueGenerique {
 
 	function affiche() {
 		?>
-		<div class="site-wrapper">
+		<style type="text/css">
+
+		</style>
+		<div class="site-wrapper" style="background-image: url(images/liste_recette.jpg); background-repeat: no repeat; background-size: cover; background-position: center; height: 500px">
 
 	      <div class="site-wrapper-inner">
 
@@ -21,29 +24,15 @@ class VueCover extends VueGenerique {
 
 	          <div class="masthead clearfix">
 	            <div class="inner">
-	              <!--<h3 class="masthead-brand">Cover</h3>
-	              <nav>
-	                <ul class="nav masthead-nav">
-	                  <li class="active"><a href="#">Home</a></li>
-	                  <li><a href="#">Features</a></li>
-	                  <li><a href="#">Contact</a></li>
-	                </ul>
-	              </nav>-->
+	             
 	            </div>
 	          </div>
 
-	          <div class="inner cover">
+	          <div class="inner cover" style="color:#FFFFFF; font-weight: 30px">
 	            <h1 class="cover-heading">Bienvenue sur le site PastaPloutos</h1>
-	            <p class="lead">Page où apparaitra une animation de fond </p>
 	            <p class="lead" onclick="redirection()">
-	              <a href="#" class="btn btn-lg btn-default" >Venez manger !</a>
+	              <a href="index.php?module=accueil" class="btn btn-lg btn-default" >Venez manger !</a>
 	            </p>
-	          </div>
-
-	          <div class="mastfoot">
-	            <div class="inner">
-	              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-	            </div>
 	          </div>
 
 	        </div>

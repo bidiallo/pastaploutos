@@ -1,35 +1,30 @@
 <?php
-
 require_once('include/controleur_generique.php');
 require_once('include/module_generique.php');
-//require_once('modules/mod_connexion/modele_ideesetastuces_exception.php');
-require_once('controleur_ideesetastuces.php');
-
-
-class ModIdeesetastuces extends ModuleGenerique {
-
+require_once('controleur_offre.php');
+class ModOffre extends ModuleGenerique {
 	function __construct() {
-
 		$action = isset($_GET['action']) ? $_GET['action'] : "default";		
-
 		parent::__construct();
 		
-		$this -> controleur = new ControleurIdeesetastuces();
-
+		$this -> controleur = new ControleurOffre();
 		switch ($action) {
-			case '':
-				$this->controleur->();
+			case 'consulter_offre':
+				$this->controleur->consulter_offre();
 				break;
-
-			case '' :
-				$this->controleur->();
+			case 'liste_offre' :
+				$this->controleur->liste_offre();
 				break;
-
+			case 'valider_offre':
+				$this->controleur->valider_offre();
+				break;
+			case 'supprimer_offre':
+				$this->controleur->supprimer_offre();
+				break;
 			default:
-				$this->controleur->();
+				$this->controleur->liste_offre();
 				break;
 		}
 	}
 }
-
 ?>

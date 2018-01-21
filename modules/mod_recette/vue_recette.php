@@ -18,6 +18,33 @@ class VueRecette extends VueGenerique {
               </div>
 
     </section>
+<?php
+    echo "
+    <section>
+      <form class='search-form'>
+        <input type='text' name='search' id='search' placeholder='Que voulez-vous cuisiner ?'>
+        <p id='r'></p>
+      </form>
+     </section>
+
+    <script src='jquery-3.1.1.min.js'></script>
+    <script>
+      $('#search').on('input', function() {
+        var recherche=$('#search').val();
+        $.ajax({
+          url : 'rechercherecette.php',
+          data : 'mot='+recherche,
+          type : 'POST',
+          dataType : 'html',
+          success : function (code_html) {
+            console.log(code_html);
+            $('#r').html(code_html);
+          }
+        });
+      });
+    </script>
+
+    ";?>
 
     <section class="container">
       <div class="row">
@@ -90,7 +117,7 @@ class VueRecette extends VueGenerique {
                   </div>
               <div class ="info">
 
-                  <div class="info-quantity" style="margin=left=120px">
+                  <div class="info-quantity" style="margin-left:190px">
                     <span class="info-quantity-title">Personnes</span>
                     <span><?php echo htmlspecialchars($element['nbPersonne_recette']);?></span>
                   </div>
@@ -105,13 +132,14 @@ class VueRecette extends VueGenerique {
                     <span><?php echo htmlspecialchars($element['niv_difficulte_recette']);?></span>
                   </div>
 
-                  <div class="info_budget" style="margin=left=120px">
+                  <div class="info_budget" style="margin-left:100px">
                     <span class="info-budget-title">Coût</span>
                     <span><?php echo htmlspecialchars($element['cout_recette']);?></span>
                   </div>
 
 
               </div>
+
 
               <div class="contenu-recette">
 
@@ -121,7 +149,7 @@ class VueRecette extends VueGenerique {
 
               </div>
 
-              <p><a id="btnvoir" href="index.php?module=recette&action=favoris_recette&id_recette=<?php echo $element['id_recette'];?>&is_favoris=<?php echo $element['is_favoris'];?>". role="button"><img src="./images/hearts.png"> Ajouter aux favoris </a></p>
+              <p><a class="button-favoris" id="btnvoir" href="index.php?module=recette&action=favoris_recette&id_recette=<?php echo $element['id_recette'];?>&is_favoris=<?php echo $element['is_favoris'];?>". role="button"><img src="./images/hearts.png"> Ajouter aux favoris </a></p>
                       
 
               </div>

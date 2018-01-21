@@ -18,11 +18,10 @@ class ControleurFavoris extends ControleurGenerique{
 
 		function supprimer_offre(){
 			$element= $this->modele-> modele_supprimer_favoris($_GET['id_recette']);
-			$this->vue->vue_confirm(" supprimé !");
+			$this->vue->vue_confirm(" Favoris supprimé !");
 			$this->vue->vue_liste_favoris($element);
-			//session_destroy();
-		//header('Location:index.php?module=favoris&action=liste_favoris');	
+			/*header('Location:index.php?module=favoris&action=liste_favoris');	*/
 		}
-//erreur mauvaise fonction utiliser pour redirige vers la liste 
+
 }
 ?>

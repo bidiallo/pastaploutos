@@ -11,7 +11,7 @@ class VueProposer extends VueGenerique{
 	function vue_form_proposer(){
 		?> 
 		
-		<div class="container" >
+		<div class="containe" >
 	        <form class="form-signin" action ="index.php?module=proposer&action=ajout_proposer" method="post">
 	       		<h2 class="form-signin-heading">Proposer une recette!</h2>
 			        <div class="select-style">

@@ -7,9 +7,13 @@ body {
 
 }
 
+
 nav {
   width: 100%;
   /*height: 50px;*/
+  
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #0D5D66;
   margin-bottom: 70px;
 
@@ -54,49 +58,179 @@ footer .menu li a:hover{
 }
 
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+
+
+/*      GESTIONSUSER     */
+
+.info {
+  padding: 4px 8px 10px;
 }
 
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
+.title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: black;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
-.form-signin .checkbox {
-  font-weight: normal;
+.info-plus{
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 20px;
+  color: #737373;
+  text-overflow: ellipsis;
+  margin-left: 20px;
 }
 
-.form-signin .form-control {
+
+
+.thumbnail {
+
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.img-profil {
+  width:130px;
+  height:100.5px;
+}
+
+.caption {
+  text-align: center;
+}
+
+.button {
+  background-color: #00404C;
+  width: 100px;
+  border-radius: 8px;
+  height: 25px;
+  position: absolute;
+  padding: 0px;
+  z-index: 99;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 150;
+  color: #FFFFFF; 
+  margin-left: -45px;
+}
+
+.button:hover {
+  color: white;
+}
+
+/*CONSULTER PROFIL*/
+
+.page {
+  margin-left: 170px;
+
+}
+
+
+
+.params-list {
+  margin-bottom: 30px;
+  list-style-type: none;
+  margin-left: 220px;
+  margin-right: 400px;
+}
+
+
+.params-list-title {
+
+  margin-bottom: 15px;
+}
+
+.params-list .params-list-title {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 10px
+  padding-bottom:6px;
   position: relative;
+
+  border-right: 0px none;
+  border-left: 0px none;
+  border-top: 0px none;
+  background-color: #FFCA28;
+  border: 1px solid #E4E3E3;
+  color: #F1F3F2;
+  text-transform: uppercase;
+  min-height: 16.5px;
   height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
+  margin-bottom: 0px;
+  list-style-type: none;
 }
 
-.form-signin .form-control:focus {
-  z-index: 2;
+.params {
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
-.form-signin input[type="text"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+
+.params-title {
+  font-size: 15px;
+  display: inline-block;
+  width: 120px;
+  margin-left: 20px;
+  /*border-right: 1px solid black;*/
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+
+
+
+.bandeau_perso {
+  background: transparent url("images/ingredients.jpg") no-repeat scroll 0% 0%;
+  width: 100%;
+  max-width: 1024px;
+  height: 58px;
+  padding: 12px 0px;
+  position: relative;
+  text-align: center;
+
 }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.bienvenue {
+  display: inline-block;
+  height: 35.5px;
+  font-size: 35px;
+  font-family: "Lobster Two", sans-serif;
+  padding: 0px 28px;
+  background-color: #FFFFFF;
+  color: #FFCA28;
+  text-align: center;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+}
+
+.trait {
+  width: 25px;
+
+  display: inline-block;
+  border: 1px solid #F1F3F2;
+  top: -7px;
+  position: relative;
+  margin: 0px 10px;
+}
+
+#btnmodif {
+  margin-left: 250px;
+}
+
+#btnsupp {
+  margin-left: 50px;
+}
+
+/*    FORM MODIF    */
+
+
+
+.select-style {
+  margin-top: 150px;
+  margin-left: 150px;
 }
