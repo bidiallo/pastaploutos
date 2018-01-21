@@ -21,11 +21,13 @@ class ControleurOffre extends ControleurGenerique{
 			$this->vue->vue_liste_offre($recette);
 		}
 		function supprimer_offre(){
+
 			$element=$this->modele->modele_supprimer_offre();
 			$this->vue->vue_liste_offre($element);
 		}
 		function valider_offre(){
-			$element=$this->modle->modele_valider_offre();
+			
+			$element=$this->modele->modele_valider_offre();
 			$this->vue->vue_liste_offre($element);
 		}
 	}
