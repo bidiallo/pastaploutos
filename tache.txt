@@ -63,7 +63,56 @@ Camille : inscription
 
 07/12/2017
 Bineta : Accueil
-Camille : Modif MCD enelver date de naissance
+Camille : Modif MCD enlever date de naissance
 Faire un pop up quand requetes marche pas
 Finir module gestion user
 
+08/01/2018
+Bineta : Modif module connexion pour accéder au nav/ modif de tout les navs
+Camille : Securité Inscription : hashage,A FAIREverif email et pseudo non utilisé + DEbut recette
+A FAIRE : ajouter mdp 2 dans BD + gestionUser : finir ABSOLUMENT DEMAIN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Proposer pour menu admin: dans Voir les profils : 2 listes, 1 liste de tout les users et 1 liste de tout admins
+POUR LE COVER : https://codepen.io/seriema/pen/JcIpG
+POUR LES IMAGES : https://www.w3schools.com/howto/howto_js_image_grid.asp
+
+10/01/2018:
+A faire pour l'ajout d'ingredients : AJAX: 
+Bineta : nav general + nav utilisateur co et admin 
+Camille : remplissage BD + Modules recettes
+
+11/01/2018:
+Bineta : modules Gestion User debug + mod Profil
+Camille : Insertion BD 
+
+12/01/2018 : 
+Bineta : Gestion User "voir profil" + module profil
+Camille : module recette + commencer AJAX si possible 
+Ajouter dans le nav un onglet proposer Recette pour un utilisateur connecté
+mod_proposer : formulaire pour proposer une recette
+mod_offre: pr Admin, voir les offres de recette
+Bineta à faire :
+Module idees et astuces : requete Select * from p_recette where id_cat=5 si noel, id_cat=6 si halloween etcs...
+
+Si tu dois inserer dans la BD, prends des photos sur Google de taille 400px par 320px
+
+Camille: Ajouter dans la liste des choix de proposer, les autres val de categories
+
+15/01/2018 : 
+Camille : ajouter les ingrédients dans la recette -> DONC MODIF  BD
+https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/file
+https://openclassrooms.com/courses/upload-de-fichiers-par-formulaire
+
+17/01/2018 : 
+Créer une liste d'ingreidnet dans la bd, et ajouter l'id de chaque ingreidnets de dedans 
+Camille : Créer msg d'erreur pour proposer + Mettre AJAX pour recherche des ingredinets + categorie du plat + Faire module Idée et Astuces
+Bine : Nav bar sur le c^oté + faire design + faire Securite + module choisis tes Ingredients (juste le debut)
+
+19/01/2018
+Camille : Debug de offre et proposer, finis SAUF lien photo qui ne marche pas, plus ajax pour le nom de l'ingredient 
+Essayé de faire pour recette en favoris :PAS POSSIBLE
+A FAIRE : Verif inscription
+Design : Cover/Proposer/Offre/Connexion/Incription/idee/
+
+Bineta : Debug pour Connexion : methode de hashage ne marchait pas à cause d'une taille trop petite pour le mdp + pas bonne méthode, donc reprend pour connexion + Debug sur  profil en ajax 
+A FAIRE : Sécurité du site !!!!!!!!!!!!!!!!!!!!!!!!!!! + Enlever commentaire
+Design : Accueil/Choisir/Favoris/Recette/Profil/NAV/Template

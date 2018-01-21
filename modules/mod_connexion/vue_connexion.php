@@ -8,11 +8,11 @@ class VueConnexion extends VueGenerique {
 		parent::__construct();
 	}
 
-	function vue_form_connexion(/*mettre le token en param*/) {
+	function vue_form_connexion() {
 		?>
 		<div class="container" >
 
-	      <form class="form-signin" action = "index.php?module=connexion&action=connexion" method="POST">
+	      <form class="form-signin" action = "index.php?module=connexion&action=authentification" method="POST">
 	        <h2 class="form-signin-heading">Connectez-vous</h2>
 
 	        <div>

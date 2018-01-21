@@ -1,12 +1,67 @@
 <?php
 class ModeleGenerique{
+<<<<<<< HEAD
 	private static $dns = "mysql:http://localhost:8080/phpmyadmin/db_structure.php?server=1&db=campao;dbname=campao; charset=utf8";
 	private static $user= "root";
 	private static $password= " ";
+=======
+	private static $dns = "mysql:host=localhost;dbname=test; charset=utf8";
+	private static $user= "pma";
+	private static $password= "montreuil";
+>>>>>>> 92dd229086040e82038948bfa9f7fbb09c5069a4
 	protected static $connexion; 
 
 	 static function init(){
 		self::$connexion=new PDO(self::$dns, self::$user, self::$password);
+		
+	}
+/*
+	function verifiAdmin($id_user) {
+
+		$req = "SELECT admin FROM p_user WHERE id_user = 1";
+
+		$reqPrep = self::$connexion->prepare($req);
+		$reqPrep->execute(array($id_user));
+		$enreg = $reqPrep->fetch();
+		return $enreg[0];
+	}*/
+
+
+	function creer_token($validite = "300") {
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    	$charactersLength = strlen($characters);
+    	$randomString = '';
+    	for ($i = 0; $i < 20; $i++) {
+        	$randomString .= $characters[rand(0, $charactersLength - 1)];
+    	}
+
+		$requete = "INSERT INTO p_token (id_token, date_token, tps_token) VALUES (?, NOW(), ?)";
+   		$reqPrep = self::$connexion->prepare($requete);
+   		$reqPrep->execute(array($randomString, $validite));
+     	$reqPrep->fetch();
+     	return $randomString;
+	}
+
+	function get_token($token) {
+		$requete = "SELECT id_token FROM p_token WHERE id_token = ?";
+   		$reqPrep = self::$connexion->prepare($requete);
+   		$reqPrep->execute(array($token));
+   		$res = $reqPrep->fetch();
+   		$this->effaceToken($token);
+   		return $res['idToken'];
+	}
+
+	function efface_token($token) {
+		$requete = "DELETE FROM p_token WHERE id_token = ?";
+   		$reqPrep = self::$connexion->prepare($requete);
+   		$this->effaceTokenNonValides();
+   		return $reqPrep->execute(array($token));
+	}
+
+	function efface_token_non_valides() {
+		$requete = "DELETE FROM p_token WHERE DATE_ADD(date_token,INTERVAL tps_token SECOND) < NOW()";
+   		$reqPrep = self::$connexion->prepare($requete);
+   		return $reqPrep->execute();
 	}
 
 }

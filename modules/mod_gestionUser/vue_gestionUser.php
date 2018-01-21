@@ -1,5 +1,6 @@
 <?php
 
+require_once('include/vue_generique.php');
 
 class VueGestionUser extends VueGenerique {
 
@@ -7,87 +8,59 @@ class VueGestionUser extends VueGenerique {
 		parent::__construct();
 	}
 
-
-	function vue_form_ajout_user() {
-
-		?>
-		<div class="container" action = "index.php?module=gestionUser&action=form_ajout_user" method="POST">
-
-	      <form class="form-signin">
-	        <h2 class="form-signin-heading">Ajouter un utilisateur</h2>
+	function vue_recherche_user() {
 
 
-	         <div>
-		        <label for="inputNom" class="sr-only">Nom</label>
-		        <input type="text" name="nom" class="form-control" placeholder="Nom" required autofocus>
-		    </div>
+		echo "
 
-		    <div>
-		        <label for="inputPrenom" class="sr-only">Prénom</label>
-		        <input type="text" name="prenom" class="form-control" placeholder="Prénom" required autofocus>
-		    </div>
+		<div class='input-group' id='pagerecherche'>
+			 <form method='POST'>
+			  <input type='text' class='form-control' id='search' placeholder='Saisir un utilisateur' aria-describedby='basic-addon1'>
+			  <p id='r'></p>
+			</form>
+		</div>
 
-	        <div>
-		        <label for="inputPseudo" class="sr-only">Pseudo</label>
-		        <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required autofocus>
-		    </div>
+		<button type='submit'>Rechercher </button>
 
-		   
+		<script src='jquery-3.1.1.min.js'></script>
+		<script>
+			$('#search').on('input', function() {
+				var recherche=$('#search').val();
+				$.ajax({
+					url : 'rechercheuser.php',
+					data : 'mot='+recherche,
+					type : 'POST',
+					dataType : 'html',
+					success : function (code_html) {
+						console.log(code_html);
+						$('#r').html(code_html);
+					}
+				});
+			});
+		</script>
 
-		    <div>
-		        <label for="inputEmail" class="sr-only">Adresse mail</label>
-        		<input type="email" name="mail" class="form-control" placeholder="Adresse mail" required autofocus>
-		    </div>
+		";
 
-		    <div>
-		        <label for="inputPassword" class="sr-only">Mot de passe</label>
-		        <input type="password" name="mdp" class="form-control" placeholder="Mot de passe" required autofocus>
-		    </div>
-
-
-		    <div class="select-style">
-				<label for="combobox">Statut : </label><!--mettre msg d'info pour demander si la modif veut ^etre validé -->
-				<select >
-					<option>Admin</option>
-					<option>User</option>
-				</select>
-				<input type="submit" name="admin" value="1"/>		    	
-		    </div>
-		    
-		    <input type="hidden" name="admin">
-	        <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
-	      </form>
-
-	    </div> <!-- /container -->
-
-	    <?php
 	}
-
-
-	function vue_modif_user() {
-	?>
-
-		<form method="POST" action="index.php?module=gestionUser&action=modif_profil">
-			
-			<input type="hidden" name="">Nouveau mail : 
-
-		</form>
-	}
-
-
+	
 	//barre de recherche en ajax pour voir si le user saisie est dans la BD
 	function vue_liste_user($users) {
-	
-	?>
-		<!--<div class="row">
-	
+		//var_dump($users);
+		
+			?>
+		<div class="row">
+			<!--faire un foreach qui recupere les données -->
+				<?php foreach($users as $user) {
+								//var_dump($users);?>
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="images/profil.jpg" alt="photo de profil" width="200" height="184.5">
+		      <img src="images/profil.jpg" alt="photo de profil" width="130" height="100.5">
 
 		      <div class="caption">
 		        
 		        	<div class="table table-responsive">
+
+							
 		        		<table class="table-vertical">
 		        			<thead>
 		        				<tr>
@@ -95,19 +68,16 @@ class VueGestionUser extends VueGenerique {
 		        				<th>Nom</th>
 		        				<th>Prénom</th>
 		        				</tr>	
-		        			</thead>-->
+		        			</thead>
 
 
 
-							<!--faire un foreach qui recupere les données -->
-							<?php //foreach($users as $user) {
-								//var_dump($users);?>
 		        			
-		        			<!--<tbody>
+		        			<tbody>
 		        				<tr>
-		        					<td><?php //echo htmlspecialchars($user['pseudo_user']);?></td>
-			        				<td><?php //echo htmlspecialchars($user['prenom_user']);?></td>
-			        				<td><?php //echo htmlspecialchars($user['nom_user']);?></td>
+		        					<td><?php echo htmlspecialchars($user['pseudo_user']);?></td>
+			        				<td><?php echo htmlspecialchars($user['prenom_user']);?></td>
+			        				<td><?php echo htmlspecialchars($user['nom_user']);?></td>
 		        				</tr>
 		        			</tbody>
 		        			
@@ -115,30 +85,123 @@ class VueGestionUser extends VueGenerique {
 		        		
 		        	</div>
 
+		        	
+		        <p><a class="btn btn-default" role="button" id="btnmodif" href="index.php?module=gestionUser&action=consulter_profil&id_user=<?php echo $user['id_user'];?>">Voir plus</a></p>
 
-		        <p><a id="btnmodif" href="index.php?module=gestionUser&action=modif_profil". class="btn btn-default" role="button"> Modifier </a></p>
+		        <p><a class="btn btn-default" role="button" id="btnmodif" href="index.php?module=gestionUser&action=form_modif_droit&id_user=<?php echo $user['id_user'];?>">Modifier</a></p>
 
-		        <p><a id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil" class="btn btn-danger" role="button">Supprimer</a></p>
+		        <p><a class="btn btn-default" role="button" id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil&id_user=<?php echo $user['id_user'];?>">Supprimer</a></p>
 		      </div>
 
 		    </div>
 		  </div>
 		  
-		</div>-->
-
-		<?php //} ?>
-
-		<?php
+		<?php }	?>
+		</div>
 
 
-	}
+		<?php 
+	} 
+	 
 
-	function vue_form_modif() {
+	function vue_consulter_profil($profil) {
 		
+		?>
+
+			<?php foreach ($profil as $element) { ?>
+              
+              <div>
+
+	              <div class="container clr page-header-inner">
+	                   	<h1 class="page-header-title"> Bonjour
+	                        <?php echo htmlspecialchars($element['prenom_user']) ?> 
+	                        :)
+	                    </h1>
+
+	              </div>
+
+	              <div class ="page">
+	            
+	              	
+	              
+	                <table class="table table-striped">
+	                        <thead>
+	                                <tr>    
+	                                    <td><strong>NOM</strong></td>
+	                                    <td><?php echo htmlspecialchars($element['prenom_user']);?></td>
+	                                </tr>
+	                        </thead>
+	                        <tbody>
+	                                <tr>    
+	                                    <td><strong>Prénom</strong></td>
+	                                    <td><?php echo htmlspecialchars($element['nom_user']);
+	                                    //var_dump($profil['prenom_user']);
+	                                    ?></td>
+	                                </tr>
+	                                <tr>    
+	                                    <td><strong>E-mail</strong></td>
+	                                    <td><?php echo htmlspecialchars($element['mail_user']);?></td>
+	                                </tr>
+	                                <tr>    
+	                                    <td><strong>Pseudo</strong></td>
+	                                    <td><?php echo htmlspecialchars($element['pseudo_user']);?></td>
+	                                </tr>
+	                    		
+	                        </tbody>
+	                </table>                      
+					
+	              </div>
+	              
+	             
+				<!--
+	               	<div class="row">
+					  <div class="col-sm-4">
+
+					  </div>
+
+					  <div class="col-sm-8">
+					  	
+					  </div>
+					</div>--> 
+
+					<!--NE MARCHE PAS QUAND ON EST SUR LE PROFIL D'UN USER-->
+					
+				<p><a id="btnmodif" href="index.php?module=gestionUser&action=form_modif_droit&id_user=<?php echo $element['id_user'];?>" class="btn btn-default" role="button"> Modifier </a></p>
+	            
+	            <p><a id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil&id_user=<?php echo $element['id_user'];?>" class="btn btn-danger" role="button">Supprimer</a></p>
+
+            </div>
+
+            <?php }?>        
+       <?php
 	}
+
+
+	function vue_form_modif_droit($id_user, $admin) {
+		
+	?>
+
+		<form method="POST" action="index.php?module=gestionUser&action=modif_droit&id_user=<?php echo $id_user ?>">
+			
+			<div class="select-style">
+				<label for="combobox">Statut : </label>
+
+				<select name="droit">
+					<option>--</option>
+					<option value="1">Admin</option>
+					<option value="0">User</option>
+				</select>
+				
+				 
+		    </div>
+
+		    <button class="btn btn-default type="submit">Valider</button>
+		</form>
+		<?php
+	}
+
 
 
 }
 
 
-?>

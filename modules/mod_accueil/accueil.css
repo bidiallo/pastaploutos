@@ -1,5 +1,164 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
+
 body {
-  /*padding-top: 50px;
-  padding-bottom: 20px;*/
+	font-family: century gothic, sans-serif;
+  	width: 100%;
+  	font-weight: 300;
+  	background-color: #EEEEEE;
 }
+
+nav {
+	width: 100%;
+	background-color: #0D5D66;
+	margin-bottom: 70px;
+
+}
+
+
+.copyright{
+    background-color:#f0f0f0;
+}
+
+.copyright p{
+   margin:15px 0px;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	background-color:#00404C;
+	margin-top: 100px;
+	padding: 60px 0px;
+}
+
+footer .menu li a{
+	color:#FFFFFF;
+	padding:10px;
+	text-decoration:none;
+}
+
+footer .menu li a:hover{
+	color:#FFD54F;
+}
+
+.icon-facebook, .icon-twitter , .icon-instagram {
+	color:#FFFFFF;
+	font-size:20px;
+	padding:10px;
+}
+
+
+.icon-facebook:hover , .icon-twitter:hover  , .icon-instagram:hover  {
+	color:#FFCA28;
+}
+
+
+
+ /*		ACCUEIL		*/
+.left-side {
+	float: left;
+	padding: 20px;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.right-side {
+	float: right;
+	padding-right: 10px;
+}
+
+.right-side li {
+	display: inline-block;
+	padding: 20px;
+	color: #FFFFFF;
+	margin-top: -26px;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.right-side li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+.jumbotron {
+	display: flex;
+	align-items:center;
+	background-image: url('images/pates.jpg'); 
+	background-size: cover;
+	color: #FFFFFF;
+	height: 300px;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+
+.jumbotron h1 {
+	font-size: 60px;
+	font-weight: 700;
+	margin: 0;
+	color: #FFFFFF;
+}
+
+.button-jumb {
+
+	width: 200px;
+	border-radius: 8px;
+	height: 50px;
+	position: absolute;
+	padding: 0px;
+	z-index: 99;
+	background-color: #FFCA28;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 150;
+	color: #FFFFFF; 
+	
+	/*margin-top: 50px;*/
+}
+
+.button-jumb:hover {
+	background-color:  #FFD54F;
+	color: white;
+}
+
+.button {
+	width: 200px;
+	border-radius: 8px;
+	height: 50px;
+	position: absolute;
+	padding: 0px;
+	z-index: 99;
+	background-color: #FFCA28;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 150;
+	color: #FFFFFF; 
+	margin-left: 60px;
+	/*margin-top: 50px;*/
+}
+
+.button:hover {
+	background-color:  #FFD54F;
+	color: white;
+}
+.img-thumbnail {
+	cursor: pointer;
+	transition: 0.3s;
+
+	/*animation*/
+	-webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.img-thumbnail:hover {
+	opacity: 0.7;
+}
+
+
+
+
+
+

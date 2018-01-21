@@ -15,8 +15,8 @@ if(!session_start()) {
 	echo 'impossible de recuperer la session';
 }
 
-var_dump($_GET['module']); //affiche pour verifier si le module et l'action existe bien
-var_dump($_GET['action']); // si ils sont a null, redirige vers la cover ---> donc faux! :/
+//var_dump($_GET['module']); //affiche pour verifier si le module et l'action existe bien
+//var_dump($_GET['action']); // si ils sont a null, redirige vers la cover ---> donc faux! :/
 
 $module = isset($_GET['module']) ? $_GET['module'] : "cover";
 
@@ -29,6 +29,7 @@ switch ($module) {
 		$classe_module = new $nom_module();
 		break;
 
+
 	case 'accueil':
 		
 		include_once ("modules/mod_accueil/mod_$module.php");
@@ -36,11 +37,19 @@ switch ($module) {
 		$classe_module = new $nom_module();
 		break;
 	
+
 	case 'connexion':
 
 		include_once ("modules/mod_connexion/mod_$module.php");
 		$nom_module = "ModConnexion";
 		$classe_module = new $nom_module();
+		break;
+
+
+	case 'deconnexion':
+
+		session_destroy();
+		header('Location:index.php?module=accueil');
 		break;
 
 
@@ -52,6 +61,7 @@ switch ($module) {
 
 		break;
 
+
 	case 'gestionUser':
 		
 		include_once ("modules/mod_gestionUser/mod_$module.php");
@@ -61,6 +71,65 @@ switch ($module) {
 		break;
 
 
+	case 'profil':
+
+		include_once ("modules/mod_profil/mod_$module.php");
+		$nom_module = "ModProfil";
+		$classe_module = new $nom_module();
+
+		break;
+
+
+	case 'recette':
+
+		include_once ("modules/mod_recette/mod_$module.php");
+		$nom_module = "ModRecette";
+		$classe_module = new $nom_module();
+
+		break;
+
+	case 'proposer':
+
+		include_once ("modules/mod_proposer/mod_$module.php");
+		$nom_module = "ModProposer";
+		$classe_module = new $nom_module();
+
+		break;
+
+
+	case 'offre':
+
+		include_once ("modules/mod_offre/mod_$module.php");
+		$nom_module = "ModOffre";
+		$classe_module = new $nom_module();
+
+		break;
+
+
+	case 'idees':
+
+		include_once ("modules/mod_idees/mod_$module.php");
+		$nom_module = "ModIdees";
+		$classe_module = new $nom_module();
+
+		break;
+
+
+	case 'choisir':
+
+		include_once ("modules/mod_choisir/mod_$module.php");
+		$nom_module = "ModChoisir";
+		$classe_module = new $nom_module();
+
+		break;
+
+	case 'favoris':
+
+		include_once("modules/mod_favoris/mod_$module.php");
+		$nom_module = "ModFavoris";
+		$classe_module = new $nom_module();
+		break;
+
 	 default:
 
 		$classe_module = new ModuleGenerique();
@@ -69,6 +138,6 @@ switch ($module) {
 }
 	$classe_module->getControleur()->getVue()->tamponVersContenu();
 
-require_once("include/template.php");
+	require_once("include/template.php");
 
 ?>
