@@ -1,8 +1,8 @@
 <?php
 class ModeleGenerique{
-	private static $dns = "mysql:host=database-etudiants.iut.univ-paris8.fr;dbname=dutinfopw201618; charset=utf8";
-	private static $user= "dutinfopw201618";
-	private static $password= "hytytesa";
+	private static $dns = "mysql:http://localhost:8080/phpmyadmin/db_structure.php?server=1&db=campao;dbname=campao; charset=utf8";
+	private static $user= "root";
+	private static $password= " ";
 	protected static $connexion; 
 
 	 static function init(){
