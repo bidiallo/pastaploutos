@@ -21,11 +21,11 @@ class VueProfil extends VueGenerique {
               <div class ="page">
 
                 <div>
-                    <div class="bandeau_perso">
+                    <div class="bandeau_perso" style="background: transparent url(images/pastas_jumb3.jpg) no-repeat scroll 0% 0%;  width: 100%; max-width: 1024px; height: 58px;">
                       <div class="bienvenue">
-                        <div class="trait" style="border-color: #FFCA28"></div>
+                        <div class="trait" style="border-color: #792026"></div>
                           <strong>Bienvenue <?php echo htmlspecialchars($element['prenom_user'])?></strong>
-                        <div class="trait" style="border-color: #FFCA28"></div>
+                        <div class="trait" style="border-color: #792026"></div>
                       </div>
                     </div>
 

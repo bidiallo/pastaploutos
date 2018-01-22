@@ -19,21 +19,6 @@ class ModeleGestionUser extends ModeleGenerique {
 		return $enregistrement;
 	}
 
-//uniquement pour les admin
-/*
-	function modele_get_liste_admin() {
-
-		$req = 'SELECT * FROM p_user WHERE admin=true';
-
-		$reqPrep = self::$connexion->prepare($req);
-
-		$reqPrep->execute();
-
-		$enregistrement = $reqPrep->all(PDO::FETCH_ASSOC);
-
-		return $enregistrement;
-	}*/
-
 
 	function modele_modif_droit($id_user, $admin) {
 		

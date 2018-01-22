@@ -2,6 +2,7 @@
 //require_once('include/module_generique.php');
 //require_once('include/controleur_generique.php');
 require_once('controleur_inscription.php');
+
 class ModInscription extends ModuleGenerique{
 	function __construct(){
 		

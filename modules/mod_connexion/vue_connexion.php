@@ -26,15 +26,10 @@ class VueConnexion extends VueGenerique {
 		    </div>
 
 		    
-	        <div class="checkbox">
-	          <label>
-	            <input type="checkbox" value="remember-me"> Se souvenir de moi ?
-	          </label>
-	        </div>
-	        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+	        <button style="margin-top:25px; margin-left:50px" type="submit">Connexion</button>
 	      </form>
 
-	    </div> <!-- /container -->
+	    </div> 
 
 		<?php
 	}

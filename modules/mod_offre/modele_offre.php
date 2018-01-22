@@ -10,6 +10,7 @@ class ModeleOffre extends ModeleGenerique{
 		return $enregistrement;
 	}
 	function modele_recuperer_info_offre($idOffre) {
+
 		$req = 'SELECT id_recette, titre_recette, nbPersonne_recette, niv_difficulte_recette, cout_recette, is_vegetarien, tpsPreparation_recette, tpsCuisson_recette, photo_recette, description_recette FROM p_recette WHERE id_recette=?;';
 		$reqPrep = self::$connexion->prepare($req);
 		$reqPrep->execute(array($idOffre));

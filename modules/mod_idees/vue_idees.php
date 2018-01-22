@@ -9,51 +9,61 @@ class VueIdees extends VueGenerique {
 
 
   function vue_liste_idee($recettes) {
- // var_dump($recettes);
   ?>
-    <div class="row">
-      <!--faire un foreach qui recupere les données -->
-        <?php  foreach($recettes as $recette) {
-         // var_dump($recette['photo_recette']);
-         ?>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img class="img-thumbnail" src=<?php echo htmlspecialchars($recette['photo_recette']);?> alt="photo de recette" width="400" height="525">
+  <section class="img_overlay">
+        
+              <div class="circle">
+                <h1><strong>Idées & Astuces</strong></h1>
+              </div>
 
-          <div class="caption">
-            
-              <div class="table table-responsive">
+    </section>
 
+
+    <section class="container">
+      <div class="row">
+        
+          <?php  foreach($recettes as $recette) {
+           
+           ?>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img class="img-thumbnail" src=<?php echo htmlspecialchars($recette['photo_recette']);?> alt="photo de recette" width="400" height="525">
+
+            <div class="caption">
               
-                <table class="table-vertical">
-                  <thead>
-                    <tr>
-                    <td><h3><?php echo htmlspecialchars($recette['titre_recette']);?></h3></td>
-                    </tr> 
-                  </thead>
+                <div class="table table-responsive">
 
-
-
-                 <tbody>
-                    <tr>
-                      
-                      <td>Nombre de Personnes :<?php echo htmlspecialchars($recette['nbPersonne_recette']);?></td>
-                      <td>Temps de préparation :<?php echo htmlspecialchars($recette['tpsPreparation_recette']);?></td>
-                      <td>Temps de cuisson :<?php echo htmlspecialchars($recette['tpsCuisson_recette']);?></td>
-                    </tr>
-                  </tbody>
-                  
-                </table>
                 
-              </div>
-              <p><a id="btnvoir" href="index.php?module=idees&action=consulter_idee&id_recette=<?php echo $recette['id_recette'];?>". class="button" role="button"> Voir plus </a></p>
-              </div>
+                  <table class="table-vertical">
+                    <thead>
+                      <tr>
+                      <td><h3><strong><?php echo htmlspecialchars($recette['titre_recette']);?></strong></h3></td>
+                      </tr> 
+                    </thead>
 
+
+
+                    <tbody>
+                      <tr>
+                        
+                        <td><?php echo htmlspecialchars($recette['nbPersonne_recette']);?> personnes</td>
+                        <td><?php echo htmlspecialchars($recette['tpsPreparation_recette']);?>min</td>
+        
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+                  
+                </div>
+
+                <p><a id="btnvoir" href="index.php?module=idees&action=consulter_idee&id_recette=<?php echo $recette['id_recette'];?>". class="button" role="button"> Voir plus </a></p>
+                </div>
+
+          </div>
         </div>
+         
+    <?php } ?> 
       </div>
-       
-  <?php } ?> 
-    </div>
 
 
  <?php  }
@@ -61,46 +71,57 @@ class VueIdees extends VueGenerique {
    
 
   function vue_consulter_idee($info) {
-   // var_dump($info);
+   
     ?>
 
           <?php foreach ($info as $element) { ?>
               
                   <div class="container clr page-header-inner">
-                      <h1 class="page-header-title">
+                      <h1 class="main-title">
                           <?php echo htmlspecialchars($element['titre_recette']) ?> 
                       </h1>
 
+                      <img style="margin-left:300px"src=<?php echo htmlspecialchars($element['photo_recette']);?> alt="photo recette">                           
+
+
                   </div>
-              <div class ="page">
 
-                <table class="table table-striped">
-                        <thead>
+              <div class ="info">
 
-                        </thead>
-                        <tbody>   
-                                  <img src=<?php echo htmlspecialchars($element['photo_recette']);?> alt="photo recette" width="150" height="135.5">                           
-                                <tr>    
-                                    <th><strong>Nombre de personne: </strong> <?php echo htmlspecialchars($element['nbPersonne_recette']);?></th>
+                  <div class="info-quantity" style="margin-left:190px">
+                    <span class="info-quantity-title">Personnes</span>
+                    <span><?php echo htmlspecialchars($element['nbPersonne_recette']);?></span>
+                  </div>
 
-                                    <th><strong>Niveau de difficulte: </strong><?php echo htmlspecialchars($element['niv_difficulte_recette']);?></th>
+                  <div class="info-time">
+                    <span class="info-time-title">Préparation</span>
+                    <span><?php echo htmlspecialchars($element['tpsPreparation_recette']);?> min</span>
+                  </div>
 
-                                    <th><strong>Cout de la recette: </strong><?php echo htmlspecialchars($element['cout_recette']);?></th>
+                  <div class="info-level">
+                    <span class="info-level-title">Difficulté</span>
+                    <span><?php echo htmlspecialchars($element['niv_difficulte_recette']);?></span>
+                  </div>
 
-                                    <th><strong>Preparation: </strong><?php echo htmlspecialchars($element['tpsPreparation_recette']);?><strong> min</strong></th>
-                                   
-                                    <th><strong>Cuisson: </strong><?php echo htmlspecialchars($element['tpsCuisson_recette']);?><strong> min</strong></th>
+                  <div class="info_budget" style="margin-left:100px">
+                    <span class="info-budget-title">Coût</span>
+                    <span><?php echo htmlspecialchars($element['cout_recette']);?></span>
+                  </div>
 
-                                </tr>
-                                <tr>
-                                  <td><strong>Description: </strong><?php echo htmlspecialchars($element['description_recette']); ?></td>
-                                </tr>
-                                </div>
-
-                        </tbody>
-                </table>                      
 
               </div>
+
+
+              <div class="contenu-recette">
+
+                    <h1>Préparation</h1>
+
+                    <p><strong><?php echo htmlspecialchars($element['description_recette']); ?></p>
+
+              </div>
+                    
+
+              
               
                        
        <?php

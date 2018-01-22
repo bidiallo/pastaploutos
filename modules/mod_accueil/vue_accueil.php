@@ -49,7 +49,7 @@ class VueAccueil extends VueGenerique {
 
 			   <div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
-			    	<!--photo 500x625-->
+			    	
 			      <img src="images/ingredients2.jpg" alt="..." class="img-thumbnail">
 			      <div class="caption">
 			        <h3><strong>Choisir ingrédients</strong></h3>

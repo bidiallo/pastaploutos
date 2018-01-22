@@ -23,7 +23,7 @@ class VueRecette extends VueGenerique {
     <section>
       <form class='search-form'>
         <input type='text' name='search' id='search' placeholder='Que voulez-vous cuisiner ?'>
-        <p id='r'></p>
+        <p style='color:#FFFFFF; font-weight:bold; padding-right:125px' id='r'></p>
       </form>
      </section>
 
@@ -83,10 +83,7 @@ class VueRecette extends VueGenerique {
                   
                 </div>
 
-                <?php
-                    /*echo "<p class='button'><a href='index.php?module=recette&action=consulter_recette&id_recette=".$recette['id_recette']. "'> Voir plus </p>";
-                 */?>
-                <p ><a href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>". class="button" role="button">Voir</a></p>
+                    <p class="button" role="button"><a href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>"></a>  Voir plus</p>
                 </div>
 
           </div>
@@ -115,6 +112,7 @@ class VueRecette extends VueGenerique {
 
 
                   </div>
+
               <div class ="info">
 
                   <div class="info-quantity" style="margin-left:190px">
@@ -123,7 +121,7 @@ class VueRecette extends VueGenerique {
                   </div>
 
                   <div class="info-time">
-                    <span class="info-time-title">Temps</span>
+                    <span class="info-time-title">Préparation</span>
                     <span><?php echo htmlspecialchars($element['tpsPreparation_recette']);?> min</span>
                   </div>
 

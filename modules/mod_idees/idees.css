@@ -1,24 +1,4 @@
 
-body {
-  font-family: century gothic, sans-serif;
-    width: 100%;
-    font-weight: 300;
-    background-color: #EEEEEE;
-
-}
-
-
-nav {
-  width: 100%;
-  /*height: 50px;*/
-  
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #0D5D66;
-  margin-bottom: 70px;
-
-}
-
 
 .copyright{
     background-color:#f0f0f0;
@@ -55,4 +35,185 @@ footer .menu li a:hover{
 
 .icon-facebook:hover , .icon-twitter:hover  , .icon-instagram:hover  {
   color:#FFCA28;
+}
+
+
+
+/*      IDEES & ASTUCES     */
+
+.button {
+  width: 200px;
+  border-radius: 8px;
+  height: 50px;
+  position: absolute;
+  padding: 0px;
+  z-index: 99;
+  background-color: #FFCA28;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 150;
+  color: #FFFFFF; 
+  margin-left: 60px;
+  /*margin-top: 50px;*/
+}
+
+.button:hover {
+  background-color:  #FFD54F;
+  color: white;s
+}
+
+.img_overlay {
+  background-image: url('images/liste_recette3.jpg');
+}
+
+.search-form {
+  color: #333333;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+
+input[type=text] {
+  width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('images/search2.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-left: -100px;
+}
+
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+
+.caption {
+  margin-bottom: 50px;
+}
+
+/*titre*/
+.img_overlay {
+
+}
+
+
+.circle {
+  margin-left: 170px;
+  margin-right: 140px;
+  margin-bottom: 100px;
+  text-align: center;
+  font-weight: 300;
+  font : 150% century gothic, sans-serif;
+    text-transform : uppercase;
+    letter-spacing : 0.3em;
+    text-align : center;
+}
+
+
+/*    la page de l'idée astuce*/
+
+/*      RECETTE     */
+
+
+
+
+.main-title {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.img-recette {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.info {
+  display: flex;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  
+}
+
+
+.info-time {
+  flex-grow: 0.2;
+  border-right: 2px solid #D6CBC7;
+}
+
+
+.info-time-title {
+  min-height: auto;
+  color: #393c6d;
+  display: block;
+  font-weight: 600;
+}
+
+
+.info-quantity {
+  flex-grow: 0.2;
+  border-right: 2px solid #D6CBC7;
+}
+
+
+.info-quantity-title {
+  min-height: auto;
+  color: #393c6d;
+  display: block;
+  font-weight: 600;
+  /*border-right: px solid #D6CBC7;*/
+}
+
+
+.info-level {
+  flex-grow: 0.2;
+  border-right: 2px solid #D6CBC7;
+}
+
+.info-level-title {
+  min-height: auto;
+  color: #393c6d;
+  display: block;
+  font-weight: 600;
+  /*border-right: 1px solid #D6CBC7;*/
+}
+
+
+.info-budget {
+  flex-grow: 0.2;
+  flex-shrink: 1;
+
+}
+
+.info-budget-title {
+  min-height: auto;
+  color: #393c6d;
+  display: block;
+  font-weight: 600;
+  /*border-right: 1px solid #D6CBC7;*/
+}
+
+
+.contenu-recette h1 {
+  font-weight: bold;
+}
+
+.contenu-recette {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 100px;
+
+
+  
 }

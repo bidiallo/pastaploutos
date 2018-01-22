@@ -1,16 +1,18 @@
 <?php
 require_once('modele_inscription.php');
 require_once('vue_inscription.php');
-//require_once('../../include/modele_generique.php');
 require_once('include/controleur_generique.php');
+
 class ControleurInscription extends ControleurGenerique {
 	function __construct() {
 		$this->vue=new VueInscription();
 		$this->modele=new ModeleInscription();
 	}
+
 	function form_inscription() {
 		$this->vue->vue_form_inscription();
 	}
+	
 	function ajout_inscription(){
 
 		$nom_user = htmlspecialchars($_POST["nom_user"]);

@@ -1,8 +1,10 @@
 <?php
 class ModeleGenerique{
+
 	private static $dns = "mysql:host=localhost;dbname=test; charset=utf8";
 	private static $user= "pma";
 	private static $password= "montreuil";
+
 	protected static $connexion; 
 
 	 static function init(){

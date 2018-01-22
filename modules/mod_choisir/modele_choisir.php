@@ -2,14 +2,6 @@
 <?php
 class ModeleChoisir extends ModeleGenerique {
 
-/*
-Se sera un sorte de moteur de recherche, recherche par critère ou mots-clé
-
-https://openclassrooms.com/courses/realiser-un-moteur-de-recherche-pour-son-site
-
-http://www.tomshardware.fr/forum/id-1346383/formulaire-recherche-php.html
-*/
-
 
 
 	function modele_recuperer_info_recette($idingredient) {
@@ -28,8 +20,6 @@ http://www.tomshardware.fr/forum/id-1346383/formulaire-recherche-php.html
 	}
 
 
-
-	//liste des recettes en fonction de l'ingrédient saisis
 }
 
 ?>

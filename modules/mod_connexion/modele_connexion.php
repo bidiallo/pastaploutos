@@ -21,15 +21,7 @@ class ModeleConnexion extends ModeleGenerique {
 			} else {
 				return NULL;
 			}
-			/*
-
-			if ( $mdp == $result['mdp_user']) {
-				return $result['id_user'];
-
-			} else {
-				return NULL;
-			}*/
-		
+			
 	}
 }
 

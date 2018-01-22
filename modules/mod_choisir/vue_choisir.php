@@ -11,12 +11,12 @@ class VueChoisir extends VueGenerique {
 
 		echo "
 
-		<section class='header'>
-			<center><h1>Choisir Ingrédient</h1></center>
+		<section class='header' style='background: transparent url(images/ingredients.jpg) no-repeat scroll 0% 0%;  width: 100%; '>
+			<h1 style='color:#771A22; margin-left: 100px;'><strong>Choisir un ingrédient</strong></h1>
 			<div class='input-group' id='pagerecherche'>
-			 	<form method='POST' class='cont'>
+			 	<form method='POST' class='cont' style='margin-left:100px;'>
 			  		<input type='text' class='srchFld' id='search' ng-model='search' placeholder='Choisissez un ingrédient' aria-describedby='basic-addon1'>
-			  		<p class='input-choisir' id='r'></p>
+			  		<p  style='color:#FFFFFF; font-weight:bold; padding-right:125px' class='input-choisir' id='r'></p>
 			  		<p id_recette='r'></p>
 
 			  		<div class='entypo-search ico'></div>

@@ -14,19 +14,14 @@ class ControleurGestionUser extends ControleurGenerique {
 	}
 
 
-
-
-	//en train de tester juste pour les users
 	function liste_profil() {
-
-		//if($this->modele->$_SESSION['id_user']) {}
 			
 			$user = $this->modele->modele_get_liste_user();
 			$this->vue->vue_recherche_user();
 			$this->vue->vue_liste_user($user);
-		//}
-
+		
 	}
+
 
 	function consulter_profil() {
 
@@ -46,7 +41,7 @@ class ControleurGestionUser extends ControleurGenerique {
 
 	function form_modif_droit() {
 		//if($this->modele->verifiAdmin($_SESSION['id_user'])) {
-			//var_dump($_POST['droit']);
+			
 			$admin = $this->modele->get_admin($_GET['id_user']);
 			$this->vue->vue_form_modif_droit($_GET['id_user'], $admin);
 		//}

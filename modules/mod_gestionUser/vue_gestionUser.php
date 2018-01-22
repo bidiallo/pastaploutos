@@ -64,19 +64,10 @@ class VueGestionUser extends VueGenerique {
 					</div>
 					<?php
 						echo "<a class='button' href='index.php?module=gestionUser&action=consulter_profil&id_user=".$user['id_user']."'>Voir plus</a>";
-					/*echo "<p class='button'><a href='index.php?module=recette&action=consulter_recette&id_recette=".$recette['id_recette']. "'> Voir plus </p>";*/
-
 					?>
 					
 
-		        		<!--<a class="btn btn-default" role="button" id="btnmodif" href="index.php?module=gestionUser&action=consulter_profil&id_user=<?php echo $user['id_user'];?>">Voir plus</a>
-
-		        		<a class="btn btn-default" role="button" id="btnmodif" href="index.php?module=gestionUser&action=form_modif_droit&id_user=<?php echo $user['id_user'];?>">Modifier</a>
-
-		        		<a class="btn btn-default" role="button" id="btnsupp" href="index.php?module=gestionUser&action=suppr_profil&id_user=<?php echo $user['id_user'];?>">Supprimer</a>
 		        		
-		        
--->
 		        	
 		     </div>
 
@@ -100,11 +91,11 @@ class VueGestionUser extends VueGenerique {
               <div class ="page">
 
 	              <div>
-	              		<div class="bandeau_perso">
+	              		<div class="bandeau_perso" style="background: transparent url(images/pastas_jumb3.jpg) no-repeat scroll 0% 0%;  width: 100%; max-width: 1024px; height: 58px;">
 	              			<div class="bienvenue">
-	              				<div class="trait" style="border-color: #FFCA28"></div>
+	              				<div class="trait" style="border-color: #792026"></div>
 	              					<strong>Bienvenue <?php echo htmlspecialchars($element['prenom_user'])?></strong>
-	              				<div class="trait" style="border-color: #FFCA28"></div>
+	              				<div class="trait" style="border-color: #792026"></div>
 	              			</div>
 	              		</div>
 

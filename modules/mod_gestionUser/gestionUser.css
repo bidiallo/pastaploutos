@@ -1,24 +1,4 @@
 
-body {
-  font-family: century gothic, sans-serif;
-    width: 100%;
-    font-weight: 300;
-    background-color: #EEEEEE;
-
-}
-
-
-nav {
-  width: 100%;
-  /*height: 50px;*/
-  
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #0D5D66;
-  margin-bottom: 70px;
-
-}
-
 
 .copyright{
     background-color:#f0f0f0;
@@ -180,11 +160,12 @@ footer .menu li a:hover{
 
 
 .bandeau_perso {
-  background: transparent url("images/ingredients.jpg") no-repeat scroll 0% 0%;
+  /*background: transparent url("images/ingredients.jpg") no-repeat scroll 0% 0%;
   width: 100%;
   max-width: 1024px;
   height: 58px;
-  padding: 12px 0px;
+  padding: 12px 0px;*/
+  margin-left: 100px;
   position: relative;
   text-align: center;
 
@@ -196,8 +177,7 @@ footer .menu li a:hover{
   font-size: 35px;
   font-family: "Lobster Two", sans-serif;
   padding: 0px 28px;
-  background-color: #FFFFFF;
-  color: #FFCA28;
+  color: #792026;
   text-align: center;
   background-image: none;
   background-repeat: repeat;
@@ -206,13 +186,14 @@ footer .menu li a:hover{
   background-clip: border-box;
   background-origin: padding-box;
   background-size: auto auto;
+  margin-right: 200px;
 }
 
 .trait {
   width: 25px;
 
   display: inline-block;
-  border: 1px solid #F1F3F2;
+  border: 1px solid #792026;
   top: -7px;
   position: relative;
   margin: 0px 10px;

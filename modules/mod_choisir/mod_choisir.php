@@ -14,10 +14,6 @@ class ModChoisir extends ModuleGenerique {
 				$this->controleur->form_choisir();
 				break;
 
-			//case 'choisir_ingr':
-				//$this->controleur->choisir_ingr();
-				//break;
-				
 			default:
 				$this->controleur->form_choisir();
 				break;
