@@ -13,7 +13,7 @@ class NavVue extends ComposantVueGenerique {
 
 				<div class="navbar-header">
 					<a class="navbar-brand" href="index.php?module=accueil">
-					<img src="images/finalelogo.png" width="100" height="50" style="margin-top: -5px;">
+					<img src="images/finalelogo.png" width="150" height="100" style="margin-top: -5px;">
 					</a>		
 				</div>
 
@@ -36,7 +36,25 @@ class NavVue extends ComposantVueGenerique {
 						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
 						break;
 
-						
+						case 'profil':
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						break;
+
+						case 'proposer':
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						break;
+
+						case 'favoris':
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						break;
+
+						case 'gestionUser':
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						break;
+
+						case 'offre':
+						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\">" . $nom . "</a></li>";
+						break;
 
 						case 'connexion':
 						echo "\t\t\t<li><a href=\"index.php?module=" . $lien . "\"><span class=\"glyphicon glyphicon-log-in\"></span>" ." ". $nom . "</a></li>";

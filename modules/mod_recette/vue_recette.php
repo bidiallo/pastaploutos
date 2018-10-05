@@ -83,7 +83,7 @@ class VueRecette extends VueGenerique {
                   
                 </div>
 
-                    <p class="button" role="button"><a href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>"></a>  Voir plus</p>
+                    <p class="button" role="button"><a href="index.php?module=recette&action=consulter_recette&id_recette=<?php echo $recette['id_recette'];?>">Voir plus</a> </p>
                 </div>
 
           </div>

@@ -18,7 +18,7 @@ class VueAccueil extends VueGenerique {
 					<div class="row text-center">
 				        <h1>Recettes pour les fetes !</h1>
 				        <p class="lead">Il neige. Commencez à préparer les fetes de fin d'année</p>
-				        <p><a  class="button-jumb" href="ideesastuces" role="button">En savoir plus...</a></p>
+				        <p><a  class="button-jumb" href="index.php?module=idees" role="button">En savoir plus...</a></p>
       		</div>
       	</section>
 
@@ -42,7 +42,7 @@ class VueAccueil extends VueGenerique {
 			      <div class="caption">
 			        <h3><strong>Idées & Astuces</strong></h3>
 			        <p>Decouvrez nos nouvelles recettes de pates !</p>
-			        <p><a href="index.php?module=ideesetastuces&action=liste_ideesetastuces" class="button" role="button">En savoir plus...</a></p>
+			        <p><a href="index.php?module=idees&action=liste_ideesetastuces" class="button" role="button">En savoir plus...</a></p>
 			      </div>
 			    </div>
 			  </div>
